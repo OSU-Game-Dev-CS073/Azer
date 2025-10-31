@@ -1,0 +1,33 @@
+name: CSharpier Format Check
+
+on:
+    pull_request:
+    push:
+        branches: [main]
+
+jobs:
+    check-format:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v4
+              with:
+                  dotnet-version: 8.0.x
+
+            # Use manifest if present; else install ad-hoc
+            - name: Ensure CSharpier available
+              run: |
+                  if [ -f ".config/dotnet-tools.json" ]; then
+                    dotnet tool restore
+                    echo "USE_CMD=dotnet csharpier" >> $GITHUB_ENV
+                  else
+                    dotnet tool install csharpier --tool-path ./.tools
+                    echo "USE_CMD=./.tools/csharpier" >> $GITHUB_ENV
+                  fi
+
+            - name: Check formatting
+              run: |
+                  $USE_CMD check Assets
+                  if [ -d "Packages" ]; then $USE_CMD check Packages || true; fi
