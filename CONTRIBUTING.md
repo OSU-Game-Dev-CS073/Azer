@@ -1,4 +1,4 @@
-# Contributing Guide — Azer: Path of Salvation
+# Contributing Guide — Azer: The Path of Salvation
 
 Welcome! This guide explains how to set up, code, test, review and release so contributions meet our **Definition of Done (DoD)** (see Team Charter).
 
