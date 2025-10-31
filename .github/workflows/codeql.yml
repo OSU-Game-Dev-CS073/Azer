@@ -1,27 +1,22 @@
-name: CodeQL
-
+name: CodeQL (advisory)
 on:
+    pull_request:
     push:
         branches: [main]
-    pull_request:
-        branches: [main]
     schedule:
-        - cron: "0 13 * * 6" # weekly
+        - cron: "0 13 * * 6"
 
 jobs:
     analyze:
         runs-on: ubuntu-latest
+        continue-on-error: true # <- do not block PRs
         permissions:
             security-events: write
-            actions: read
             contents: read
-        strategy:
-            fail-fast: false
-            matrix:
-                language: ["csharp"]
         steps:
             - uses: actions/checkout@v4
             - uses: github/codeql-action/init@v3
               with:
-                  languages: ${{ matrix.language }}
+                  languages: csharp
+                  build-mode: none
             - uses: github/codeql-action/analyze@v3

@@ -5,6 +5,9 @@ on:
     push:
         branches: [main]
 
+env:
+    PROJECT_DIR: Azer-project
+
 jobs:
     tests:
         name: EditMode Tests
@@ -15,18 +18,17 @@ jobs:
             - name: Get Unity version
               id: unity
               run: |
-                  ver=$(grep -m1 'm_EditorVersion:' ProjectSettings/ProjectVersion.txt | awk '{print $2}')
-                  echo "version=$ver" >> $GITHUB_OUTPUT
+                  ver=$(grep -m1 'm_EditorVersion:' "$PROJECT_DIR/ProjectSettings/ProjectVersion.txt" | awk '{print $2}')
+                  echo "version=$ver" >> "$GITHUB_OUTPUT"
 
             - name: Run EditMode tests
               uses: game-ci/unity-test-runner@v4
               with:
                   unityVersion: ${{ steps.unity.outputs.version }}
                   testMode: EditMode
-                  customParameters: -projectPath .
-              # If your tests require a license, add UNITY_LICENSE repo secret and uncomment:
-              # env:
-              #   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+                  projectPath: ${{ env.PROJECT_DIR }}
+              env:
+                  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }} # add this secret (base64 license)
 
             - name: Upload Test Results
               if: always()
@@ -39,25 +41,25 @@ jobs:
         name: Build Windows (x86_64)
         runs-on: ubuntu-latest
         needs: tests
+        if: ${{ github.event_name == 'push' }} # only build on pushes to main; tweak if you want
         steps:
             - uses: actions/checkout@v4
 
             - name: Get Unity version
               id: unity
               run: |
-                  ver=$(grep -m1 'm_EditorVersion:' ProjectSettings/ProjectVersion.txt | awk '{print $2}')
-                  echo "version=$ver" >> $GITHUB_OUTPUT
+                  ver=$(grep -m1 'm_EditorVersion:' "$PROJECT_DIR/ProjectSettings/ProjectVersion.txt" | awk '{print $2}')
+                  echo "version=$ver" >> "$GITHUB_OUTPUT"
 
             - name: Build Player
               uses: game-ci/unity-builder@v4
               with:
                   unityVersion: ${{ steps.unity.outputs.version }}
                   targetPlatform: StandaloneWindows64
+                  projectPath: ${{ env.PROJECT_DIR }}
                   buildName: AzerBuild
-                  projectPath: .
               env:
-                  # Required for building. Add Settings → Secrets → Actions → UNITY_LICENSE
-                  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+                  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }} # needed for builds
 
             - name: Upload Build
               if: ${{ success() }}

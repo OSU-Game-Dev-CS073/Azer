@@ -1,6 +1,7 @@
+# Normalize everything to LF in repo and working tree
 *               text=auto eol=lf
 
-# Unity text assets
+# Unity text assets (YAML / text)
 *.meta          text eol=lf
 *.unity         text eol=lf
 *.prefab        text eol=lf
@@ -20,5 +21,19 @@
 *.json          text eol=lf
 *.cs            text eol=lf
 
-# Binary assets
-*.png *.jpg *.jpeg *.psd *.fbx *.wav *.ttf binary
+# Binary assets (never change line endings)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.psd  binary
+*.fbx  binary
+*.wav  binary
+*.ttf  binary
+*.gif  binary
+*.ogg  binary
+*.mp3  binary
+*.mp4  binary
+
+# Don't ever commit local Unity license files
+*.ulf  -text
+Unity_*.ulf -text

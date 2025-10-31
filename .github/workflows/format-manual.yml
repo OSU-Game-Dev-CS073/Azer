@@ -1,0 +1,48 @@
+name: Manual CSharpier Format
+on:
+    workflow_dispatch: # run manually from Actions tab
+
+permissions:
+    contents: write
+
+env:
+    PROJECT_DIR: Azer-project
+
+jobs:
+    format:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with: { fetch-depth: 0 }
+
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v4
+              with:
+                  dotnet-version: 8.0.x
+
+            - name: Install CSharpier
+              run: dotnet tool install csharpier --tool-path ./.tools
+
+            - name: Run formatter (writes changes)
+              run: |
+                  ./.tools/csharpier format "$PROJECT_DIR/Assets"
+                  if [ -d "$PROJECT_DIR/Packages" ]; then ./.tools/csharpier format "$PROJECT_DIR/Packages" || true; fi
+
+            - name: Create patch (diff) of formatting changes
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+                  git diff > csharpier.patch || true
+
+            - name: Upload patch artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: csharpier-patch
+                  path: csharpier.patch
+
+            # Optional: auto-commit back to branch (only if you want)
+            - name: Commit formatted files
+              if: ${{ github.event.repository.fork == false }}
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "chore: apply CSharpier formatting (manual)"
