@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        // ⚠️ change "GameScene" to the target game scence
+        //  change "GameScene" to the target game scence
         SceneManager.LoadScene("GameScene");
     }
 
@@ -28,5 +28,6 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 }
+
 
 
