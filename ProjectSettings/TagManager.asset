@@ -3,22 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Damage
-  - ManaSprite
-  - HealthSprite
-  - coin
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Ground
-  - Enemy
-  - Background
-  - Player
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -45,26 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 1sky
-    uniqueID: 623845071
+  - name: Background
+    uniqueID: 3455463395
     locked: 0
-  - name: 2cloud
-    uniqueID: 3299973079
+  - name: Wall
+    uniqueID: 2417457155
     locked: 0
-  - name: 3fore
-    uniqueID: 2039380489
+  - name: Deco
+    uniqueID: 1626378911
     locked: 0
-  - name: player
-    uniqueID: 1223840877
+  - name: Ground
+    uniqueID: 3547758743
     locked: 0
-  - name: 4back
-    uniqueID: 1810215365
-    locked: 0
-  - name: 
-    uniqueID: 1918965537
-    locked: 0
-  - name: 
-    uniqueID: 2256975787
+  - name: Player
+    uniqueID: 2610667011
     locked: 0
   m_RenderingLayers:
   - Default
