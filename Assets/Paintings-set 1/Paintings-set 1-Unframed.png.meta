@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: c86268c2a4187472a8a656b822a04d6c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1118181349038455872
+    second: Paintings-set 1-Unframed_0
+  - first:
+      213: 7212319976289396815
+    second: Paintings-set 1-Unframed_1
+  - first:
+      213: 3270919616175687046
+    second: Paintings-set 1-Unframed_2
+  - first:
+      213: -1659776805307352472
+    second: Paintings-set 1-Unframed_3
+  - first:
+      213: 8420899885685537092
+    second: Paintings-set 1-Unframed_4
+  - first:
+      213: 3177214293216083773
+    second: Paintings-set 1-Unframed_5
+  - first:
+      213: 1937003633686753128
+    second: Paintings-set 1-Unframed_6
+  - first:
+      213: 3880346017224084624
+    second: Paintings-set 1-Unframed_7
+  - first:
+      213: -2303448791329243394
+    second: Paintings-set 1-Unframed_8
+  - first:
+      213: 6259360277164637737
+    second: Paintings-set 1-Unframed_9
+  - first:
+      213: 2424391985418114087
+    second: Paintings-set 1-Unframed_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 326
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c38818ccfb6b70f0800000000000000
+      internalID: -1118181349038455872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 325
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48ee215ece471460800000000000000
+      internalID: 7212319976289396815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 245
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68542039f04a46d20800000000000000
+      internalID: 3270919616175687046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 172
+        width: 52
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86af8391ac947f8e0800000000000000
+      internalID: -1659776805307352472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_4
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 206
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449f96784db0dd470800000000000000
+      internalID: 8420899885685537092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_5
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 165
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f307ae09bb71c20800000000000000
+      internalID: 3177214293216083773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 126
+        width: 66
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f2a8aca8e91ea10800000000000000
+      internalID: 1937003633686753128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_7
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 132
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c4e3ac422c9d530800000000000000
+      internalID: 3880346017224084624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 72
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe748a47818800e0800000000000000
+      internalID: -2303448791329243394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 75
+        width: 51
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92eb6913207bdd650800000000000000
+      internalID: 6259360277164637737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings-set 1-Unframed_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 15
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724962f6aab25a120800000000000000
+      internalID: 2424391985418114087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Paintings-set 1-Unframed_0: -1118181349038455872
+      Paintings-set 1-Unframed_1: 7212319976289396815
+      Paintings-set 1-Unframed_10: 2424391985418114087
+      Paintings-set 1-Unframed_2: 3270919616175687046
+      Paintings-set 1-Unframed_3: -1659776805307352472
+      Paintings-set 1-Unframed_4: 8420899885685537092
+      Paintings-set 1-Unframed_5: 3177214293216083773
+      Paintings-set 1-Unframed_6: 1937003633686753128
+      Paintings-set 1-Unframed_7: 3880346017224084624
+      Paintings-set 1-Unframed_8: -2303448791329243394
+      Paintings-set 1-Unframed_9: 6259360277164637737
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
