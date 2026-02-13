@@ -789,13 +789,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2c1387e68834f3f95e528ba67c4b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::azerPlayer
-  health: 100
   rb: {fileID: 389852270}
   playerInput: {fileID: 389852267}
-  speed: 8
-  facingDirection: 1
-  moveInput: {x: 0, y: 0}
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 389852271}
+  audioSource: {fileID: 0}
   tr: {fileID: 0}
+  health: 100
+  coins: 0
+  damage: 3
+  baseScale: 4
+  facingDirection: 1
+  speed: 8
+  moveInput: {x: 0, y: 0}
   jumpForce: 15.5
   jumpCutMultiplier: 0.4
   groundCheck: {fileID: 1031108881}
@@ -804,15 +810,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   extraJumpsValue: 12
-  coins: 0
+  dashPower: 24
+  dashTime: 0.2
+  dashCooldown: 1
   healthImage: {fileID: 1144564109}
-  damage: 3
-  attackRadius: 0.5
   attackPoint: {fileID: 528947163}
+  attackRadius: 0.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  baseScale: 4
+  attackPressed: 0
 --- !u!61 &389852269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -953,7 +960,7 @@ Transform:
   m_GameObject: {fileID: 389852264}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.6, y: -54.1, z: 0}
+  m_LocalPosition: {x: -51.95, y: -20.08, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7658,7 +7665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948339739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -41.39, y: -55.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8070,7 +8077,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 4.5
+    OrthographicSize: 6.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -8097,7 +8104,7 @@ Transform:
   m_GameObject: {fileID: 1015071739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.6, y: -54.6, z: -10}
+  m_LocalPosition: {x: -51.95, y: -20.58, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8485,7 +8492,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 6.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8510,7 +8517,7 @@ Transform:
   m_GameObject: {fileID: 1418159057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.6, y: -54.6, z: -10}
+  m_LocalPosition: {x: -51.95, y: -20.58, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19073,7 +19080,6 @@ SceneRoots:
   - {fileID: 2117455358}
   - {fileID: 336605386}
   - {fileID: 832658709}
-  - {fileID: 948339742}
   - {fileID: 1251288464}
   - {fileID: 429565049}
   - {fileID: 1605858773}
@@ -19084,3 +19090,4 @@ SceneRoots:
   - {fileID: 857019492}
   - {fileID: 694393179}
   - {fileID: 1739822561}
+  - {fileID: 948339742}
