@@ -3,22 +3,6 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-<<<<<<< HEAD
-/*
-2/5 - added the variable jump and got rid of wall and floor sticking. 
- next task will be to make more platforming, find a proper dash animation
- and start the npc dialogue and interaction. 
- 
-side quests
- - create secret rooms usings pixel art I found
- - hollow knight camera system
-*/
-
-public class Player : MonoBehaviour
-{
-    #region COMPONENTS
-    [Header("Component References")]
-=======
 /// <summary>
 /// PATCH 5 — MAJOR CHANGES:
 /// 
@@ -50,21 +34,16 @@ public class Player : MonoBehaviour
 public class Player : MonoBehaviour
 {
     [Header("Movement")]
->>>>>>> origin/workspace-yigit-latest
     public Rigidbody2D rb;
     public PlayerInput playerInput;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     public AudioSource audioSource;
-    [SerializeField] private TrailRenderer tr;
-    #endregion
+    [SerializeField] private TrailRenderer tr;   // from original
 
     #region PLAYER STATS
     [Header("Player Stats")]
-    public int health = 100;
-    public int coins;
-    public int damage = 10;
-    public float baseScale = 4f;
+    public int coins;          // kept from original (Yigit uses GameManager)
     public int facingDirection = 1;
     #endregion
 
@@ -72,52 +51,13 @@ public class Player : MonoBehaviour
     [Header("Movement Settings")]
     public float speed = 5f;
     public Vector2 moveInput;
-<<<<<<< HEAD
-    #endregion
-
-    #region JUMP SETTINGS
-    [Header("Jump Settings")]
-=======
 
     [Header("Jump")]
->>>>>>> origin/workspace-yigit-latest
     public float jumpForce = 10f;
     public float jumpCutMultiplier = 1f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
-<<<<<<< HEAD
-    public int extraJumpsValue = 1;
-    private bool isGrounded;
-    private int extraJumps;
-    #endregion
-
-    #region DASH SETTINGS
-    [Header("Dash Settings")]
-    public float dashPower = 24f;
-    public float dashTime = 0.2f;
-    public float dashCooldown = 1f;
-    private bool canDash = true;
-    private bool isDashing = false;
-    #endregion
-
-    #region UI REFERENCES
-    [Header("UI References")]
-    public Image healthImage;
-    #endregion
-
-    #region ATTACK REFERENCES
-    [Header("Attack References")]
-    public Transform attackPoint;
-    public float attackRadius = 0.5f;
-    public LayerMask enemyLayer;
-   // public PlayerAttackState attackState;
-
-    
-    #endregion
-
-    #region PRIVATE STATE VARIABLES
-=======
     [Tooltip("Air jumps in normal mode. 1 = double jump.")]
     public int maxAirJumps = 1;
 
@@ -125,6 +65,9 @@ public class Player : MonoBehaviour
     public float attackRadius = 0.5f;
     public Transform attackPoint;
     public LayerMask enemyLayer;
+    #endregion
+
+    #region DARK MODE SPRITES
     [Header("Dark Mode Sprites")]
     [Tooltip("Default player sprite. If blank, uses whatever is on SpriteRenderer at Start.")]
     public Sprite normalSprite;
@@ -146,10 +89,23 @@ public class Player : MonoBehaviour
     public float normalAttackCooldown = 0.8f;
     [Tooltip("Attack cooldown in dark mode (seconds). Must be >= dark_attack animation length or frames get cut off.")]
     public float darkAttackCooldown = 1.1f;
+    #endregion
 
+    #region DASH SETTINGS
+    [Header("Dash Settings")]
+    public float dashPower = 24f;
+    public float dashTime = 0.2f;
+    public float dashCooldown = 1f;
+    private bool canDash = true;
+    private bool isDashing = false;
+    #endregion
+
+    #region SCALE
     [Header("Scale")]
-    public float baseScale = 4f;
+    public float baseScale = 1f;
+    #endregion
 
+    #region SFX
     [Header("=== SFX (assign in Inspector) ===")]
     [Tooltip("Footstep sound in normal form")]
     public AudioClip walkSFX;
@@ -172,22 +128,21 @@ public class Player : MonoBehaviour
     public float footstepInterval = 0.35f;
     public float sfxVolume = 0.6f;
 
+    
+    #endregion
+
     // --- Private ---
     private bool isGrounded;
     private bool wasGrounded;
     private int airJumpsLeft;
     private bool usedGroundJump;
-    private Animator animator;
     private RuntimeAnimatorController originalAnimController;
-    private SpriteRenderer spriteRenderer;
->>>>>>> origin/workspace-yigit-latest
+    private GameObject impactFXObject;
+    private Vector3 originalImpactScale;
+    private Animator impactFXAnimator; // Animator for impact effect (child of attackPoint)
+
     private bool isAttacking = false;
     private float lastAttackTime = 0f;
-<<<<<<< HEAD
-    public bool attackPressed;
-    #endregion
-=======
-    private AudioSource audioSource;
     private bool inputEnabled = true;
     private bool darkModeActive = false;
     private Sprite _originalSprite;
@@ -199,9 +154,10 @@ public class Player : MonoBehaviour
     // Transition
     private bool isTransitioning = false;
 
-    [HideInInspector] public int extraJumpsValue = -1; // legacy
-    [HideInInspector] public int maxHealth = 100; // legacy, now from stats
-    [HideInInspector] public int damage = 10; // legacy, now from stats
+    // Legacy compatibility
+    [HideInInspector] public int extraJumpsValue = -1;
+    [HideInInspector] public int maxHealth = 100;
+    [HideInInspector] public int damage = 10; // legacy
 
     // Health through GameManager
     private int health
@@ -212,15 +168,10 @@ public class Player : MonoBehaviour
 
     // Current max health from stats
     private int currentMaxHealth => GameManager.Instance != null ? GameManager.Instance.playerMaxHealth : 100;
->>>>>>> origin/workspace-yigit-latest
 
     #region UNITY LIFE CYCLE METHODS
     void Start()
     {
-<<<<<<< HEAD
-        InitializeComponents();
-        InitializeState();
-=======
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         if (animator != null) originalAnimController = animator.runtimeAnimatorController;
@@ -253,20 +204,28 @@ public class Player : MonoBehaviour
 
             UIManager.Instance?.RefreshAllDisplays();
         }
->>>>>>> origin/workspace-yigit-latest
+
+        // --- IMPACT FX INITIALIZATION (FIXED) ---
+        if (attackPoint != null)
+        {
+            Transform impactTransform = attackPoint.Find("impactFX");
+            if (impactTransform != null)
+            {
+                impactFXObject = impactTransform.gameObject;
+                impactFXAnimator = impactTransform.GetComponent<Animator>();
+
+                // Store the ORIGINAL scale you set in the Inspector (should be 1,1,1)
+                originalImpactScale = impactTransform.localScale;
+
+                // Ensure it starts disabled
+                impactFXObject.SetActive(false);
+            }
+        }
     }
 
     void Update()
     {
-<<<<<<< HEAD
-        if (isDashing) return;
-        
-        UpdateGroundCheck();
-        UpdateAnimations();
-        UpdateHealthUI();
-        HandleJumpCut();
-=======
-        if (!inputEnabled) return;
+        if (!inputEnabled || isDashing) return; // dashing blocks normal updates
         if (GameManager.Instance != null && GameManager.Instance.isPaused) return;
 
         Flip();
@@ -279,6 +238,7 @@ public class Player : MonoBehaviour
         {
             airJumpsLeft = GetCurrentAirJumps();
             usedGroundJump = false;
+            canDash = true; // reset dash when grounded (from original)
         }
 
         SetAnimation(moveInput.x);
@@ -296,24 +256,17 @@ public class Player : MonoBehaviour
             GameManager.Instance?.QuickSave();
             UIManager.Instance?.ShowSaveNotification("Quick Saved!");
         }
->>>>>>> origin/workspace-yigit-latest
+
+        // Jump cut
+        if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
+        }
     }
 
     void FixedUpdate()
     {
-<<<<<<< HEAD
-        if (isDashing) return;
-        
-        if (!isAttacking)
-        {
-            MovePlayer();
-        }
-        else
-        {
-            StopMovementDuringAttack();
-        }
-=======
-        if (!inputEnabled) return;
+        if (!inputEnabled || isDashing) return;
         if (GameManager.Instance != null && GameManager.Instance.isPaused) return;
 
         float currentSpeed = speed;
@@ -323,50 +276,11 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(moveInput.x * currentSpeed, rb.linearVelocity.y);
         else
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
->>>>>>> origin/workspace-yigit-latest
     }
     #endregion
 
-<<<<<<< HEAD
-    #region INITIALIZATION
-    private void InitializeComponents()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    private void InitializeState()
-    {
-        extraJumps = extraJumpsValue;
-    }
-    #endregion
-
-    #region MOVEMENT
-    private void MovePlayer()
-    {
-        float targetSpeed = moveInput.x * speed;
-        rb.linearVelocity = new Vector2(targetSpeed, rb.linearVelocity.y);
-    }
-
-    private void StopMovementDuringAttack()
-    {
-        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-    }
-
-    public void OnMove(InputValue value)
-    {
-        moveInput = value.Get<Vector2>();
-        Debug.Log("Move input: " + moveInput);
-    }
-
-    private void Flip()
-=======
-    // ============ INPUT ============
-
+    #region INPUT
     void Flip()
->>>>>>> origin/workspace-yigit-latest
     {
         if (moveInput.x > 0.1f) facingDirection = 1;
         else if (moveInput.x < -0.1f) facingDirection = -1;
@@ -379,21 +293,16 @@ public class Player : MonoBehaviour
                 GameManager.Instance.facingDirection = facingDirection;
         }
     }
-    #endregion
 
-<<<<<<< HEAD
-    #region JUMP
-=======
     public void OnMove(InputValue value)
     {
         if (!inputEnabled) { moveInput = Vector2.zero; return; }
         moveInput = value.Get<Vector2>();
     }
 
->>>>>>> origin/workspace-yigit-latest
     public void OnJump(InputValue value)
     {
-        if (!inputEnabled || !value.isPressed || isAttacking) return;
+        if (!inputEnabled || !value.isPressed || isAttacking || isDashing) return;
 
         float currentJumpForce = jumpForce;
         if (darkModeActive) currentJumpForce *= darkModeJumpMultiplier;
@@ -401,27 +310,6 @@ public class Player : MonoBehaviour
         // Dev infinite jump
         if (DevPanel.Instance != null && DevPanel.Instance.infiniteJump)
         {
-<<<<<<< HEAD
-            Debug.Log("Jump button pressed");
-            if (!isAttacking && !isDashing)
-            {
-                if (isGrounded)
-                {
-                    PerformJump();
-                    Debug.Log("Jumped - grounded");
-                }
-                else if (extraJumps > 0)
-                {
-                    PerformJump();
-                    extraJumps--;
-                    Debug.Log("Jumped - extra jump. Remaining: " + extraJumps);
-                }
-            }
-            else
-            {
-                Debug.Log("Jump blocked - currently attacking or dashing");
-            }
-=======
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
             PlaySound(jumpSFX);
             return;
@@ -441,189 +329,72 @@ public class Player : MonoBehaviour
             airJumpsLeft--;
             PlaySound(jumpSFX);
             return;
->>>>>>> origin/workspace-yigit-latest
         }
     }
 
-    private void PerformJump()
-    {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-    }
-
-    private void HandleJumpCut()
-    {
-        if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
-        }
-    }
-
-    private void UpdateGroundCheck()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        
-        if (isGrounded)
-        {
-            extraJumps = extraJumpsValue;
-            canDash = true;
-        }
-    }
-    #endregion
-
-    #region DASH
     public void OnDash(InputValue value)
     {
-        Debug.Log("Dash button pressed - isPressed: " + value.isPressed);
-        
-        if (value.isPressed && canDash && !isAttacking)
+        if (!inputEnabled || isAttacking) return;
+        if (value.isPressed && canDash)
         {
-            StartDash();
+            StartCoroutine(Dash());
         }
-    }
-
-    private void StartDash()
-    {
-        Debug.Log("Starting dash!");
-        StartCoroutine(Dash());
     }
 
     private IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
-        
+
         float originalGravity = rb.gravityScale;
         float originalSpeed = speed;
-        
+
         rb.gravityScale = 0f;
         speed = 0f;
         rb.linearVelocity = new Vector2(facingDirection * dashPower, 0f);
-        
-        // Visual effects
+
         if (tr != null)
             tr.emitting = true;
-        
+
         spriteRenderer.color = new Color(1f, 1f, 1f, 0.7f);
-        
+
         yield return new WaitForSeconds(dashTime);
-        
+
         rb.gravityScale = originalGravity;
         speed = originalSpeed;
-        
+
         if (tr != null)
             tr.emitting = false;
-        
+
         spriteRenderer.color = Color.white;
         isDashing = false;
-        
+
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
-        
-        Debug.Log("Dash ready again");
-    }
-    #endregion
-
-    #region ANIMATION
-    private void UpdateAnimations()
-    {
-        Flip();
-        SetAnimation(moveInput.x);
     }
 
-    private void SetAnimation(float moveInput)
-    {
-        if (animator == null) return;
-
-        if (isDashing)
-        {
-            animator.Play("player_dash");
-            return;
-        }
-
-        if (isAttacking)
-        {
-            return;
-        }
-
-        if (isGrounded)
-        {
-            if (moveInput == 0)
-                animator.Play("player_idle");
-            else
-                animator.Play("player_run");
-        }
-        else
-        {
-            if (rb.linearVelocity.y > 0)
-                animator.Play("player_jump");
-            else
-                animator.Play("player_fall");
-        }
-    }
-    #endregion
-
-    #region ATTACK
     public void OnAttack(InputValue value)
     {
-<<<<<<< HEAD
-        Debug.Log("Attack button pressed - isPressed: " + value.isPressed);
-        
-        if (value.isPressed && !isAttacking && Time.time >= lastAttackTime + attackCooldown && !isDashing)
-        {
-            StartAttack();
-        }
-        else
-        {
-            Debug.Log("Attack blocked - either already attacking, on cooldown, or dashing");
-        }
-    }
-    private void StartAttack()
-    {
-    Debug.Log("Starting attack!");
-    isAttacking = true;
-    lastAttackTime = Time.time;
-    animator.SetBool("isAttacking", true);
-    
-    // Turn on and play spellFX
-    GameObject spellFX = transform.Find("spellFX")?.gameObject;
-    if (spellFX != null)
-    {
-        spellFX.SetActive(true);
-        spellFX.GetComponent<Animator>().Play("hitFX", 0, 0f);
-    }
-    
-    Debug.Log("Attack animation triggered");
-    PerformAttack();
-    StartCoroutine(ResetAttack());
-    }
-
-    private void PerformAttack()
-    {
-        Collider2D enemy = Physics2D.OverlapCircle(attackPoint.position, attackRadius, enemyLayer);
-        if (enemy != null)
-=======
         if (!inputEnabled) return;
         float currentCooldown = darkModeActive ? darkAttackCooldown : normalAttackCooldown;
-        if (value.isPressed && !isAttacking && Time.time >= lastAttackTime + currentCooldown)
+        if (value.isPressed && !isAttacking && !isDashing && Time.time >= lastAttackTime + currentCooldown)
         {
             StartAttack();
         }
     }
+    #endregion
 
-    // ============ COMBAT ============
-
+    #region COMBAT
     void StartAttack()
     {
         isAttacking = true;
         lastAttackTime = Time.time;
 
-        // Play attack animation directly (works with Override Controller)
         if (animator != null)
             animator.Play("player_attack", 0, 0f);
 
         // Activate spellFX only in normal (human) form
         if (!darkModeActive)
->>>>>>> origin/workspace-yigit-latest
         {
             Transform spellFX = transform.Find("spellFX");
             if (spellFX != null)
@@ -634,38 +405,29 @@ public class Player : MonoBehaviour
             }
         }
 
-        // SFX
         PlaySound(darkModeActive ? darkAttackSFX : attackSFX);
 
-        // Start coroutine to wait for animation to finish, then deal damage and end attack
         StartCoroutine(AttackSequence());
     }
 
     IEnumerator AttackSequence()
     {
-        // Wait one frame for animator to start the clip
         yield return null;
 
-        // Get actual clip length from animator
-        float clipLength = 0.5f; // fallback
+        float clipLength = 0.5f;
         if (animator != null)
         {
             AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(0);
             if (info.length > 0) clipLength = info.length;
         }
 
-        // Deal damage at 40% through animation
         float damageDelay = clipLength * 0.4f;
         yield return new WaitForSeconds(damageDelay);
         DealAttackDamage();
 
-        // Wait for rest of animation
         yield return new WaitForSeconds(clipLength - damageDelay);
 
-        // End attack
         isAttacking = false;
-
-        // Deactivate spellFX
         transform.Find("spellFX")?.gameObject.SetActive(false);
     }
 
@@ -680,56 +442,55 @@ public class Player : MonoBehaviour
             dmg *= darkModeDamageMultiplier;
 
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
+        bool hitEnemy = false;
+
         foreach (Collider2D enemy in enemies)
         {
             Health enemyHealth = enemy.GetComponent<Health>();
             if (enemyHealth != null)
             {
                 enemyHealth.ChangeHealth(-dmg);
+                hitEnemy = true;
                 if (crit)
                     UIManager.Instance?.ShowCritPopup();
             }
         }
+
+        // --- CORRECTED IMPACT FX ---
+        if (hitEnemy && impactFXObject != null && impactFXAnimator != null)
+        {
+            // CRITICAL: Reset scale to your original animation size
+            // This overrides any parent scaling
+            impactFXObject.transform.localScale = originalImpactScale;
+
+            // Position exactly at the attack point
+            impactFXObject.transform.position = attackPoint.position;
+
+            // Activate and play
+            impactFXObject.SetActive(true);
+            impactFXAnimator.Play("impactFX", 0, 0f);
+
+            // Auto-disable after animation
+            StartCoroutine(DisableImpactAfterAnimation());
+        }
     }
 
-<<<<<<< HEAD
-    private IEnumerator ResetAttack()
+    // Coroutine to auto-disable the effect
+    private IEnumerator DisableImpactAfterAnimation()
     {
-    yield return new WaitForSeconds(attackCooldown);
-    isAttacking = false;
-    animator.SetBool("isAttacking", false);
-    
-    // Turn off the spellFX object
-    transform.Find("spellFX")?.gameObject.SetActive(false);
-    
-    Debug.Log("Attack finished - can attack again");
-    }   
+        // Wait for the animation to play (adjust time to match your clip)
+        yield return new WaitForSeconds(0.2f);
+
+        if (impactFXObject != null)
+            impactFXObject.SetActive(false);
+    }
     #endregion
 
-    #region HEALTH & DAMAGE
-    private void UpdateHealthUI()
-    {
-        healthImage.fillAmount = health / 100f;
-    }
-
+    #region DAMAGE / DEATH
     public void TakeDamage(int damageAmount)
     {
-        if (isDashing)
-            return;
-            
-        health -= damageAmount;
-        Debug.Log("Player took " + damageAmount + " damage! Health: " + health);
-        
-        StartCoroutine(BlinkRed());
-        
-        if (health <= 0)
-        {
-            Die();
-=======
-    // ============ DAMAGE / DEATH ============
+        if (isDashing) return; // invincibility during dash (from original)
 
-    public void TakeDamage(int damageAmount)
-    {
         health -= damageAmount;
         StartCoroutine(BlinkRed());
         if (health <= 0) Die();
@@ -737,11 +498,10 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Damage"))
+        if (collision.gameObject.CompareTag("Damage") && !isDashing)
         {
             TakeDamage(25);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
->>>>>>> origin/workspace-yigit-latest
         }
     }
 
@@ -755,43 +515,11 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-<<<<<<< HEAD
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-        );
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Damage") && !isDashing)
-        {
-            health -= 25;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            StartCoroutine(BlinkRed());
-
-            if (health <= 0)
-                Die();
-        }
-    }
-    #endregion
-
-    #region AUDIO
-    public void PlaySFX(AudioClip audioClip, float volume = 1f, float pitch = 1.5f)
-    {
-        if (audioSource == null || audioClip == null) return;
-
-        audioSource.clip = audioClip;
-        audioSource.volume = volume;
-        audioSource.pitch = pitch;
-        audioSource.Play();
-=======
         PlaySound(darkModeActive ? darkDieSFX : dieSFX, 1f);
 
         if (GameManager.Instance != null)
         {
-            // Reset health to max
             GameManager.Instance.playerHealth = currentMaxHealth;
-            // End dark mode if active
             if (darkModeActive)
                 GameManager.Instance.DeactivateDarkMode();
         }
@@ -799,21 +527,19 @@ public class Player : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
+    #endregion
 
-    // ============ DARK / CHAOS MODE ============
-
+    #region DARK MODE
     private int GetCurrentAirJumps()
     {
         return darkModeActive ? darkModeAirJumps : maxAirJumps;
     }
 
-    /// <summary>Called by GameManager when chaos mode activates</summary>
     public void ActivateDarkMode()
     {
         StartCoroutine(TransformSequence(true));
     }
 
-    /// <summary>Called by GameManager when chaos mode ends</summary>
     public void DeactivateDarkMode()
     {
         StartCoroutine(TransformSequence(false));
@@ -825,10 +551,8 @@ public class Player : MonoBehaviour
 
         isTransitioning = true;
 
-        // Pause the animator so transition sprites are visible
         if (animator != null) animator.enabled = false;
 
-        // Show transition sprite 1
         if (transitionSprite != null && spriteRenderer != null)
         {
             spriteRenderer.sprite = transitionSprite;
@@ -836,7 +560,6 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
         }
 
-        // Show transition sprite 2
         if (transitionSprite2 != null && spriteRenderer != null)
         {
             spriteRenderer.sprite = transitionSprite2;
@@ -855,7 +578,6 @@ public class Player : MonoBehaviour
         else
             RemoveDarkModeVisuals();
 
-        // Re-enable animator (now with the correct controller)
         if (animator != null) animator.enabled = true;
     }
 
@@ -864,15 +586,12 @@ public class Player : MonoBehaviour
         darkModeActive = true;
         airJumpsLeft = darkModeAirJumps;
 
-        // Swap to dark mode animator (if override assigned)
         if (darkAnimOverride != null && animator != null)
             animator.runtimeAnimatorController = darkAnimOverride;
 
-        // Fallback: if no override, use static dark sprite
         if (darkModeSprite != null && spriteRenderer != null)
             spriteRenderer.sprite = darkModeSprite;
 
-        // Reset color to white so dark sprites show their true colors
         if (spriteRenderer != null)
             spriteRenderer.color = Color.white;
     }
@@ -882,7 +601,6 @@ public class Player : MonoBehaviour
         darkModeActive = false;
         airJumpsLeft = maxAirJumps;
 
-        // Swap back to normal animator
         if (originalAnimController != null && animator != null)
             animator.runtimeAnimatorController = originalAnimController;
 
@@ -896,12 +614,12 @@ public class Player : MonoBehaviour
     }
 
     public bool IsDarkModeActive => darkModeActive;
+    #endregion
 
-    // ============ SFX ============
-
+    #region SFX
     private void HandleFootsteps()
     {
-        bool isMoving = isGrounded && Mathf.Abs(moveInput.x) > 0.1f && !isAttacking;
+        bool isMoving = isGrounded && Mathf.Abs(moveInput.x) > 0.1f && !isAttacking && !isDashing;
 
         if (isMoving)
         {
@@ -928,38 +646,16 @@ public class Player : MonoBehaviour
         audioSource.PlayOneShot(clip, volume);
     }
 
-    // Legacy method kept for compatibility
     public void PlaySFX(AudioClip audioClip, float volume = 1f, float pitch = 1.5f)
     {
         if (audioSource == null || audioClip == null) return;
         audioSource.pitch = pitch;
         audioSource.PlayOneShot(audioClip, volume);
         audioSource.pitch = 1f;
->>>>>>> origin/workspace-yigit-latest
     }
     #endregion
 
-<<<<<<< HEAD
-    #region GIZMOS
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
-        }
-        
-        if (groundCheck != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-        }
-    }
-    #endregion
-}
-=======
-    // ============ COINS / DIALOGUE ============
-
+    #region COINS / DIALOGUE
     public void AddCoins(int amount)
     {
         if (GameManager.Instance != null)
@@ -975,12 +671,12 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
     }
+    #endregion
 
-    // ============ ANIMATION ============
-
+    #region ANIMATION
     private void SetAnimation(float moveInput)
     {
-        if (animator == null || isAttacking || isTransitioning) return;
+        if (animator == null || isAttacking || isTransitioning || isDashing) return;
 
         if (isGrounded)
         {
@@ -993,5 +689,22 @@ public class Player : MonoBehaviour
             else animator.Play("player_fall");
         }
     }
+    #endregion
+
+    #region GIZMOS
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+        }
+
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
+    }
+    #endregion
 }
->>>>>>> origin/workspace-yigit-latest
