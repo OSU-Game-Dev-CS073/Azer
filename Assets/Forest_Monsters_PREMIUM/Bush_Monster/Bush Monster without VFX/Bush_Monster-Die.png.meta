@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: a81fb0c16e77b44dc882170bd71173b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -848991375719808522
+    second: Bush_Monster-Die_0
+  - first:
+      213: -6232424134896544195
+    second: Bush_Monster-Die_1
+  - first:
+      213: 3749217993802399642
+    second: Bush_Monster-Die_2
+  - first:
+      213: 2967167691788202286
+    second: Bush_Monster-Die_3
+  - first:
+      213: 1922135640705097873
+    second: Bush_Monster-Die_4
+  - first:
+      213: -6347975208735700489
+    second: Bush_Monster-Die_5
+  - first:
+      213: -8117173678661311436
+    second: Bush_Monster-Die_6
+  - first:
+      213: -8452904791335411862
+    second: Bush_Monster-Die_7
+  - first:
+      213: -816626289143026063
+    second: Bush_Monster-Die_8
+  - first:
+      213: 7645486748760991039
+    second: Bush_Monster-Die_9
+  - first:
+      213: -1703736622629889916
+    second: Bush_Monster-Die_10
+  - first:
+      213: -4196784461085262482
+    second: Bush_Monster-Die_11
+  - first:
+      213: 3582909112656355829
+    second: Bush_Monster-Die_12
+  - first:
+      213: -3210123226666450356
+    second: Bush_Monster-Die_13
+  - first:
+      213: -798924341651381498
+    second: Bush_Monster-Die_14
+  - first:
+      213: 715492854873496246
+    second: Bush_Monster-Die_15
+  - first:
+      213: -8686818872043859016
+    second: Bush_Monster-Die_16
+  - first:
+      213: -1981200541050261446
+    second: Bush_Monster-Die_17
+  - first:
+      213: 1556095292245729548
+    second: Bush_Monster-Die_18
+  - first:
+      213: 7343012915553063299
+    second: Bush_Monster-Die_19
+  - first:
+      213: 4404409942749730244
+    second: Bush_Monster-Die_20
+  - first:
+      213: -5642078739413198477
+    second: Bush_Monster-Die_21
+  - first:
+      213: -1932643486003192999
+    second: Bush_Monster-Die_22
+  - first:
+      213: -2825425714891977728
+    second: Bush_Monster-Die_23
+  - first:
+      213: -4548196270006407646
+    second: Bush_Monster-Die_24
+  - first:
+      213: 2171089904595310446
+    second: Bush_Monster-Die_25
+  - first:
+      213: 6082609522791611179
+    second: Bush_Monster-Die_26
+  - first:
+      213: -38897298703634566
+    second: Bush_Monster-Die_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bush_Monster-Die_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f1c9d887d6c734f0800000000000000
+      internalID: -848991375719808522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d369be5254bf189a0800000000000000
+      internalID: -6232424134896544195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 57
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f3812b6e5e70430800000000000000
+      internalID: 3749217993802399642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 0
+        width: 65
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e213d028b4f7d2920800000000000000
+      internalID: 2967167691788202286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_4
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 0
+        width: 68
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190685a6e2cccaa10800000000000000
+      internalID: 1922135640705097873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_5
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 0
+        width: 57
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f982504e2677e7a0800000000000000
+      internalID: -6347975208735700489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_6
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 0
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434ed3fbb810a5f80800000000000000
+      internalID: -8117173678661311436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_7
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 5
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f5140b0ef31ba80800000000000000
+      internalID: -8452904791335411862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_8
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e626977b2caa4f0800000000000000
+      internalID: -816626289143026063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_9
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 6
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35ead2c0b93a1a60800000000000000
+      internalID: 7645486748760991039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_10
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 0
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4885259819c1b58e0800000000000000
+      internalID: -1703736622629889916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_11
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 0
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d3226a4c602c5c0800000000000000
+      internalID: -4196784461085262482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_12
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 10
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1646adadc09b130800000000000000
+      internalID: 3582909112656355829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_13
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 0
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42c05deee95373d0800000000000000
+      internalID: -3210123226666450356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_14
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 9
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603e47d4b86a9e4f0800000000000000
+      internalID: -798924341651381498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_15
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 0
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba901ee5f0fde900800000000000000
+      internalID: 715492854873496246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_16
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 3
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b39aa7b248327780800000000000000
+      internalID: -8686818872043859016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_17
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3033e1da9c5184e0800000000000000
+      internalID: -1981200541050261446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_18
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 2
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01e6fa7c6c589510800000000000000
+      internalID: 1556095292245729548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_19
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 11
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38155ac775f97e560800000000000000
+      internalID: 7343012915553063299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_20
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 0
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5dbc2e18b9f1d30800000000000000
+      internalID: 4404409942749730244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_21
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 3
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3791e7e874f43b1b0800000000000000
+      internalID: -5642078739413198477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_22
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b9e433dfedd25e0800000000000000
+      internalID: -1932643486003192999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_23
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c0c9438421ac8d0800000000000000
+      internalID: -2825425714891977728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_24
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 3
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ee28df69f81e0c0800000000000000
+      internalID: -4548196270006407646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_25
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 0
+        width: 24
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6717dae3c2412e10800000000000000
+      internalID: 2171089904595310446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_26
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 0
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2bf6694225c96450800000000000000
+      internalID: 6082609522791611179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Die_27
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 0
+        width: 150
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f2c08ec1fc57ff0800000000000000
+      internalID: -38897298703634566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bush_Monster-Die_0: -848991375719808522
+      Bush_Monster-Die_1: -6232424134896544195
+      Bush_Monster-Die_10: -1703736622629889916
+      Bush_Monster-Die_11: -4196784461085262482
+      Bush_Monster-Die_12: 3582909112656355829
+      Bush_Monster-Die_13: -3210123226666450356
+      Bush_Monster-Die_14: -798924341651381498
+      Bush_Monster-Die_15: 715492854873496246
+      Bush_Monster-Die_16: -8686818872043859016
+      Bush_Monster-Die_17: -1981200541050261446
+      Bush_Monster-Die_18: 1556095292245729548
+      Bush_Monster-Die_19: 7343012915553063299
+      Bush_Monster-Die_2: 3749217993802399642
+      Bush_Monster-Die_20: 4404409942749730244
+      Bush_Monster-Die_21: -5642078739413198477
+      Bush_Monster-Die_22: -1932643486003192999
+      Bush_Monster-Die_23: -2825425714891977728
+      Bush_Monster-Die_24: -4548196270006407646
+      Bush_Monster-Die_25: 2171089904595310446
+      Bush_Monster-Die_26: 6082609522791611179
+      Bush_Monster-Die_27: -38897298703634566
+      Bush_Monster-Die_3: 2967167691788202286
+      Bush_Monster-Die_4: 1922135640705097873
+      Bush_Monster-Die_5: -6347975208735700489
+      Bush_Monster-Die_6: -8117173678661311436
+      Bush_Monster-Die_7: -8452904791335411862
+      Bush_Monster-Die_8: -816626289143026063
+      Bush_Monster-Die_9: 7645486748760991039
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

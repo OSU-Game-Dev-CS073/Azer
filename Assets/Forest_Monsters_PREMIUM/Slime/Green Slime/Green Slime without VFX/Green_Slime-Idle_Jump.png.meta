@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: a97a804bea971443f953e268598a989b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7137227794155362592
+    second: Green_Slime-Idle_Jump_0
+  - first:
+      213: -8877132944219934414
+    second: Green_Slime-Idle_Jump_1
+  - first:
+      213: -4510484432238888014
+    second: Green_Slime-Idle_Jump_2
+  - first:
+      213: -6495961612664815613
+    second: Green_Slime-Idle_Jump_3
+  - first:
+      213: 2292357078298290869
+    second: Green_Slime-Idle_Jump_4
+  - first:
+      213: -4035858802893530042
+    second: Green_Slime-Idle_Jump_5
+  - first:
+      213: 8426815073947102931
+    second: Green_Slime-Idle_Jump_6
+  - first:
+      213: -2935757286721781587
+    second: Green_Slime-Idle_Jump_7
+  - first:
+      213: 388536861342343974
+    second: Green_Slime-Idle_Jump_8
+  - first:
+      213: -8453996072573213263
+    second: Green_Slime-Idle_Jump_9
+  - first:
+      213: -5474231524478907562
+    second: Green_Slime-Idle_Jump_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 18
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029dca73dd68c0360800000000000000
+      internalID: 7137227794155362592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 27
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2317adbce961ec480800000000000000
+      internalID: -8877132944219934414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 30
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbb8737e4a8761c0800000000000000
+      internalID: -4510484432238888014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 31
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3004a829455b9d5a0800000000000000
+      internalID: -6495961612664815613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 29
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba62560e9610df10800000000000000
+      internalID: 2292357078298290869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 13
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cd5e93dcfbdf7c0800000000000000
+      internalID: -4035858802893530042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de268e99af02f470800000000000000
+      internalID: 8426815073947102931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da00f225d481247d0800000000000000
+      internalID: -2935757286721781587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623a472873c546500800000000000000
+      internalID: 388536861342343974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5e9b9fc5f5daa80800000000000000
+      internalID: -8453996072573213263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Idle_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 0
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b8035ae6f9704b0800000000000000
+      internalID: -5474231524478907562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Green_Slime-Idle_Jump_0: 7137227794155362592
+      Green_Slime-Idle_Jump_1: -8877132944219934414
+      Green_Slime-Idle_Jump_10: -5474231524478907562
+      Green_Slime-Idle_Jump_2: -4510484432238888014
+      Green_Slime-Idle_Jump_3: -6495961612664815613
+      Green_Slime-Idle_Jump_4: 2292357078298290869
+      Green_Slime-Idle_Jump_5: -4035858802893530042
+      Green_Slime-Idle_Jump_6: 8426815073947102931
+      Green_Slime-Idle_Jump_7: -2935757286721781587
+      Green_Slime-Idle_Jump_8: 388536861342343974
+      Green_Slime-Idle_Jump_9: -8453996072573213263
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

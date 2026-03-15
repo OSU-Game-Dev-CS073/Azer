@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 02bdee2efb14946c29639cc6d17721ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5272509939049490268
+    second: Orange_Slime-Idle_Jump_0
+  - first:
+      213: -3406349722202407470
+    second: Orange_Slime-Idle_Jump_1
+  - first:
+      213: 652566407649030412
+    second: Orange_Slime-Idle_Jump_2
+  - first:
+      213: -5933478553386615207
+    second: Orange_Slime-Idle_Jump_3
+  - first:
+      213: -790927225561743716
+    second: Orange_Slime-Idle_Jump_4
+  - first:
+      213: 329128454493304452
+    second: Orange_Slime-Idle_Jump_5
+  - first:
+      213: -6516804173972890589
+    second: Orange_Slime-Idle_Jump_6
+  - first:
+      213: 4628721449263794787
+    second: Orange_Slime-Idle_Jump_7
+  - first:
+      213: 5589710908442242155
+    second: Orange_Slime-Idle_Jump_8
+  - first:
+      213: -1862347658707529529
+    second: Orange_Slime-Idle_Jump_9
+  - first:
+      213: 5670489438115988002
+    second: Orange_Slime-Idle_Jump_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 18
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57e2c7cad7bb2940800000000000000
+      internalID: 5272509939049490268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 27
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ddff5ba9f63ab0d0800000000000000
+      internalID: -3406349722202407470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 30
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01f548b0b16e0900800000000000000
+      internalID: 652566407649030412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 31
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95efdfe41bc08ada0800000000000000
+      internalID: -5933478553386615207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 29
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ef43df0ef0605f0800000000000000
+      internalID: -790927225561743716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 13
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 486fb87e59c419400800000000000000
+      internalID: 329128454493304452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c109b9129af85a0800000000000000
+      internalID: -6516804173972890589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a899352a58c3040800000000000000
+      internalID: 4628721449263794787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c63d6a474a29d40800000000000000
+      internalID: 5589710908442242155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0157aebac9726e0800000000000000
+      internalID: -1862347658707529529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Idle_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 0
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2220285b910a1be40800000000000000
+      internalID: 5670489438115988002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Orange_Slime-Idle_Jump_0: 5272509939049490268
+      Orange_Slime-Idle_Jump_1: -3406349722202407470
+      Orange_Slime-Idle_Jump_10: 5670489438115988002
+      Orange_Slime-Idle_Jump_2: 652566407649030412
+      Orange_Slime-Idle_Jump_3: -5933478553386615207
+      Orange_Slime-Idle_Jump_4: -790927225561743716
+      Orange_Slime-Idle_Jump_5: 329128454493304452
+      Orange_Slime-Idle_Jump_6: -6516804173972890589
+      Orange_Slime-Idle_Jump_7: 4628721449263794787
+      Orange_Slime-Idle_Jump_8: 5589710908442242155
+      Orange_Slime-Idle_Jump_9: -1862347658707529529
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -79,6 +79,9 @@ public class EnemyController : MonoBehaviour
     public AIBehavior aiBehavior = AIBehavior.Patrol;
 
     [Header("══ MOVEMENT ══")]
+    [Tooltip("Enable if the sprite artwork faces LEFT by default instead of RIGHT.")]
+    public bool spriteFacesLeft = false;
+
     [Tooltip("Speed when patrolling between points.")]
     public float patrolSpeed = 2f;
 
@@ -831,11 +834,17 @@ public class EnemyController : MonoBehaviour
 
     void FaceTarget(Vector3 target)
     {
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.flipX = (target.x - transform.position.x) < 0f;
-        }
+        if (spriteRenderer == null) return;
+
+        float deltaX = target.x - transform.position.x;
+
+        if (Mathf.Abs(deltaX) < 0.05f) return;
+
+        bool targetLeft = deltaX < 0f;
+
+        spriteRenderer.flipX = spriteFacesLeft ? !targetLeft : targetLeft;
     }
+
 
     void PlayAnim(string animName)
     {

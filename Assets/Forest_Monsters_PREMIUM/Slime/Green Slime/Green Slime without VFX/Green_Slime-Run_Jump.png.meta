@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 5643addc536b747e3b69dfab0278b6a8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5976320023886407031
+    second: Green_Slime-Run_Jump_0
+  - first:
+      213: 6831296851405040155
+    second: Green_Slime-Run_Jump_1
+  - first:
+      213: -6303799088657500583
+    second: Green_Slime-Run_Jump_2
+  - first:
+      213: 5871367348114820371
+    second: Green_Slime-Run_Jump_3
+  - first:
+      213: -1365999122217730535
+    second: Green_Slime-Run_Jump_4
+  - first:
+      213: -7628991113918018409
+    second: Green_Slime-Run_Jump_5
+  - first:
+      213: -7456189010393048647
+    second: Green_Slime-Run_Jump_6
+  - first:
+      213: 1997610886230345391
+    second: Green_Slime-Run_Jump_7
+  - first:
+      213: 299417928099781810
+    second: Green_Slime-Run_Jump_8
+  - first:
+      213: -5651382187908571918
+    second: Green_Slime-Run_Jump_9
+  - first:
+      213: -4700615751125263167
+    second: Green_Slime-Run_Jump_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 19
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a52382a98df0da0800000000000000
+      internalID: -5976320023886407031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 27
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1aed37ea44adce50800000000000000
+      internalID: 6831296851405040155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 29
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9567329b0286488a0800000000000000
+      internalID: -6303799088657500583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 31
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d063ace794b7150800000000000000
+      internalID: 5871367348114820371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 29
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e77b4290ffa0de0800000000000000
+      internalID: -1365999122217730535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 14
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c0e448001602690800000000000000
+      internalID: -7628991113918018409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9d951899b468890800000000000000
+      internalID: -7456189010393048647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa686396480f8bb10800000000000000
+      internalID: 1997610886230345391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc55cbe40fb72400800000000000000
+      internalID: 299417928099781810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 2
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc5db7a7d14291b0800000000000000
+      internalID: -5651382187908571918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Slime-Run_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc929811ee04ceb0800000000000000
+      internalID: -4700615751125263167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Green_Slime-Run_Jump_0: -5976320023886407031
+      Green_Slime-Run_Jump_1: 6831296851405040155
+      Green_Slime-Run_Jump_10: -4700615751125263167
+      Green_Slime-Run_Jump_2: -6303799088657500583
+      Green_Slime-Run_Jump_3: 5871367348114820371
+      Green_Slime-Run_Jump_4: -1365999122217730535
+      Green_Slime-Run_Jump_5: -7628991113918018409
+      Green_Slime-Run_Jump_6: -7456189010393048647
+      Green_Slime-Run_Jump_7: 1997610886230345391
+      Green_Slime-Run_Jump_8: 299417928099781810
+      Green_Slime-Run_Jump_9: -5651382187908571918
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: 1e65655c679e7483a88aba292ed0c331
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8384142892524401211
+    second: Orange_Slime-Die_Air_0
+  - first:
+      213: 7741332784435107239
+    second: Orange_Slime-Die_Air_1
+  - first:
+      213: -2719571301282396305
+    second: Orange_Slime-Die_Air_2
+  - first:
+      213: -6372460105156392747
+    second: Orange_Slime-Die_Air_3
+  - first:
+      213: 7797160488658195801
+    second: Orange_Slime-Die_Air_4
+  - first:
+      213: 4186557810698713952
+    second: Orange_Slime-Die_Air_5
+  - first:
+      213: 7969250302720605149
+    second: Orange_Slime-Die_Air_6
+  - first:
+      213: -6471704182973791156
+    second: Orange_Slime-Die_Air_7
+  - first:
+      213: -8364398588348103768
+    second: Orange_Slime-Die_Air_8
+  - first:
+      213: 7373405662895847235
+    second: Orange_Slime-Die_Air_9
+  - first:
+      213: 1144884791423709912
+    second: Orange_Slime-Die_Air_10
+  - first:
+      213: 1215000998825901843
+    second: Orange_Slime-Die_Air_11
+  - first:
+      213: 744003688207080663
+    second: Orange_Slime-Die_Air_12
+  - first:
+      213: -8877172027606379460
+    second: Orange_Slime-Die_Air_13
+  - first:
+      213: -5972519901863848875
+    second: Orange_Slime-Die_Air_14
+  - first:
+      213: 3040866781686729674
+    second: Orange_Slime-Die_Air_15
+  - first:
+      213: -34742421434578155
+    second: Orange_Slime-Die_Air_16
+  - first:
+      213: -3439331987218465473
+    second: Orange_Slime-Die_Air_17
+  - first:
+      213: 5584162353687650525
+    second: Orange_Slime-Die_Air_18
+  - first:
+      213: 3930416372405270606
+    second: Orange_Slime-Die_Air_19
+  - first:
+      213: 4306228299986608883
+    second: Orange_Slime-Die_Air_20
+  - first:
+      213: 7441684966861365082
+    second: Orange_Slime-Die_Air_21
+  - first:
+      213: 8425146884660552730
+    second: Orange_Slime-Die_Air_22
+  - first:
+      213: -218833249267276751
+    second: Orange_Slime-Die_Air_23
+  - first:
+      213: 8359296125153837332
+    second: Orange_Slime-Die_Air_24
+  - first:
+      213: -1722618633713661305
+    second: Orange_Slime-Die_Air_25
+  - first:
+      213: 9117962412269139808
+    second: Orange_Slime-Die_Air_26
+  - first:
+      213: 2998189480341315170
+    second: Orange_Slime-Die_Air_27
+  - first:
+      213: -237731815198183362
+    second: Orange_Slime-Die_Air_28
+  - first:
+      213: 1573476578326774061
+    second: Orange_Slime-Die_Air_29
+  - first:
+      213: -4299854584787384098
+    second: Orange_Slime-Die_Air_30
+  - first:
+      213: -9078253673986413508
+    second: Orange_Slime-Die_Air_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3278072a857a5470800000000000000
+      internalID: 8384142892524401211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a51750f62dbe6b60800000000000000
+      internalID: 7741332784435107239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6747b57f44224ad0800000000000000
+      internalID: -2719571301282396305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d80ece0c497097a0800000000000000
+      internalID: -6372460105156392747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955de2f3724153c60800000000000000
+      internalID: 7797160488658195801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b7552c524a91a30800000000000000
+      internalID: 4186557810698713952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbf5db6de6789e60800000000000000
+      internalID: 7969250302720605149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44007a8553ef26a0800000000000000
+      internalID: -6471704182973791156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a38bb5eccfabeb80800000000000000
+      internalID: -8364398588348103768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Air_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 347b2c96269935660800000000000000
+      internalID: 7373405662895847235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6d58d0cc9a14e486ea3056e873c683a3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Orange_Slime-Die_Air_0: 8384142892524401211
+      Orange_Slime-Die_Air_1: 7741332784435107239
+      Orange_Slime-Die_Air_2: -2719571301282396305
+      Orange_Slime-Die_Air_3: -6372460105156392747
+      Orange_Slime-Die_Air_4: 7797160488658195801
+      Orange_Slime-Die_Air_5: 4186557810698713952
+      Orange_Slime-Die_Air_6: 7969250302720605149
+      Orange_Slime-Die_Air_7: -6471704182973791156
+      Orange_Slime-Die_Air_8: -8364398588348103768
+      Orange_Slime-Die_Air_9: 7373405662895847235
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

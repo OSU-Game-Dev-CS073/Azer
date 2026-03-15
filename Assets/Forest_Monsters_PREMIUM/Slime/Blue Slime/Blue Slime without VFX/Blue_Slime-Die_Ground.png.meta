@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: dd4e47a546bf4444e9dbf6b05faaa8eb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3599524391503019294
+    second: Blue_Slime-Die_Ground_0
+  - first:
+      213: -2190526051933085016
+    second: Blue_Slime-Die_Ground_1
+  - first:
+      213: 4830474090185594056
+    second: Blue_Slime-Die_Ground_2
+  - first:
+      213: -3913093794538185221
+    second: Blue_Slime-Die_Ground_3
+  - first:
+      213: -5008723044218867036
+    second: Blue_Slime-Die_Ground_4
+  - first:
+      213: 2966019823236777031
+    second: Blue_Slime-Die_Ground_5
+  - first:
+      213: 4011953840372592960
+    second: Blue_Slime-Die_Ground_6
+  - first:
+      213: -1942498369006765109
+    second: Blue_Slime-Die_Ground_7
+  - first:
+      213: 1810077655323261595
+    second: Blue_Slime-Die_Ground_8
+  - first:
+      213: 5309691257361222270
+    second: Blue_Slime-Die_Ground_9
+  - first:
+      213: -1330328986569216075
+    second: Blue_Slime-Die_Ground_10
+  - first:
+      213: 2244071953065394038
+    second: Blue_Slime-Die_Ground_11
+  - first:
+      213: -6763377742438820700
+    second: Blue_Slime-Die_Ground_12
+  - first:
+      213: -8639946696101745775
+    second: Blue_Slime-Die_Ground_13
+  - first:
+      213: -4787871243822750406
+    second: Blue_Slime-Die_Ground_14
+  - first:
+      213: 3868369681874174132
+    second: Blue_Slime-Die_Ground_15
+  - first:
+      213: 7376695189786383498
+    second: Blue_Slime-Die_Ground_16
+  - first:
+      213: -7682201385644381128
+    second: Blue_Slime-Die_Ground_17
+  - first:
+      213: 5227117681230984981
+    second: Blue_Slime-Die_Ground_18
+  - first:
+      213: -8081157205921940400
+    second: Blue_Slime-Die_Ground_19
+  - first:
+      213: 7431795798015086020
+    second: Blue_Slime-Die_Ground_20
+  - first:
+      213: 4488353251942219394
+    second: Blue_Slime-Die_Ground_21
+  - first:
+      213: 903239488951195056
+    second: Blue_Slime-Die_Ground_22
+  - first:
+      213: -5076961468100913525
+    second: Blue_Slime-Die_Ground_23
+  - first:
+      213: -5190822069250951350
+    second: Blue_Slime-Die_Ground_24
+  - first:
+      213: -2572162929251397433
+    second: Blue_Slime-Die_Ground_25
+  - first:
+      213: -1835558016388222632
+    second: Blue_Slime-Die_Ground_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d34ebec5414f130800000000000000
+      internalID: 3599524391503019294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a22a436920b991e0800000000000000
+      internalID: -2190526051933085016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c49d32979a490340800000000000000
+      internalID: 4830474090185594056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd14c32de5e1b9c0800000000000000
+      internalID: -3913093794538185221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 19
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2750bbde07d7ab0800000000000000
+      internalID: -5008723044218867036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_5
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 20
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7448bc8805b692920800000000000000
+      internalID: 2966019823236777031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 18
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0413ca6f2c25da730800000000000000
+      internalID: 4011953840372592960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_7
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 16
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb7392760cda05e0800000000000000
+      internalID: -1942498369006765109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_8
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 22
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a3a6d8900be1910800000000000000
+      internalID: 1810077655323261595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_9
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 18
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a430e0110dfa940800000000000000
+      internalID: 5309691257361222270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_10
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 13
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bfe229c5d8b98de0800000000000000
+      internalID: -1330328986569216075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_11
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 15
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f31ec3d8b842f10800000000000000
+      internalID: 2244071953065394038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_12
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 14
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a49624f6c7a322a0800000000000000
+      internalID: -6763377742438820700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_13
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 4
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19bab8c914eb81880800000000000000
+      internalID: -8639946696101745775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_14
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3523a198701e8db0800000000000000
+      internalID: -4787871243822750406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_15
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 14
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0400ceab53fa530800000000000000
+      internalID: 3868369681874174132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_16
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84dc8311394f5660800000000000000
+      internalID: 7376695189786383498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_17
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 11
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c27a3ba86536590800000000000000
+      internalID: -7682201385644381128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_18
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 48
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517bfec26d37a8840800000000000000
+      internalID: 5227117681230984981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_19
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 14
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c3fe64656f9df80800000000000000
+      internalID: -8081157205921940400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_20
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 8
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd0ee727ea032760800000000000000
+      internalID: 7431795798015086020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_21
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 8
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e3c789085d94e30800000000000000
+      internalID: 4488353251942219394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_22
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 0
+        width: 40
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b59a069783f88c00800000000000000
+      internalID: 903239488951195056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_23
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 5
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b86df7391720b89b0800000000000000
+      internalID: -5076961468100913525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_24
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47f90684de76f7b0800000000000000
+      internalID: -5190822069250951350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_25
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 0
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0da899177dd4cd0800000000000000
+      internalID: -2572162929251397433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Ground_26
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 77
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8513f8495b9c686e0800000000000000
+      internalID: -1835558016388222632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blue_Slime-Die_Ground_0: 3599524391503019294
+      Blue_Slime-Die_Ground_1: -2190526051933085016
+      Blue_Slime-Die_Ground_10: -1330328986569216075
+      Blue_Slime-Die_Ground_11: 2244071953065394038
+      Blue_Slime-Die_Ground_12: -6763377742438820700
+      Blue_Slime-Die_Ground_13: -8639946696101745775
+      Blue_Slime-Die_Ground_14: -4787871243822750406
+      Blue_Slime-Die_Ground_15: 3868369681874174132
+      Blue_Slime-Die_Ground_16: 7376695189786383498
+      Blue_Slime-Die_Ground_17: -7682201385644381128
+      Blue_Slime-Die_Ground_18: 5227117681230984981
+      Blue_Slime-Die_Ground_19: -8081157205921940400
+      Blue_Slime-Die_Ground_2: 4830474090185594056
+      Blue_Slime-Die_Ground_20: 7431795798015086020
+      Blue_Slime-Die_Ground_21: 4488353251942219394
+      Blue_Slime-Die_Ground_22: 903239488951195056
+      Blue_Slime-Die_Ground_23: -5076961468100913525
+      Blue_Slime-Die_Ground_24: -5190822069250951350
+      Blue_Slime-Die_Ground_25: -2572162929251397433
+      Blue_Slime-Die_Ground_26: -1835558016388222632
+      Blue_Slime-Die_Ground_3: -3913093794538185221
+      Blue_Slime-Die_Ground_4: -5008723044218867036
+      Blue_Slime-Die_Ground_5: 2966019823236777031
+      Blue_Slime-Die_Ground_6: 4011953840372592960
+      Blue_Slime-Die_Ground_7: -1942498369006765109
+      Blue_Slime-Die_Ground_8: 1810077655323261595
+      Blue_Slime-Die_Ground_9: 5309691257361222270
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

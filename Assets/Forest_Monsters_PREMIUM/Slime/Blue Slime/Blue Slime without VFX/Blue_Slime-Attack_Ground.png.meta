@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 4581815dae94c4801b05689a61c69b5b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4662630017578039106
+    second: Blue_Slime-Attack_Ground_0
+  - first:
+      213: -2417098859989601098
+    second: Blue_Slime-Attack_Ground_1
+  - first:
+      213: -6296335649803984718
+    second: Blue_Slime-Attack_Ground_2
+  - first:
+      213: -7080851663127085205
+    second: Blue_Slime-Attack_Ground_3
+  - first:
+      213: -8555944636965226047
+    second: Blue_Slime-Attack_Ground_4
+  - first:
+      213: -32454945103182015
+    second: Blue_Slime-Attack_Ground_5
+  - first:
+      213: 3277626179162685831
+    second: Blue_Slime-Attack_Ground_6
+  - first:
+      213: -1173527633878103736
+    second: Blue_Slime-Attack_Ground_7
+  - first:
+      213: 2993745919119571324
+    second: Blue_Slime-Attack_Ground_8
+  - first:
+      213: 4718912493362316581
+    second: Blue_Slime-Attack_Ground_9
+  - first:
+      213: -3645391015772389991
+    second: Blue_Slime-Attack_Ground_10
+  - first:
+      213: -1783666725888882248
+    second: Blue_Slime-Attack_Ground_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247ffcc1c4df4b040800000000000000
+      internalID: 4662630017578039106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b47157a46db47ed0800000000000000
+      internalID: -2417098859989601098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b02ecef51cee98a0800000000000000
+      internalID: -6296335649803984718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 0
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f7318ade2cbbd90800000000000000
+      internalID: -7080851663127085205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c977cb1fad234980800000000000000
+      internalID: -8555944636965226047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_5
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1478bed3662bc8ff0800000000000000
+      internalID: -32454945103182015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_6
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7814383f4a77c7d20800000000000000
+      internalID: 3277626179162685831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_7
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 0
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8494798a5dac6bfe0800000000000000
+      internalID: -1173527633878103736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_8
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79b5e84d0ceb8920800000000000000
+      internalID: 2993745919119571324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_9
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 0
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525830d29e1fc7140800000000000000
+      internalID: 4718912493362316581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_10
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 0
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d7c7d6f28f86dc0800000000000000
+      internalID: -3645391015772389991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Attack_Ground_11
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b985b520942f37e0800000000000000
+      internalID: -1783666725888882248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blue_Slime-Attack_Ground_0: 4662630017578039106
+      Blue_Slime-Attack_Ground_1: -2417098859989601098
+      Blue_Slime-Attack_Ground_10: -3645391015772389991
+      Blue_Slime-Attack_Ground_11: -1783666725888882248
+      Blue_Slime-Attack_Ground_2: -6296335649803984718
+      Blue_Slime-Attack_Ground_3: -7080851663127085205
+      Blue_Slime-Attack_Ground_4: -8555944636965226047
+      Blue_Slime-Attack_Ground_5: -32454945103182015
+      Blue_Slime-Attack_Ground_6: 3277626179162685831
+      Blue_Slime-Attack_Ground_7: -1173527633878103736
+      Blue_Slime-Attack_Ground_8: 2993745919119571324
+      Blue_Slime-Attack_Ground_9: 4718912493362316581
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

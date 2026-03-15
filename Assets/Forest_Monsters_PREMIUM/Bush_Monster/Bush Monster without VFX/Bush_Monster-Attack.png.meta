@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: fffe21f0ae4b849df8e04ffcae9f6bea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3451225387367657513
+    second: Bush_Monster-Attack_0
+  - first:
+      213: -8953650431809870263
+    second: Bush_Monster-Attack_1
+  - first:
+      213: 4050669051200622587
+    second: Bush_Monster-Attack_2
+  - first:
+      213: 6900126639789411564
+    second: Bush_Monster-Attack_3
+  - first:
+      213: -2456259215802692050
+    second: Bush_Monster-Attack_4
+  - first:
+      213: -8864096362006887936
+    second: Bush_Monster-Attack_5
+  - first:
+      213: -8363562525813143461
+    second: Bush_Monster-Attack_6
+  - first:
+      213: 4086472753502745492
+    second: Bush_Monster-Attack_7
+  - first:
+      213: -2420022678355240379
+    second: Bush_Monster-Attack_8
+  - first:
+      213: -8140980553682241667
+    second: Bush_Monster-Attack_9
+  - first:
+      213: -8188556738804056767
+    second: Bush_Monster-Attack_10
+  - first:
+      213: -5266491900394959004
+    second: Bush_Monster-Attack_11
+  - first:
+      213: -8329005890826793801
+    second: Bush_Monster-Attack_12
+  - first:
+      213: -7609926740752957078
+    second: Bush_Monster-Attack_13
+  - first:
+      213: -5090948927843884083
+    second: Bush_Monster-Attack_14
+  - first:
+      213: 734732421822476902
+    second: Bush_Monster-Attack_15
+  - first:
+      213: 7848348986443309818
+    second: Bush_Monster-Attack_16
+  - first:
+      213: -1884902439672067222
+    second: Bush_Monster-Attack_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df042aabc8ca10d0800000000000000
+      internalID: -3451225387367657513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 0
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94623f8ee5e3eb380800000000000000
+      internalID: -8953650431809870263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff4b7b6a0ed63830800000000000000
+      internalID: 4050669051200622587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_3
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec8bd5de9c22cf50800000000000000
+      internalID: 6900126639789411564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_4
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 84
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e0dcdc14d99edd0800000000000000
+      internalID: -2456259215802692050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_5
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 0
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0024fbf92576cf480800000000000000
+      internalID: -8864096362006887936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_6
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 0
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b588320e138aeeb80800000000000000
+      internalID: -8363562525813143461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_7
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 0
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493f7d8715116b830800000000000000
+      internalID: 4086472753502745492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_8
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 0
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a1f34223a5a6ed0800000000000000
+      internalID: -2420022678355240379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_9
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 0
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d773866b15d650f80800000000000000
+      internalID: -8140980553682241667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_10
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 0
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14df378e7076c5e80800000000000000
+      internalID: -8188556738804056767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_11
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 0
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f8c780589a9e6b0800000000000000
+      internalID: -5266491900394959004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_12
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 0
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc0221754d696c80800000000000000
+      internalID: -8329005890826793801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_13
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 0
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a618caac2fb146690800000000000000
+      internalID: -7609926740752957078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_14
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 0
+        width: 50
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3a5325ce05959b0800000000000000
+      internalID: -5090948927843884083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_15
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 0
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662f0bfae3b423a00800000000000000
+      internalID: 734732421822476902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_16
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 0
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2204222dfeaec60800000000000000
+      internalID: 7848348986443309818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_Monster-Attack_17
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 0
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b441fb73b77d5e0800000000000000
+      internalID: -1884902439672067222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bush_Monster-Attack_0: -3451225387367657513
+      Bush_Monster-Attack_1: -8953650431809870263
+      Bush_Monster-Attack_10: -8188556738804056767
+      Bush_Monster-Attack_11: -5266491900394959004
+      Bush_Monster-Attack_12: -8329005890826793801
+      Bush_Monster-Attack_13: -7609926740752957078
+      Bush_Monster-Attack_14: -5090948927843884083
+      Bush_Monster-Attack_15: 734732421822476902
+      Bush_Monster-Attack_16: 7848348986443309818
+      Bush_Monster-Attack_17: -1884902439672067222
+      Bush_Monster-Attack_2: 4050669051200622587
+      Bush_Monster-Attack_3: 6900126639789411564
+      Bush_Monster-Attack_4: -2456259215802692050
+      Bush_Monster-Attack_5: -8864096362006887936
+      Bush_Monster-Attack_6: -8363562525813143461
+      Bush_Monster-Attack_7: 4086472753502745492
+      Bush_Monster-Attack_8: -2420022678355240379
+      Bush_Monster-Attack_9: -8140980553682241667
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

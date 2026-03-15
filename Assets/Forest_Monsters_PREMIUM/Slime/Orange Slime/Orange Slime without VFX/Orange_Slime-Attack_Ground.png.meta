@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 9f63b3d45865346b29c6bcb64bb1f518
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2396221359672983455
+    second: Orange_Slime-Attack_Ground_0
+  - first:
+      213: 7496477649100716772
+    second: Orange_Slime-Attack_Ground_1
+  - first:
+      213: 2842799731569411367
+    second: Orange_Slime-Attack_Ground_2
+  - first:
+      213: -8366659613801389983
+    second: Orange_Slime-Attack_Ground_3
+  - first:
+      213: 8792872889605074144
+    second: Orange_Slime-Attack_Ground_4
+  - first:
+      213: -6026541938595144059
+    second: Orange_Slime-Attack_Ground_5
+  - first:
+      213: -379663166557356784
+    second: Orange_Slime-Attack_Ground_6
+  - first:
+      213: -3046254072159798120
+    second: Orange_Slime-Attack_Ground_7
+  - first:
+      213: -7263130197673340857
+    second: Orange_Slime-Attack_Ground_8
+  - first:
+      213: 7756965582014235993
+    second: Orange_Slime-Attack_Ground_9
+  - first:
+      213: 7016633650833363435
+    second: Orange_Slime-Attack_Ground_10
+  - first:
+      213: -6604722498422877448
+    second: Orange_Slime-Attack_Ground_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ff28281a6114120800000000000000
+      internalID: 2396221359672983455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eabd4d24b6d80860800000000000000
+      internalID: 7496477649100716772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72545c74b47a37720800000000000000
+      internalID: 2842799731569411367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 0
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 160e2c2e867a3eb80800000000000000
+      internalID: -8366659613801389983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eca2147e4f860a70800000000000000
+      internalID: 8792872889605074144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_5
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58eda0e690c6d5ca0800000000000000
+      internalID: -6026541938595144059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_6
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d7c0f8c5a2bbaf0800000000000000
+      internalID: -379663166557356784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_7
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 0
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89cf355af0889b5d0800000000000000
+      internalID: -3046254072159798120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_8
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7409442219d243b90800000000000000
+      internalID: -7263130197673340857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_9
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 0
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955c3e2491746ab60800000000000000
+      internalID: 7756965582014235993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_10
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 0
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be199f43127106160800000000000000
+      internalID: 7016633650833363435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Attack_Ground_11
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2597981ef4754a0800000000000000
+      internalID: -6604722498422877448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Orange_Slime-Attack_Ground_0: 2396221359672983455
+      Orange_Slime-Attack_Ground_1: 7496477649100716772
+      Orange_Slime-Attack_Ground_10: 7016633650833363435
+      Orange_Slime-Attack_Ground_11: -6604722498422877448
+      Orange_Slime-Attack_Ground_2: 2842799731569411367
+      Orange_Slime-Attack_Ground_3: -8366659613801389983
+      Orange_Slime-Attack_Ground_4: 8792872889605074144
+      Orange_Slime-Attack_Ground_5: -6026541938595144059
+      Orange_Slime-Attack_Ground_6: -379663166557356784
+      Orange_Slime-Attack_Ground_7: -3046254072159798120
+      Orange_Slime-Attack_Ground_8: -7263130197673340857
+      Orange_Slime-Attack_Ground_9: 7756965582014235993
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

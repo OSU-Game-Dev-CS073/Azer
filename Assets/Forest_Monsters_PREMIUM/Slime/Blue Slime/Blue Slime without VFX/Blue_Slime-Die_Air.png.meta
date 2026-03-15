@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 200b0951c38a1400da5aacb320357327
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3419984281352085127
+    second: Blue_Slime-Die_Air_0
+  - first:
+      213: -6683314093065771900
+    second: Blue_Slime-Die_Air_1
+  - first:
+      213: 3423077282492975831
+    second: Blue_Slime-Die_Air_2
+  - first:
+      213: -752605293983424547
+    second: Blue_Slime-Die_Air_3
+  - first:
+      213: -8014864384765856935
+    second: Blue_Slime-Die_Air_4
+  - first:
+      213: -8589182422246017922
+    second: Blue_Slime-Die_Air_5
+  - first:
+      213: 9038297607633832301
+    second: Blue_Slime-Die_Air_6
+  - first:
+      213: 781771773271869613
+    second: Blue_Slime-Die_Air_7
+  - first:
+      213: 640759735474421273
+    second: Blue_Slime-Die_Air_8
+  - first:
+      213: -3524309640290903030
+    second: Blue_Slime-Die_Air_9
+  - first:
+      213: 5731094782635561123
+    second: Blue_Slime-Die_Air_10
+  - first:
+      213: -8679228352106641767
+    second: Blue_Slime-Die_Air_11
+  - first:
+      213: 5874865874878176481
+    second: Blue_Slime-Die_Air_12
+  - first:
+      213: 1784142788711226084
+    second: Blue_Slime-Die_Air_13
+  - first:
+      213: -8015714854520099849
+    second: Blue_Slime-Die_Air_14
+  - first:
+      213: -2407500652942228765
+    second: Blue_Slime-Die_Air_15
+  - first:
+      213: -4437054316224841744
+    second: Blue_Slime-Die_Air_16
+  - first:
+      213: -8366745735762307103
+    second: Blue_Slime-Die_Air_17
+  - first:
+      213: 1362378612566474131
+    second: Blue_Slime-Die_Air_18
+  - first:
+      213: -7521147574106837582
+    second: Blue_Slime-Die_Air_19
+  - first:
+      213: 7339527096760016669
+    second: Blue_Slime-Die_Air_20
+  - first:
+      213: 694728990811948839
+    second: Blue_Slime-Die_Air_21
+  - first:
+      213: 3325939230587066423
+    second: Blue_Slime-Die_Air_22
+  - first:
+      213: 1236384642572625270
+    second: Blue_Slime-Die_Air_23
+  - first:
+      213: 4106374777129888442
+    second: Blue_Slime-Die_Air_24
+  - first:
+      213: 5688732579289294366
+    second: Blue_Slime-Die_Air_25
+  - first:
+      213: 2198553786239806113
+    second: Blue_Slime-Die_Air_26
+  - first:
+      213: 8728312020191909856
+    second: Blue_Slime-Die_Air_27
+  - first:
+      213: 5572782846109965909
+    second: Blue_Slime-Die_Air_28
+  - first:
+      213: 5894338198036665412
+    second: Blue_Slime-Die_Air_29
+  - first:
+      213: -3298938739696633952
+    second: Blue_Slime-Die_Air_30
+  - first:
+      213: 615393963395744353
+    second: Blue_Slime-Die_Air_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 25
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e19638599367f20800000000000000
+      internalID: 3419984281352085127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 23
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484e378fd391043a0800000000000000
+      internalID: -6683314093065771900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 23
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da04b5f6a6318f20800000000000000
+      internalID: 3423077282492975831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 22
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf1a0cf8753e85f0800000000000000
+      internalID: -752605293983424547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 51
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953f91f7e4b75c090800000000000000
+      internalID: -8014864384765856935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_5
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 44
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e743ffa28181dc880800000000000000
+      internalID: -8589182422246017922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 42
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69074589cb7e6d70800000000000000
+      internalID: 9038297607633832301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_7
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 41
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da80c49294969da00800000000000000
+      internalID: 781771773271869613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_8
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 52
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e7353a59f64e800800000000000000
+      internalID: 640759735474421273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_9
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 26
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0cd9f30e03271fc0800000000000000
+      internalID: -3524309640290903030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_10
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 43
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a056151750f88f40800000000000000
+      internalID: 5731094782635561123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_11
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 38
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9964f2c5ccf2d8780800000000000000
+      internalID: -8679228352106641767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_12
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 35
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec9d270367b78150800000000000000
+      internalID: 5874865874878176481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_13
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 37
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea15bdd96c82c810800000000000000
+      internalID: 1784142788711226084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_14
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 20
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbe1831fc572c090800000000000000
+      internalID: -8015714854520099849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_15
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 12
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e28bd069e6d69ed0800000000000000
+      internalID: -2407500652942228765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_16
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 30
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7fd40ab9a6c62c0800000000000000
+      internalID: -4437054316224841744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_17
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 26
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e79fdd051953eb80800000000000000
+      internalID: -8366745735762307103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_18
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 27
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d3d93412428e210800000000000000
+      internalID: 1362378612566474131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_19
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 27
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd221e41248f9790800000000000000
+      internalID: -7521147574106837582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_20
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 12
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f1cbd020d3bd560800000000000000
+      internalID: 7339527096760016669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_21
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7270388165c24a900800000000000000
+      internalID: 694728990811948839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_22
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 19
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7389dafcb1c182e20800000000000000
+      internalID: 3325939230587066423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_23
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 9
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6752a422845882110800000000000000
+      internalID: 1236384642572625270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_24
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 14
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba63717a16ccf830800000000000000
+      internalID: 4106374777129888442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_25
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 19
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16eab2042072fe40800000000000000
+      internalID: 5688732579289294366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_26
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 13
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aae9682505d28e10800000000000000
+      internalID: 2198553786239806113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_27
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e79f4ca981312970800000000000000
+      internalID: 8728312020191909856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_28
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e56c00970865d40800000000000000
+      internalID: 5572782846109965909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_29
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 0
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444ddff8c55ecc150800000000000000
+      internalID: 5894338198036665412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_30
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 0
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a77b9cd1b0d732d0800000000000000
+      internalID: -3298938739696633952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Slime-Die_Air_31
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 0
+        width: 71
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1628f199c815a8800800000000000000
+      internalID: 615393963395744353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blue_Slime-Die_Air_0: 3419984281352085127
+      Blue_Slime-Die_Air_1: -6683314093065771900
+      Blue_Slime-Die_Air_10: 5731094782635561123
+      Blue_Slime-Die_Air_11: -8679228352106641767
+      Blue_Slime-Die_Air_12: 5874865874878176481
+      Blue_Slime-Die_Air_13: 1784142788711226084
+      Blue_Slime-Die_Air_14: -8015714854520099849
+      Blue_Slime-Die_Air_15: -2407500652942228765
+      Blue_Slime-Die_Air_16: -4437054316224841744
+      Blue_Slime-Die_Air_17: -8366745735762307103
+      Blue_Slime-Die_Air_18: 1362378612566474131
+      Blue_Slime-Die_Air_19: -7521147574106837582
+      Blue_Slime-Die_Air_2: 3423077282492975831
+      Blue_Slime-Die_Air_20: 7339527096760016669
+      Blue_Slime-Die_Air_21: 694728990811948839
+      Blue_Slime-Die_Air_22: 3325939230587066423
+      Blue_Slime-Die_Air_23: 1236384642572625270
+      Blue_Slime-Die_Air_24: 4106374777129888442
+      Blue_Slime-Die_Air_25: 5688732579289294366
+      Blue_Slime-Die_Air_26: 2198553786239806113
+      Blue_Slime-Die_Air_27: 8728312020191909856
+      Blue_Slime-Die_Air_28: 5572782846109965909
+      Blue_Slime-Die_Air_29: 5894338198036665412
+      Blue_Slime-Die_Air_3: -752605293983424547
+      Blue_Slime-Die_Air_30: -3298938739696633952
+      Blue_Slime-Die_Air_31: 615393963395744353
+      Blue_Slime-Die_Air_4: -8014864384765856935
+      Blue_Slime-Die_Air_5: -8589182422246017922
+      Blue_Slime-Die_Air_6: 9038297607633832301
+      Blue_Slime-Die_Air_7: 781771773271869613
+      Blue_Slime-Die_Air_8: 640759735474421273
+      Blue_Slime-Die_Air_9: -3524309640290903030
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
