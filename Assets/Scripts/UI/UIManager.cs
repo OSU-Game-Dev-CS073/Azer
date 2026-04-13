@@ -37,6 +37,8 @@ public class UIManager : MonoBehaviour
     // Coins
     private TextMeshProUGUI coinText;
 
+    private TMPro.TextMeshProUGUI moneyText; // Reference to money display text
+
     // XP / Level
     private Image xpBarFill;
     private TextMeshProUGUI levelText;
@@ -96,11 +98,15 @@ public class UIManager : MonoBehaviour
         else { Destroy(gameObject); return; }
     }
 
-    void OnDestroy()
+void OnDestroy()
+{
+    if (Instance == this) 
     {
-        if (Instance == this) SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (CurrencyController.Instance != null)
+            CurrencyController.Instance.OnCurrencyChanged -= UpdateMoneyDisplay;
     }
-
+}
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "MainMenu")
@@ -294,21 +300,64 @@ public class UIManager : MonoBehaviour
     }
 
     // ---------- COIN DISPLAY ----------
-    private void BuildCoinDisplay()
-    {
-        GameObject c = MkUI("Coins", hudRoot.transform);
-        RectTransform rt = c.GetComponent<RectTransform>();
-        rt.anchorMin = new Vector2(0, 1); rt.anchorMax = new Vector2(0, 1);
-        rt.pivot = new Vector2(0, 1);
-        rt.anchoredPosition = new Vector2(20, -100);
-        rt.sizeDelta = new Vector2(180, 26);
+private void BuildCoinDisplay()
+{
+    GameObject c = MkUI("Money", hudRoot.transform);
+    RectTransform rt = c.GetComponent<RectTransform>();
+    rt.anchorMin = new Vector2(0, 1); rt.anchorMax = new Vector2(0, 1);
+    rt.pivot = new Vector2(0, 1);
+    rt.anchoredPosition = new Vector2(20, -100);
+    rt.sizeDelta = new Vector2(180, 26);
 
-        MkImage(c.transform, "Bg", new Color(0.1f, 0.1f, 0.15f, 0.7f), true);
-        coinText = c.AddComponent<TextMeshProUGUI>();
-        coinText.text = "● 0"; coinText.fontSize = 18;
-        coinText.color = goldColor; coinText.alignment = TextAlignmentOptions.MidlineLeft;
-        coinText.margin = new Vector4(10, 0, 0, 0);
+    MkImage(c.transform, "Bg", new Color(0.1f, 0.1f, 0.15f, 0.7f), true);
+    moneyText = c.AddComponent<TextMeshProUGUI>();
+    moneyText.text = "● 0"; 
+    moneyText.fontSize = 18;
+    moneyText.color = goldColor; 
+    moneyText.alignment = TextAlignmentOptions.MidlineLeft;
+    moneyText.margin = new Vector4(10, 0, 0, 0);
+    
+    // Subscribe to CurrencyController events
+    if (CurrencyController.Instance != null)
+    {
+        CurrencyController.Instance.OnCurrencyChanged += UpdateMoneyDisplay;
+        UpdateMoneyDisplay(CurrencyController.Instance.GetCurrency());
     }
+    else
+    {
+        Debug.LogWarning("CurrencyController not found, will retry");
+        StartCoroutine(WaitForCurrencyController());
+    }
+}
+
+private System.Collections.IEnumerator WaitForCurrencyController()
+{
+    yield return new WaitForSeconds(0.5f);
+    if (CurrencyController.Instance != null)
+    {
+        CurrencyController.Instance.OnCurrencyChanged += UpdateMoneyDisplay;
+        UpdateMoneyDisplay(CurrencyController.Instance.GetCurrency());
+    }
+}
+
+public void UpdateMoneyDisplay(int amount)
+{
+    if (moneyText != null)
+    {
+        moneyText.text = $"● {amount}";
+    }
+    else
+    {
+        // Fallback: try to find dynamically
+        GameObject moneyDisplay = GameObject.Find("MoneyText");
+        if (moneyDisplay != null)
+        {
+            TMPro.TextMeshProUGUI text = moneyDisplay.GetComponent<TMPro.TextMeshProUGUI>();
+            if (text != null) text.text = $"● {amount}";
+        }
+    }
+}
+
 
     // ---------- XP BAR + LEVEL ----------
     private void BuildXPBar()
@@ -613,10 +662,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void UpdateCoinDisplay(int coins)
-    {
-        if (coinText != null) coinText.text = $"● {coins}";
-    }
+    
 
     public void UpdateXPBar(int currentXP, int xpNeeded, int level)
     {
@@ -716,7 +762,7 @@ public class UIManager : MonoBehaviour
         UpdateHealthBar((float)gm.playerHealth / gm.playerMaxHealth);
         if (!chaosIsTimerMode)
             UpdateChaosMeter(gm.chaosMeter / gm.chaosMax, gm.chaosReady);
-        UpdateCoinDisplay(gm.playerCoins);
+        UpdateMoneyDisplay(gm.playerMoney);
         UpdateXPBar(gm.stats.currentXP, gm.stats.XPToNext(), gm.stats.level);
         if (QuestSystem.Instance != null)
             UpdateQuestDisplay(QuestSystem.Instance.GetCurrentQuestText());

@@ -236,7 +236,7 @@ public class MainMenuManager : MonoBehaviour
             if (peek != null)
             {
                 int minutes = Mathf.FloorToInt(peek.totalPlayTime / 60f);
-                label = $"Slot {i + 1}: {peek.currentScene}  |  HP: {peek.health}  |  Coins: {peek.coins}\n" +
+                label = $"Slot {i + 1}: {peek.currentScene}  |  HP: {peek.health}  |  Money: {peek.money}\n" +
                         $"Quest #{peek.questIndex}  |  {minutes}min  |  {peek.saveDate}";
             }
             else

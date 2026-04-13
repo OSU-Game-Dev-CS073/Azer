@@ -1,16 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
-/// <summary>
-/// PATCH 5 CHANGES:
-/// - Added PlayerStats (STR/INT/LUK/END/WIS + leveling)
-/// - Chaos mode now activated with K key (was T)
-/// - Chaos meter fills with WIS multiplier
-/// - Dark mode is now a timed transformation (10s countdown)
-/// - XP system: enemies give XP, leveling grants stat points
-/// - Max health derived from END stat
-/// - Stats saved/loaded with save system
-/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -23,7 +14,7 @@ public class GameManager : MonoBehaviour
     [Header("Player Data - Live")]
     public int playerHealth = 100;
     public int playerMaxHealth = 100;
-    public int playerCoins = 0;
+    public int playerMoney = 0;
     public int killCount = 0;
     public int facingDirection = 1;
 
@@ -33,7 +24,7 @@ public class GameManager : MonoBehaviour
     public bool isDarkMode = false;
     public float darkModeTimer = 0f;
     public float darkModeDuration = 10f;
-    public bool chaosReady = false; // meter is full, waiting for K press
+    public bool chaosReady = false;
 
     [Header("Quest")]
     public int questIndex = 0;
@@ -45,9 +36,20 @@ public class GameManager : MonoBehaviour
     [Header("Play Time")]
     public float totalPlayTime = 0f;
 
-    // === STAT SYSTEM ===
     [Header("Player Stats")]
     public PlayerStats stats = new PlayerStats();
+
+    [Header("Inventory Persistence")]
+    public List<InventorySlotData> inventorySlots = new List<InventorySlotData>();
+
+    [System.Serializable]
+    public class InventorySlotData
+    {
+        public string itemName;
+        public string uiPrefabName;
+        public int quantity;
+        public Collectibles.CollectibleType itemType;
+    }
 
     void Awake()
     {
@@ -72,38 +74,26 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (!isGameStarted) return;
-
         totalPlayTime += Time.unscaledDeltaTime;
 
-        // ESC — pause
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (SceneManager.GetActiveScene().name == "MainMenu") return;
             if (DialogueSystem.Instance != null && DialogueSystem.Instance.IsDialogueActive) return;
-
             if (isPaused) ResumeGame();
             else PauseGame();
         }
 
-        // K — activate chaos mode when meter is full
         if (Input.GetKeyDown(KeyCode.K) && !isPaused)
         {
-            if (chaosReady && !isDarkMode)
-            {
-                ActivateDarkMode();
-            }
+            if (chaosReady && !isDarkMode) ActivateDarkMode();
         }
 
-        // Dark mode countdown
         if (isDarkMode)
         {
             darkModeTimer -= Time.deltaTime;
             UIManager.Instance?.UpdateChaosTimer(darkModeTimer, darkModeDuration);
-
-            if (darkModeTimer <= 0f)
-            {
-                DeactivateDarkMode();
-            }
+            if (darkModeTimer <= 0f) DeactivateDarkMode();
         }
     }
 
@@ -116,9 +106,15 @@ public class GameManager : MonoBehaviour
         }
         if (scene.name == "MainMenu")
             isGameStarted = false;
+
+        // Do NOT reload inventory here – InventoryController will do it in Start()
     }
 
-    // ============ PAUSE ============
+    public void SetPlayerMoney(int amount)
+{
+    playerMoney = amount;
+    UIManager.Instance?.UpdateMoneyDisplay(playerMoney);
+}
 
     public void PauseGame()
     {
@@ -135,37 +131,38 @@ public class GameManager : MonoBehaviour
         UIManager.Instance?.HidePauseMenu();
     }
 
-    // ============ GAME FLOW ============
-
     public void StartNewGame()
-    {
-        playerHealth = 100;
-        playerMaxHealth = 100;
-        playerCoins = 0;
-        killCount = 0;
-        chaosMeter = 0f;
-        chaosReady = false;
-        isDarkMode = false;
-        darkModeTimer = 0f;
-        questIndex = 0;
-        hasFireball = true;
-        hasIceBolt = true;
-        totalPlayTime = 0f;
-        facingDirection = 1;
-        currentSaveSlot = -1;
-        isGameStarted = true;
+{
+    playerHealth = 100;
+    playerMaxHealth = 100;
+    // Use CurrencyController's starting value instead of 0
+    if (CurrencyController.Instance != null)
+        playerMoney = CurrencyController.Instance.GetCurrency();
+    else
+        playerMoney = 1000;
+    killCount = 0;
+    chaosMeter = 0f;
+    chaosReady = false;
+    isDarkMode = false;
+    darkModeTimer = 0f;
+    questIndex = 0;
+    hasFireball = true;
+    hasIceBolt = true;
+    totalPlayTime = 0f;
+    facingDirection = 1;
+    currentSaveSlot = -1;
+    isGameStarted = true;
 
-        stats.Reset();
-        RecalculateMaxHealth();
+    stats.Reset();
+    RecalculateMaxHealth();
 
-        SceneManager.LoadScene("GameScene");
-    }
-
+    inventorySlots.Clear();
+    SceneManager.LoadScene("GameScene");
+}
     public void LoadGame(int slot)
     {
         SaveData data = SaveSystem.Load(slot);
         if (data == null) return;
-
         currentSaveSlot = slot;
         ApplySaveData(data);
         isGameStarted = true;
@@ -183,20 +180,16 @@ public class GameManager : MonoBehaviour
     {
         if (currentSaveSlot >= 0) { SaveGame(currentSaveSlot); return; }
         for (int i = 0; i < 3; i++)
-        {
             if (!SaveSystem.SlotExists(i)) { SaveGame(i); return; }
-        }
         SaveGame(0);
     }
-
-    // ============ SAVE / LOAD ============
 
     private SaveData CreateSaveData()
     {
         SaveData d = new SaveData();
         d.health = playerHealth;
         d.maxHealth = playerMaxHealth;
-        d.coins = playerCoins;
+        d.money = playerMoney;
         d.killCount = killCount;
         d.chaosMeter = chaosMeter;
         d.isDarkMode = isDarkMode;
@@ -206,10 +199,8 @@ public class GameManager : MonoBehaviour
         d.totalPlayTime = totalPlayTime;
         d.facingDirection = facingDirection;
         d.currentScene = SceneManager.GetActiveScene().name;
-        d.lastQuestDescription = QuestSystem.Instance != null
-            ? QuestSystem.Instance.GetCurrentQuestText() : "Explore the world";
+        d.lastQuestDescription = QuestSystem.Instance != null ? QuestSystem.Instance.GetCurrentQuestText() : "Explore the world";
 
-        // Stats
         d.statSTR = stats.STR;
         d.statINT = stats.INT;
         d.statLUK = stats.LUK;
@@ -219,6 +210,19 @@ public class GameManager : MonoBehaviour
         d.statCurrentXP = stats.currentXP;
         d.statUnspentPoints = stats.unspentPoints;
         d.statBonusPoints = stats.bonusStatPoints;
+
+        // Save inventory
+        d.inventoryItems.Clear();
+        foreach (var slot in inventorySlots)
+        {
+            d.inventoryItems.Add(new InventoryItemData
+            {
+                itemName = slot.itemName,
+                uiPrefabPath = slot.uiPrefabName,
+                quantity = slot.quantity,
+                itemType = (int)slot.itemType
+            });
+        }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -233,7 +237,7 @@ public class GameManager : MonoBehaviour
     {
         playerHealth = d.health;
         playerMaxHealth = d.maxHealth;
-        playerCoins = d.coins;
+        playerMoney = d.money;
         killCount = d.killCount;
         chaosMeter = d.chaosMeter;
         isDarkMode = d.isDarkMode;
@@ -243,7 +247,6 @@ public class GameManager : MonoBehaviour
         totalPlayTime = d.totalPlayTime;
         facingDirection = d.facingDirection;
 
-        // Stats
         stats.STR = d.statSTR;
         stats.INT = d.statINT;
         stats.LUK = d.statLUK;
@@ -256,6 +259,18 @@ public class GameManager : MonoBehaviour
 
         RecalculateMaxHealth();
         chaosReady = (chaosMeter >= chaosMax) && !isDarkMode;
+
+        inventorySlots.Clear();
+        foreach (var item in d.inventoryItems)
+        {
+            inventorySlots.Add(new InventorySlotData
+            {
+                itemName = item.itemName,
+                uiPrefabName = item.uiPrefabPath,
+                quantity = item.quantity,
+                itemType = (Collectibles.CollectibleType)item.itemType
+            });
+        }
     }
 
     public Vector2? GetSavedPosition()
@@ -267,9 +282,6 @@ public class GameManager : MonoBehaviour
         return null;
     }
 
-    // ============ STATS ============
-
-    /// <summary>Recalculate max HP from END stat. Heals by the difference if HP increased.</summary>
     public void RecalculateMaxHealth()
     {
         int oldMax = playerMaxHealth;
@@ -280,22 +292,12 @@ public class GameManager : MonoBehaviour
         UIManager.Instance?.UpdateHealthBar((float)playerHealth / playerMaxHealth);
     }
 
-    // ============ XP / LEVELING ============
-
-    /// <summary>Give XP to the player. Shows level-up popup if leveled.</summary>
     public void GiveXP(int amount)
     {
         int levelsGained = stats.AddXP(amount);
         UIManager.Instance?.UpdateXPBar(stats.currentXP, stats.XPToNext(), stats.level);
-
-        if (levelsGained > 0)
-        {
-            RecalculateMaxHealth();
-            UIManager.Instance?.ShowLevelUp(stats.level);
-        }
+        if (levelsGained > 0) RecalculateMaxHealth();
     }
-
-    // ============ CHAOS / DARK MODE ============
 
     public void OnEnemyKilled(int xpReward = 25)
     {
@@ -306,21 +308,13 @@ public class GameManager : MonoBehaviour
 
     public void AddChaos(float amount)
     {
-        if (isDarkMode) return; // can't fill during dark mode
-
+        if (isDarkMode) return;
         float scaledAmount = amount * stats.GetChaosRate();
         chaosMeter = Mathf.Clamp(chaosMeter + scaledAmount, 0f, chaosMax);
-
         bool wasFull = chaosReady;
         chaosReady = chaosMeter >= chaosMax;
-
         UIManager.Instance?.UpdateChaosMeter(chaosMeter / chaosMax, chaosReady);
-
-        // Show prompt when meter first fills
-        if (chaosReady && !wasFull)
-        {
-            UIManager.Instance?.ShowChaosReadyPrompt(true);
-        }
+        if (chaosReady && !wasFull) UIManager.Instance?.ShowChaosReadyPrompt(true);
     }
 
     public bool IsChaosMaxed() => chaosReady;
@@ -328,18 +322,14 @@ public class GameManager : MonoBehaviour
     public void ActivateDarkMode()
     {
         if (!chaosReady) return;
-
         isDarkMode = true;
         chaosReady = false;
         darkModeTimer = darkModeDuration;
-
         UIManager.Instance?.ShowChaosReadyPrompt(false);
         UIManager.Instance?.ShowDarkModeFlash();
         UIManager.Instance?.SetChaosTimerMode(true);
-
         Player player = FindAnyObjectByType<Player>();
-        if (player != null)
-            player.ActivateDarkMode();
+        if (player != null) player.ActivateDarkMode();
     }
 
     public void DeactivateDarkMode()
@@ -348,22 +338,31 @@ public class GameManager : MonoBehaviour
         darkModeTimer = 0f;
         chaosMeter = 0f;
         chaosReady = false;
-
         UIManager.Instance?.SetChaosTimerMode(false);
         UIManager.Instance?.UpdateChaosMeter(0f, false);
-
         Player player = FindAnyObjectByType<Player>();
-        if (player != null)
-            player.DeactivateDarkMode();
+        if (player != null) player.DeactivateDarkMode();
     }
 
-    // ============ PLAYER HEALTH ============
-
-    public void AddCoins(int amount)
+    public void AddMoney(int amount)
     {
-        playerCoins += amount;
-        UIManager.Instance?.UpdateCoinDisplay(playerCoins);
+        playerMoney += amount;
+        UIManager.Instance?.UpdateMoneyDisplay(playerMoney);
+        Debug.Log($"Added {amount} money. Total: {playerMoney}");
     }
+
+    public bool SpendMoney(int amount)
+    {
+        if (playerMoney >= amount)
+        {
+            playerMoney -= amount;
+            UIManager.Instance?.UpdateMoneyDisplay(playerMoney);
+            return true;
+        }
+        return false;
+    }
+
+    public bool HasEnoughMoney(int amount) => playerMoney >= amount;
 
     public void SetPlayerHealth(int hp)
     {
@@ -371,14 +370,16 @@ public class GameManager : MonoBehaviour
         UIManager.Instance?.UpdateHealthBar((float)playerHealth / playerMaxHealth);
     }
 
-    // ============ NAVIGATION ============
+    public void SyncInventoryFromController(InventoryController controller)
+    {
+        inventorySlots = controller.GetAllSlotData();
+    }
 
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
         isPaused = false;
         isGameStarted = false;
-        // Reset dark mode if active
         if (isDarkMode) DeactivateDarkMode();
         SceneManager.LoadScene("MainMenu");
     }

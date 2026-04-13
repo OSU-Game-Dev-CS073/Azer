@@ -287,12 +287,12 @@ public class DevPanel : MonoBehaviour
 
         // Gold: [-] [value] [+] [APPLY]
         AddNumberRow(parent, "Gold", W, 0, 99999, 50,
-            () => GameManager.Instance != null ? GameManager.Instance.playerCoins : 0,
+            () => GameManager.Instance != null ? GameManager.Instance.playerMoney : 0,
             (v) =>
             {
                 if (GameManager.Instance == null) return;
-                GameManager.Instance.playerCoins = v;
-                UIManager.Instance?.UpdateCoinDisplay(v);
+                GameManager.Instance.playerMoney = v;
+                UIManager.Instance?.UpdateMoneyDisplay(v);
             });
 
         // Stat Points: [-] [amount] [+] [ADD]

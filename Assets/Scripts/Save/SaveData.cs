@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 /// <summary>
 /// PATCH 5 CHANGES:
@@ -16,7 +17,7 @@ public class SaveData
     // Player Stats
     public int health;
     public int maxHealth;
-    public int coins;
+    public int money; // Replaces coins
     public int killCount;
     public float chaosMeter;
 
@@ -47,7 +48,7 @@ public class SaveData
     public int statCurrentXP;
     public int statUnspentPoints;
     public int statBonusPoints;
-
+    public List<InventoryItemData> inventoryItems = new List<InventoryItemData>();
     public SaveData()
     {
         slotIndex = -1;
@@ -55,7 +56,7 @@ public class SaveData
         totalPlayTime = 0f;
         health = 100;
         maxHealth = 100;
-        coins = 0;
+        money = 0;
         killCount = 0;
         chaosMeter = 0f;
         currentScene = "GameScene";
@@ -78,5 +79,16 @@ public class SaveData
         statCurrentXP = 0;
         statUnspentPoints = 0;
         statBonusPoints = 0;
+        inventoryItems = new List<InventoryItemData>();
+
     }
+}
+
+[Serializable]
+public class InventoryItemData
+{
+    public string itemName;
+    public string uiPrefabPath;  // store resource path or prefab name
+    public int quantity;
+    public int itemType; // 0=Coin,1=Diamond,2=Crystal,3=Food,4=Potion,5=QuestItem
 }

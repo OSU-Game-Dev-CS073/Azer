@@ -43,9 +43,11 @@ public class Player : MonoBehaviour
 
     #region PLAYER STATS
     [Header("Player Stats")]
-    public int coins;          // kept from original (Yigit uses GameManager)
+    public int coins;  
+    public int money;          // kept from original (Yigit uses GameManager)
     public int facingDirection = 1;
     #endregion
+    
 
     #region MOVEMENT SETTINGS
     [Header("Movement Settings")]
@@ -66,6 +68,15 @@ public class Player : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayer;
     #endregion
+
+    [Header("Hit Effects")]
+    public GameObject impactFXPrefab;       // Particle system for enemy hits (with child "Splash")
+    public GameObject wallImpactFXPrefab;   // Particle system for wall hits
+    public LayerMask wallLayer;             // Assign the layer your walls are on (should be "Ground")
+
+    [Header("Knockback & Screenshake")]
+    public float knockbackForce = 5f;       // Force applied to enemies when hit
+    
 
     #region DARK MODE SPRITES
     [Header("Dark Mode Sprites")]
@@ -127,8 +138,6 @@ public class Player : MonoBehaviour
     [Header("SFX Settings")]
     public float footstepInterval = 0.35f;
     public float sfxVolume = 0.6f;
-
-    
     #endregion
 
     // --- Private ---
@@ -137,10 +146,6 @@ public class Player : MonoBehaviour
     private int airJumpsLeft;
     private bool usedGroundJump;
     private RuntimeAnimatorController originalAnimController;
-    private GameObject impactFXObject;
-    private Vector3 originalImpactScale;
-    private Animator impactFXAnimator; // Animator for impact effect (child of attackPoint)
-
     private bool isAttacking = false;
     private float lastAttackTime = 0f;
     private bool inputEnabled = true;
@@ -150,6 +155,7 @@ public class Player : MonoBehaviour
     // Footstep timer
     private float footstepTimer = 0f;
     private bool wasMoving = false;
+    private bool movementEnabled = true;
 
     // Transition
     private bool isTransitioning = false;
@@ -168,6 +174,14 @@ public class Player : MonoBehaviour
 
     // Current max health from stats
     private int currentMaxHealth => GameManager.Instance != null ? GameManager.Instance.playerMaxHealth : 100;
+
+    // Screenshake
+    private Transform cameraTransform;
+    private Vector3 originalCameraPos;
+
+    // Prefab scales
+    private Vector3 originalImpactScale;
+    private Vector3 originalWallImpactScale;
 
     #region UNITY LIFE CYCLE METHODS
     void Start()
@@ -205,22 +219,16 @@ public class Player : MonoBehaviour
             UIManager.Instance?.RefreshAllDisplays();
         }
 
-        // --- IMPACT FX INITIALIZATION (FIXED) ---
-        if (attackPoint != null)
-        {
-            Transform impactTransform = attackPoint.Find("impactFX");
-            if (impactTransform != null)
-            {
-                impactFXObject = impactTransform.gameObject;
-                impactFXAnimator = impactTransform.GetComponent<Animator>();
+        // Cache camera transform for screenshake
+        Camera mainCam = Camera.main;
+        if (mainCam != null)
+            cameraTransform = mainCam.transform;
 
-                // Store the ORIGINAL scale you set in the Inspector (should be 1,1,1)
-                originalImpactScale = impactTransform.localScale;
-
-                // Ensure it starts disabled
-                impactFXObject.SetActive(false);
-            }
-        }
+        // Store original scales from prefabs
+        if (impactFXPrefab != null)
+            originalImpactScale = impactFXPrefab.transform.localScale;
+        if (wallImpactFXPrefab != null)
+            originalWallImpactScale = wallImpactFXPrefab.transform.localScale;
     }
 
     void Update()
@@ -293,48 +301,45 @@ public class Player : MonoBehaviour
                 GameManager.Instance.facingDirection = facingDirection;
         }
     }
-
-    public void OnMove(InputValue value)
-    {
-        if (!inputEnabled) { moveInput = Vector2.zero; return; }
-        moveInput = value.Get<Vector2>();
-    }
-
+   public void OnMove(InputValue value)
+{
+    if (!inputEnabled || !movementEnabled) { moveInput = Vector2.zero; return; }
+    moveInput = value.Get<Vector2>();
+}
     public void OnJump(InputValue value)
+{
+    if (!inputEnabled || !movementEnabled || !value.isPressed || isAttacking || isDashing) return;
+
+    float currentJumpForce = jumpForce;
+    if (darkModeActive) currentJumpForce *= darkModeJumpMultiplier;
+
+    // Dev infinite jump
+    if (DevPanel.Instance != null && DevPanel.Instance.infiniteJump)
     {
-        if (!inputEnabled || !value.isPressed || isAttacking || isDashing) return;
-
-        float currentJumpForce = jumpForce;
-        if (darkModeActive) currentJumpForce *= darkModeJumpMultiplier;
-
-        // Dev infinite jump
-        if (DevPanel.Instance != null && DevPanel.Instance.infiniteJump)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-            PlaySound(jumpSFX);
-            return;
-        }
-
-        if (isGrounded && !usedGroundJump)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-            usedGroundJump = true;
-            PlaySound(jumpSFX);
-            return;
-        }
-
-        if (!isGrounded && airJumpsLeft > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-            airJumpsLeft--;
-            PlaySound(jumpSFX);
-            return;
-        }
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+        PlaySound(jumpSFX);
+        return;
     }
 
+    if (isGrounded && !usedGroundJump)
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+        usedGroundJump = true;
+        PlaySound(jumpSFX);
+        return;
+    }
+
+    if (!isGrounded && airJumpsLeft > 0)
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+        airJumpsLeft--;
+        PlaySound(jumpSFX);
+        return;
+    }
+}
     public void OnDash(InputValue value)
     {
-        if (!inputEnabled || isAttacking) return;
+        if (!inputEnabled || !movementEnabled || isAttacking) return;
         if (value.isPressed && canDash)
         {
             StartCoroutine(Dash());
@@ -375,7 +380,7 @@ public class Player : MonoBehaviour
 
     public void OnAttack(InputValue value)
     {
-        if (!inputEnabled) return;
+        if (!inputEnabled || !movementEnabled) return;
         float currentCooldown = darkModeActive ? darkAttackCooldown : normalAttackCooldown;
         if (value.isPressed && !isAttacking && !isDashing && Time.time >= lastAttackTime + currentCooldown)
         {
@@ -441,52 +446,86 @@ public class Player : MonoBehaviour
         if (darkModeActive)
             dmg *= darkModeDamageMultiplier;
 
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
+        // Check both enemies and walls in one overlap
+        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer | wallLayer);
+        
         bool hitEnemy = false;
+        bool hitWall = false;
+        Vector2 closestHitPoint = attackPoint.position; // Default to attack point
 
-        foreach (Collider2D enemy in enemies)
+        foreach (Collider2D hit in hits)
         {
-            Health enemyHealth = enemy.GetComponent<Health>();
+            // Check if it's an enemy
+            Health enemyHealth = hit.GetComponent<Health>();
             if (enemyHealth != null)
             {
                 enemyHealth.ChangeHealth(-dmg);
                 hitEnemy = true;
                 if (crit)
                     UIManager.Instance?.ShowCritPopup();
+
+                // Apply knockback to enemy
+                Rigidbody2D enemyRb = hit.GetComponent<Rigidbody2D>();
+                if (enemyRb != null)
+                {
+                    Vector2 knockbackDir = (hit.transform.position - transform.position).normalized;
+                    enemyRb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
+                }
+                
+                // Get the closest point on the enemy's collider to the attack point
+                closestHitPoint = hit.ClosestPoint(attackPoint.position);
+            }
+            // Check if it's a wall
+            else if (((1 << hit.gameObject.layer) & wallLayer) != 0)
+            {
+                hitWall = true;
+                // Get the closest point on the wall's collider to the attack point
+                closestHitPoint = hit.ClosestPoint(attackPoint.position);
             }
         }
 
-        // --- CORRECTED IMPACT FX ---
-        if (hitEnemy && impactFXObject != null && impactFXAnimator != null)
+        // Spawn effect based on what we hit - at the EXACT hit point
+        if (hitEnemy)
         {
-            // CRITICAL: Reset scale to your original animation size
-            // This overrides any parent scaling
-            impactFXObject.transform.localScale = originalImpactScale;
+            SpawnEffect(impactFXPrefab, closestHitPoint, originalImpactScale);
+        }
+        else if (hitWall)
+        {
+            SpawnEffect(wallImpactFXPrefab, closestHitPoint, originalWallImpactScale);
+        }
+        // If neither, do nothing (air swing)
+    }
 
-            // Position exactly at the attack point
-            impactFXObject.transform.position = attackPoint.position;
+    // Helper method to spawn and auto-destroy particle effects with correct scale
+    void SpawnEffect(GameObject prefab, Vector3 position, Vector3 originalScale)
+    {
+        if (prefab == null)
+        {
+            Debug.LogWarning("Impact effect prefab is not assigned in the Inspector!");
+            return;
+        }
 
-            // Activate and play
-            impactFXObject.SetActive(true);
-            impactFXAnimator.Play("impactFX", 0, 0f);
-
-            // Auto-disable after animation
-            StartCoroutine(DisableImpactAfterAnimation());
+        GameObject effect = Instantiate(prefab, position, Quaternion.identity);
+        
+        // Force the exact scale from the prefab
+        effect.transform.localScale = originalScale;
+        
+        // Get the particle system to determine how long to wait before destroying
+        ParticleSystem ps = effect.GetComponent<ParticleSystem>();
+        if (ps != null)
+        {
+            float duration = ps.main.duration;
+            Destroy(effect, duration);
+        }
+        else
+        {
+            // If no particle system, destroy after 0.5 seconds as fallback
+            Destroy(effect, 0.5f);
         }
     }
 
-    // Coroutine to auto-disable the effect
-    private IEnumerator DisableImpactAfterAnimation()
-    {
-        // Wait for the animation to play (adjust time to match your clip)
-        yield return new WaitForSeconds(0.2f);
-
-        if (impactFXObject != null)
-            impactFXObject.SetActive(false);
-    }
-    #endregion
-
-    #region DAMAGE / DEATH
+    // Simple screenshake coroutine
+    
     public void TakeDamage(int damageAmount)
     {
         if (isDashing) return; // invincibility during dash (from original)
@@ -656,11 +695,20 @@ public class Player : MonoBehaviour
     #endregion
 
     #region COINS / DIALOGUE
+public void AddMoney(int amount)
+{
+    money += amount;
+    if (CurrencyController.Instance != null)
+        CurrencyController.Instance.AddCurrency(amount);
+    else if (GameManager.Instance != null)
+        GameManager.Instance.AddMoney(amount);
+}
+
     public void AddCoins(int amount)
     {
-        if (GameManager.Instance != null)
-            GameManager.Instance.AddCoins(amount);
+        AddMoney(amount);
     }
+
 
     public void SetInputEnabled(bool enabled)
     {
@@ -671,6 +719,19 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
     }
+    public void DisableMovement()
+{
+    movementEnabled = false;
+    moveInput = Vector2.zero;
+    rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+    Debug.Log("Player movement disabled");
+}
+
+public void EnableMovement()
+{
+    movementEnabled = true;
+    Debug.Log("Player movement enabled");
+}
     #endregion
 
     #region ANIMATION
@@ -707,4 +768,20 @@ public class Player : MonoBehaviour
         }
     }
     #endregion
+    public void Heal(int amount)
+{
+    health += amount;
+    if (health > currentMaxHealth)
+    {
+        health = currentMaxHealth;
+    }
+    
+    if (GameManager.Instance != null)
+    {
+        GameManager.Instance.playerHealth = health;
+    }
+    
+    UIManager.Instance?.UpdateHealthBar((float)health / currentMaxHealth);
+    Debug.Log($"Healed {amount} health. Current health: {health}");
+}
 }
