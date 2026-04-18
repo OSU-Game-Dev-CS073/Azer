@@ -36,27 +36,12 @@ public class Player : MonoBehaviour
     [Header("Movement")]
     public Rigidbody2D rb;
     public PlayerInput playerInput;
-    public Animator animator;
-    public SpriteRenderer spriteRenderer;
-    public AudioSource audioSource;
-    [SerializeField] private TrailRenderer tr;   // from original
-
-    #region PLAYER STATS
-    [Header("Player Stats")]
-    public int coins;  
-    public int money;          // kept from original (Yigit uses GameManager)
-    public int facingDirection = 1;
-    #endregion
-    
-
-    #region MOVEMENT SETTINGS
-    [Header("Movement Settings")]
     public float speed = 5f;
+    public int facingDirection = 1;
     public Vector2 moveInput;
 
     [Header("Jump")]
     public float jumpForce = 10f;
-    public float jumpCutMultiplier = 1f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
@@ -67,18 +52,6 @@ public class Player : MonoBehaviour
     public float attackRadius = 0.5f;
     public Transform attackPoint;
     public LayerMask enemyLayer;
-    #endregion
-
-    [Header("Hit Effects")]
-    public GameObject impactFXPrefab;       // Particle system for enemy hits (with child "Splash")
-    public GameObject wallImpactFXPrefab;   // Particle system for wall hits
-    public LayerMask wallLayer;             // Assign the layer your walls are on (should be "Ground")
-
-    [Header("Knockback & Screenshake")]
-    public float knockbackForce = 5f;       // Force applied to enemies when hit
-    
-
-    #region DARK MODE SPRITES
     [Header("Dark Mode Sprites")]
     [Tooltip("Default player sprite. If blank, uses whatever is on SpriteRenderer at Start.")]
     public Sprite normalSprite;
@@ -100,23 +73,10 @@ public class Player : MonoBehaviour
     public float normalAttackCooldown = 0.8f;
     [Tooltip("Attack cooldown in dark mode (seconds). Must be >= dark_attack animation length or frames get cut off.")]
     public float darkAttackCooldown = 1.1f;
-    #endregion
 
-    #region DASH SETTINGS
-    [Header("Dash Settings")]
-    public float dashPower = 24f;
-    public float dashTime = 0.2f;
-    public float dashCooldown = 1f;
-    private bool canDash = true;
-    private bool isDashing = false;
-    #endregion
-
-    #region SCALE
     [Header("Scale")]
-    public float baseScale = 1f;
-    #endregion
+    public float baseScale = 4f;
 
-    #region SFX
     [Header("=== SFX (assign in Inspector) ===")]
     [Tooltip("Footstep sound in normal form")]
     public AudioClip walkSFX;
@@ -138,16 +98,18 @@ public class Player : MonoBehaviour
     [Header("SFX Settings")]
     public float footstepInterval = 0.35f;
     public float sfxVolume = 0.6f;
-    #endregion
 
     // --- Private ---
     private bool isGrounded;
     private bool wasGrounded;
     private int airJumpsLeft;
     private bool usedGroundJump;
+    private Animator animator;
     private RuntimeAnimatorController originalAnimController;
+    private SpriteRenderer spriteRenderer;
     private bool isAttacking = false;
     private float lastAttackTime = 0f;
+    private AudioSource audioSource;
     private bool inputEnabled = true;
     private bool darkModeActive = false;
     private Sprite _originalSprite;
@@ -155,15 +117,13 @@ public class Player : MonoBehaviour
     // Footstep timer
     private float footstepTimer = 0f;
     private bool wasMoving = false;
-    private bool movementEnabled = true;
 
     // Transition
     private bool isTransitioning = false;
 
-    // Legacy compatibility
-    [HideInInspector] public int extraJumpsValue = -1;
-    [HideInInspector] public int maxHealth = 100;
-    [HideInInspector] public int damage = 10; // legacy
+    [HideInInspector] public int extraJumpsValue = -1; // legacy
+    [HideInInspector] public int maxHealth = 100; // legacy, now from stats
+    [HideInInspector] public int damage = 10; // legacy, now from stats
 
     // Health through GameManager
     private int health
@@ -175,15 +135,6 @@ public class Player : MonoBehaviour
     // Current max health from stats
     private int currentMaxHealth => GameManager.Instance != null ? GameManager.Instance.playerMaxHealth : 100;
 
-    // Screenshake
-    private Transform cameraTransform;
-    private Vector3 originalCameraPos;
-
-    // Prefab scales
-    private Vector3 originalImpactScale;
-    private Vector3 originalWallImpactScale;
-
-    #region UNITY LIFE CYCLE METHODS
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -218,22 +169,11 @@ public class Player : MonoBehaviour
 
             UIManager.Instance?.RefreshAllDisplays();
         }
-
-        // Cache camera transform for screenshake
-        Camera mainCam = Camera.main;
-        if (mainCam != null)
-            cameraTransform = mainCam.transform;
-
-        // Store original scales from prefabs
-        if (impactFXPrefab != null)
-            originalImpactScale = impactFXPrefab.transform.localScale;
-        if (wallImpactFXPrefab != null)
-            originalWallImpactScale = wallImpactFXPrefab.transform.localScale;
     }
 
     void Update()
     {
-        if (!inputEnabled || isDashing) return; // dashing blocks normal updates
+        if (!inputEnabled) return;
         if (GameManager.Instance != null && GameManager.Instance.isPaused) return;
 
         Flip();
@@ -246,7 +186,6 @@ public class Player : MonoBehaviour
         {
             airJumpsLeft = GetCurrentAirJumps();
             usedGroundJump = false;
-            canDash = true; // reset dash when grounded (from original)
         }
 
         SetAnimation(moveInput.x);
@@ -264,17 +203,11 @@ public class Player : MonoBehaviour
             GameManager.Instance?.QuickSave();
             UIManager.Instance?.ShowSaveNotification("Quick Saved!");
         }
-
-        // Jump cut
-        if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
-        }
     }
 
     void FixedUpdate()
     {
-        if (!inputEnabled || isDashing) return;
+        if (!inputEnabled) return;
         if (GameManager.Instance != null && GameManager.Instance.isPaused) return;
 
         float currentSpeed = speed;
@@ -285,9 +218,9 @@ public class Player : MonoBehaviour
         else
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
     }
-    #endregion
 
-    #region INPUT
+    // ============ INPUT ============
+
     void Flip()
     {
         if (moveInput.x > 0.1f) facingDirection = 1;
@@ -301,100 +234,63 @@ public class Player : MonoBehaviour
                 GameManager.Instance.facingDirection = facingDirection;
         }
     }
-   public void OnMove(InputValue value)
-{
-    if (!inputEnabled || !movementEnabled) { moveInput = Vector2.zero; return; }
-    moveInput = value.Get<Vector2>();
-}
+
+    public void OnMove(InputValue value)
+    {
+        if (!inputEnabled) { moveInput = Vector2.zero; return; }
+        moveInput = value.Get<Vector2>();
+    }
+
     public void OnJump(InputValue value)
-{
-    if (!inputEnabled || !movementEnabled || !value.isPressed || isAttacking || isDashing) return;
-
-    float currentJumpForce = jumpForce;
-    if (darkModeActive) currentJumpForce *= darkModeJumpMultiplier;
-
-    // Dev infinite jump
-    if (DevPanel.Instance != null && DevPanel.Instance.infiniteJump)
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-        PlaySound(jumpSFX);
-        return;
-    }
+        if (!inputEnabled || !value.isPressed || isAttacking) return;
 
-    if (isGrounded && !usedGroundJump)
-    {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-        usedGroundJump = true;
-        PlaySound(jumpSFX);
-        return;
-    }
+        float currentJumpForce = jumpForce;
+        if (darkModeActive) currentJumpForce *= darkModeJumpMultiplier;
 
-    if (!isGrounded && airJumpsLeft > 0)
-    {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-        airJumpsLeft--;
-        PlaySound(jumpSFX);
-        return;
-    }
-}
-    public void OnDash(InputValue value)
-    {
-        if (!inputEnabled || !movementEnabled || isAttacking) return;
-        if (value.isPressed && canDash)
+        // Dev infinite jump
+        if (DevPanel.Instance != null && DevPanel.Instance.infiniteJump)
         {
-            StartCoroutine(Dash());
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+            PlaySound(jumpSFX);
+            return;
         }
-    }
 
-    private IEnumerator Dash()
-    {
-        canDash = false;
-        isDashing = true;
+        if (isGrounded && !usedGroundJump)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+            usedGroundJump = true;
+            PlaySound(jumpSFX);
+            return;
+        }
 
-        float originalGravity = rb.gravityScale;
-        float originalSpeed = speed;
-
-        rb.gravityScale = 0f;
-        speed = 0f;
-        rb.linearVelocity = new Vector2(facingDirection * dashPower, 0f);
-
-        if (tr != null)
-            tr.emitting = true;
-
-        spriteRenderer.color = new Color(1f, 1f, 1f, 0.7f);
-
-        yield return new WaitForSeconds(dashTime);
-
-        rb.gravityScale = originalGravity;
-        speed = originalSpeed;
-
-        if (tr != null)
-            tr.emitting = false;
-
-        spriteRenderer.color = Color.white;
-        isDashing = false;
-
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
+        if (!isGrounded && airJumpsLeft > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+            airJumpsLeft--;
+            PlaySound(jumpSFX);
+            return;
+        }
     }
 
     public void OnAttack(InputValue value)
     {
-        if (!inputEnabled || !movementEnabled) return;
+        if (!inputEnabled) return;
         float currentCooldown = darkModeActive ? darkAttackCooldown : normalAttackCooldown;
-        if (value.isPressed && !isAttacking && !isDashing && Time.time >= lastAttackTime + currentCooldown)
+        if (value.isPressed && !isAttacking && Time.time >= lastAttackTime + currentCooldown)
         {
             StartAttack();
         }
     }
-    #endregion
 
-    #region COMBAT
+    // ============ COMBAT ============
+
     void StartAttack()
     {
         isAttacking = true;
         lastAttackTime = Time.time;
 
+        // Play attack animation directly (works with Override Controller)
         if (animator != null)
             animator.Play("player_attack", 0, 0f);
 
@@ -410,29 +306,38 @@ public class Player : MonoBehaviour
             }
         }
 
+        // SFX
         PlaySound(darkModeActive ? darkAttackSFX : attackSFX);
 
+        // Start coroutine to wait for animation to finish, then deal damage and end attack
         StartCoroutine(AttackSequence());
     }
 
     IEnumerator AttackSequence()
     {
+        // Wait one frame for animator to start the clip
         yield return null;
 
-        float clipLength = 0.5f;
+        // Get actual clip length from animator
+        float clipLength = 0.5f; // fallback
         if (animator != null)
         {
             AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(0);
             if (info.length > 0) clipLength = info.length;
         }
 
+        // Deal damage at 40% through animation
         float damageDelay = clipLength * 0.4f;
         yield return new WaitForSeconds(damageDelay);
         DealAttackDamage();
 
+        // Wait for rest of animation
         yield return new WaitForSeconds(clipLength - damageDelay);
 
+        // End attack
         isAttacking = false;
+
+        // Deactivate spellFX
         transform.Find("spellFX")?.gameObject.SetActive(false);
     }
 
@@ -446,90 +351,23 @@ public class Player : MonoBehaviour
         if (darkModeActive)
             dmg *= darkModeDamageMultiplier;
 
-        // Check both enemies and walls in one overlap
-        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer | wallLayer);
-        
-        bool hitEnemy = false;
-        bool hitWall = false;
-        Vector2 closestHitPoint = attackPoint.position; // Default to attack point
-
-        foreach (Collider2D hit in hits)
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
+        foreach (Collider2D enemy in enemies)
         {
-            // Check if it's an enemy
-            Health enemyHealth = hit.GetComponent<Health>();
+            Health enemyHealth = enemy.GetComponent<Health>();
             if (enemyHealth != null)
             {
                 enemyHealth.ChangeHealth(-dmg);
-                hitEnemy = true;
                 if (crit)
                     UIManager.Instance?.ShowCritPopup();
-
-                // Apply knockback to enemy
-                Rigidbody2D enemyRb = hit.GetComponent<Rigidbody2D>();
-                if (enemyRb != null)
-                {
-                    Vector2 knockbackDir = (hit.transform.position - transform.position).normalized;
-                    enemyRb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
-                }
-                
-                // Get the closest point on the enemy's collider to the attack point
-                closestHitPoint = hit.ClosestPoint(attackPoint.position);
             }
-            // Check if it's a wall
-            else if (((1 << hit.gameObject.layer) & wallLayer) != 0)
-            {
-                hitWall = true;
-                // Get the closest point on the wall's collider to the attack point
-                closestHitPoint = hit.ClosestPoint(attackPoint.position);
-            }
-        }
-
-        // Spawn effect based on what we hit - at the EXACT hit point
-        if (hitEnemy)
-        {
-            SpawnEffect(impactFXPrefab, closestHitPoint, originalImpactScale);
-        }
-        else if (hitWall)
-        {
-            SpawnEffect(wallImpactFXPrefab, closestHitPoint, originalWallImpactScale);
-        }
-        // If neither, do nothing (air swing)
-    }
-
-    // Helper method to spawn and auto-destroy particle effects with correct scale
-    void SpawnEffect(GameObject prefab, Vector3 position, Vector3 originalScale)
-    {
-        if (prefab == null)
-        {
-            Debug.LogWarning("Impact effect prefab is not assigned in the Inspector!");
-            return;
-        }
-
-        GameObject effect = Instantiate(prefab, position, Quaternion.identity);
-        
-        // Force the exact scale from the prefab
-        effect.transform.localScale = originalScale;
-        
-        // Get the particle system to determine how long to wait before destroying
-        ParticleSystem ps = effect.GetComponent<ParticleSystem>();
-        if (ps != null)
-        {
-            float duration = ps.main.duration;
-            Destroy(effect, duration);
-        }
-        else
-        {
-            // If no particle system, destroy after 0.5 seconds as fallback
-            Destroy(effect, 0.5f);
         }
     }
 
-    // Simple screenshake coroutine
-    
+    // ============ DAMAGE / DEATH ============
+
     public void TakeDamage(int damageAmount)
     {
-        if (isDashing) return; // invincibility during dash (from original)
-
         health -= damageAmount;
         StartCoroutine(BlinkRed());
         if (health <= 0) Die();
@@ -537,7 +375,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Damage") && !isDashing)
+        if (collision.gameObject.CompareTag("Damage"))
         {
             TakeDamage(25);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -558,7 +396,9 @@ public class Player : MonoBehaviour
 
         if (GameManager.Instance != null)
         {
+            // Reset health to max
             GameManager.Instance.playerHealth = currentMaxHealth;
+            // End dark mode if active
             if (darkModeActive)
                 GameManager.Instance.DeactivateDarkMode();
         }
@@ -566,19 +406,21 @@ public class Player : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
-    #endregion
 
-    #region DARK MODE
+    // ============ DARK / CHAOS MODE ============
+
     private int GetCurrentAirJumps()
     {
         return darkModeActive ? darkModeAirJumps : maxAirJumps;
     }
 
+    /// <summary>Called by GameManager when chaos mode activates</summary>
     public void ActivateDarkMode()
     {
         StartCoroutine(TransformSequence(true));
     }
 
+    /// <summary>Called by GameManager when chaos mode ends</summary>
     public void DeactivateDarkMode()
     {
         StartCoroutine(TransformSequence(false));
@@ -590,8 +432,10 @@ public class Player : MonoBehaviour
 
         isTransitioning = true;
 
+        // Pause the animator so transition sprites are visible
         if (animator != null) animator.enabled = false;
 
+        // Show transition sprite 1
         if (transitionSprite != null && spriteRenderer != null)
         {
             spriteRenderer.sprite = transitionSprite;
@@ -599,6 +443,7 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
         }
 
+        // Show transition sprite 2
         if (transitionSprite2 != null && spriteRenderer != null)
         {
             spriteRenderer.sprite = transitionSprite2;
@@ -617,6 +462,7 @@ public class Player : MonoBehaviour
         else
             RemoveDarkModeVisuals();
 
+        // Re-enable animator (now with the correct controller)
         if (animator != null) animator.enabled = true;
     }
 
@@ -625,12 +471,15 @@ public class Player : MonoBehaviour
         darkModeActive = true;
         airJumpsLeft = darkModeAirJumps;
 
+        // Swap to dark mode animator (if override assigned)
         if (darkAnimOverride != null && animator != null)
             animator.runtimeAnimatorController = darkAnimOverride;
 
+        // Fallback: if no override, use static dark sprite
         if (darkModeSprite != null && spriteRenderer != null)
             spriteRenderer.sprite = darkModeSprite;
 
+        // Reset color to white so dark sprites show their true colors
         if (spriteRenderer != null)
             spriteRenderer.color = Color.white;
     }
@@ -640,6 +489,7 @@ public class Player : MonoBehaviour
         darkModeActive = false;
         airJumpsLeft = maxAirJumps;
 
+        // Swap back to normal animator
         if (originalAnimController != null && animator != null)
             animator.runtimeAnimatorController = originalAnimController;
 
@@ -653,12 +503,12 @@ public class Player : MonoBehaviour
     }
 
     public bool IsDarkModeActive => darkModeActive;
-    #endregion
 
-    #region SFX
+    // ============ SFX ============
+
     private void HandleFootsteps()
     {
-        bool isMoving = isGrounded && Mathf.Abs(moveInput.x) > 0.1f && !isAttacking && !isDashing;
+        bool isMoving = isGrounded && Mathf.Abs(moveInput.x) > 0.1f && !isAttacking;
 
         if (isMoving)
         {
@@ -685,6 +535,7 @@ public class Player : MonoBehaviour
         audioSource.PlayOneShot(clip, volume);
     }
 
+    // Legacy method kept for compatibility
     public void PlaySFX(AudioClip audioClip, float volume = 1f, float pitch = 1.5f)
     {
         if (audioSource == null || audioClip == null) return;
@@ -692,23 +543,29 @@ public class Player : MonoBehaviour
         audioSource.PlayOneShot(audioClip, volume);
         audioSource.pitch = 1f;
     }
-    #endregion
 
-    #region COINS / DIALOGUE
-public void AddMoney(int amount)
-{
-    money += amount;
-    if (CurrencyController.Instance != null)
-        CurrencyController.Instance.AddCurrency(amount);
-    else if (GameManager.Instance != null)
-        GameManager.Instance.AddMoney(amount);
-}
+    // ============ COINS / DIALOGUE ============
 
     public void AddCoins(int amount)
     {
-        AddMoney(amount);
+        if (GameManager.Instance != null)
+            GameManager.Instance.AddMoney(amount);
     }
 
+    public void AddMoney(int amount)
+    {
+        if (GameManager.Instance != null)
+            GameManager.Instance.AddMoney(amount);
+    }
+
+    public void Heal(int amount)
+    {
+        if (GameManager.Instance != null)
+        {
+            int newHp = GameManager.Instance.playerHealth + amount;
+            GameManager.Instance.SetPlayerHealth(newHp);
+        }
+    }
 
     public void SetInputEnabled(bool enabled)
     {
@@ -719,25 +576,12 @@ public void AddMoney(int amount)
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
     }
-    public void DisableMovement()
-{
-    movementEnabled = false;
-    moveInput = Vector2.zero;
-    rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-    Debug.Log("Player movement disabled");
-}
 
-public void EnableMovement()
-{
-    movementEnabled = true;
-    Debug.Log("Player movement enabled");
-}
-    #endregion
+    // ============ ANIMATION ============
 
-    #region ANIMATION
     private void SetAnimation(float moveInput)
     {
-        if (animator == null || isAttacking || isTransitioning || isDashing) return;
+        if (animator == null || isAttacking || isTransitioning) return;
 
         if (isGrounded)
         {
@@ -750,38 +594,4 @@ public void EnableMovement()
             else animator.Play("player_fall");
         }
     }
-    #endregion
-
-    #region GIZMOS
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
-        }
-
-        if (groundCheck != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-        }
-    }
-    #endregion
-    public void Heal(int amount)
-{
-    health += amount;
-    if (health > currentMaxHealth)
-    {
-        health = currentMaxHealth;
-    }
-    
-    if (GameManager.Instance != null)
-    {
-        GameManager.Instance.playerHealth = health;
-    }
-    
-    UIManager.Instance?.UpdateHealthBar((float)health / currentMaxHealth);
-    Debug.Log($"Healed {amount} health. Current health: {health}");
-}
 }

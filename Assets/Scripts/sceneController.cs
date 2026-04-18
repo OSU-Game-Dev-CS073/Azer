@@ -94,14 +94,11 @@ public class SceneController : MonoBehaviour
         StartCoroutine(LoadLevelByIndex());
     }
 
-public void LoadSceneByName(string sceneName)
-{
-    // Save inventory before scene change
-    if (InventoryController.Instance != null)
-        InventoryController.Instance.SaveToGameManager();
-    
-    StartCoroutine(LoadLevelByName(sceneName));
-}
+    public void LoadSceneByName(string sceneName)
+    {
+        StartCoroutine(LoadLevelByName(sceneName));
+    }
+
     IEnumerator LoadLevelByIndex()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;

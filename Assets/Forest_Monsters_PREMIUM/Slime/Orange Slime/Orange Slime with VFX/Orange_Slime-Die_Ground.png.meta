@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: f074eaa8f2fd04a15a203c80e1bb0d0f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3795158464865459440
+    second: Orange_Slime-Die_Ground_0
+  - first:
+      213: 3936326055376879161
+    second: Orange_Slime-Die_Ground_1
+  - first:
+      213: -5985408568278880753
+    second: Orange_Slime-Die_Ground_2
+  - first:
+      213: 6452316574434174746
+    second: Orange_Slime-Die_Ground_3
+  - first:
+      213: -5235970480161895039
+    second: Orange_Slime-Die_Ground_4
+  - first:
+      213: 818332143031683451
+    second: Orange_Slime-Die_Ground_5
+  - first:
+      213: 6966834880455534038
+    second: Orange_Slime-Die_Ground_6
+  - first:
+      213: 3345509950411098300
+    second: Orange_Slime-Die_Ground_7
+  - first:
+      213: 8642266088399210813
+    second: Orange_Slime-Die_Ground_8
+  - first:
+      213: -8343327178141390866
+    second: Orange_Slime-Die_Ground_9
+  - first:
+      213: 1817604351023504679
+    second: Orange_Slime-Die_Ground_10
+  - first:
+      213: 6325803156193196796
+    second: Orange_Slime-Die_Ground_11
+  - first:
+      213: 2560025726907062166
+    second: Orange_Slime-Die_Ground_12
+  - first:
+      213: 3646255233497065427
+    second: Orange_Slime-Die_Ground_13
+  - first:
+      213: 3192754461495701648
+    second: Orange_Slime-Die_Ground_14
+  - first:
+      213: -8148427331461020387
+    second: Orange_Slime-Die_Ground_15
+  - first:
+      213: 2688948144498737185
+    second: Orange_Slime-Die_Ground_16
+  - first:
+      213: 1194006290839506633
+    second: Orange_Slime-Die_Ground_17
+  - first:
+      213: 3758337961449646314
+    second: Orange_Slime-Die_Ground_18
+  - first:
+      213: 1327114193445015918
+    second: Orange_Slime-Die_Ground_19
+  - first:
+      213: 5737718474103112380
+    second: Orange_Slime-Die_Ground_20
+  - first:
+      213: -8035868943717705953
+    second: Orange_Slime-Die_Ground_21
+  - first:
+      213: 7531719433852516755
+    second: Orange_Slime-Die_Ground_22
+  - first:
+      213: 7863886625899286499
+    second: Orange_Slime-Die_Ground_23
+  - first:
+      213: 7285513745738182281
+    second: Orange_Slime-Die_Ground_24
+  - first:
+      213: -3226801850786431746
+    second: Orange_Slime-Die_Ground_25
+  - first:
+      213: 3174776510093364654
+    second: Orange_Slime-Die_Ground_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc5f94248c1ba430800000000000000
+      internalID: 3795158464865459440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e7ada11b3a0a630800000000000000
+      internalID: 3936326055376879161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e68248e9e8feca0800000000000000
+      internalID: -5985408568278880753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17a3851dbb3b8950800000000000000
+      internalID: 6452316574434174746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18dc483f6981657b0800000000000000
+      internalID: -5235970480161895039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7900b59fbc4b5b00800000000000000
+      internalID: 818332143031683451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d56a52796b2fa060800000000000000
+      internalID: 6966834880455534038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8c9ca1393ad6e20800000000000000
+      internalID: 3345509950411098300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39807df73f7fe770800000000000000
+      internalID: 8642266088399210813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Slime-Die_Ground_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee72506e22c863c80800000000000000
+      internalID: -8343327178141390866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 69ec3ee0bdaab4c44acc5b84e310358c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Orange_Slime-Die_Ground_0: 3795158464865459440
+      Orange_Slime-Die_Ground_1: 3936326055376879161
+      Orange_Slime-Die_Ground_2: -5985408568278880753
+      Orange_Slime-Die_Ground_3: 6452316574434174746
+      Orange_Slime-Die_Ground_4: -5235970480161895039
+      Orange_Slime-Die_Ground_5: 818332143031683451
+      Orange_Slime-Die_Ground_6: 6966834880455534038
+      Orange_Slime-Die_Ground_7: 3345509950411098300
+      Orange_Slime-Die_Ground_8: 8642266088399210813
+      Orange_Slime-Die_Ground_9: -8343327178141390866
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
