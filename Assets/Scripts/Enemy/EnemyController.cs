@@ -634,7 +634,9 @@ public class EnemyController : MonoBehaviour
         if (GameManager.Instance != null)
             GameManager.Instance.OnEnemyKilled(xpReward);
 
-        
+        // Gold drop
+        if (goldDrop > 0 && GameManager.Instance != null)
+            GameManager.Instance.AddMoney(goldDrop);
 
         // Stop movement
         if (rb != null)
