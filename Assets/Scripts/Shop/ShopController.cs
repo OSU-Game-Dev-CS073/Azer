@@ -44,7 +44,6 @@ public class ShopController : MonoBehaviour
         currentShop = null;
     }
 
-    // ========== REFRESH METHODS (using your reference logic) ==========
     public void RefreshShopDisplay()
     {
         if (currentShop == null) return;
@@ -57,158 +56,200 @@ public class ShopController : MonoBehaviour
         }
     }
 
-public void RefreshPlayerInventoryDisplay()
-{
-    if (InventoryController.Instance == null) return;
-    foreach (Transform child in playerInventoryGrid) Destroy(child.gameObject);
-
-    // Iterate over actual inventory slots
-    Transform inventoryParent = InventoryController.Instance.itemsPageParent;
-    if (inventoryParent == null)
+    public void RefreshPlayerInventoryDisplay()
     {
-        Debug.LogWarning("InventoryController itemsPageParent not assigned!");
-        return;
-    }
+        if (InventoryController.Instance == null) return;
+        foreach (Transform child in playerInventoryGrid) Destroy(child.gameObject);
 
-    foreach (Transform slotTransform in inventoryParent)
-    {
-        Slot inventorySlot = slotTransform.GetComponent<Slot>();
-        if (inventorySlot?.currentItem != null)
+        Transform inventoryParent = InventoryController.Instance.itemsPageParent;
+        if (inventoryParent == null)
         {
-            Item originalItem = inventorySlot.currentItem.GetComponent<Item>();
-            if (originalItem != null)
+            Debug.LogWarning("InventoryController itemsPageParent not assigned!");
+            return;
+        }
+
+        foreach (Transform slotTransform in inventoryParent)
+        {
+            Slot inventorySlot = slotTransform.GetComponent<Slot>();
+            if (inventorySlot?.currentItem != null)
             {
-                // Pass the inventorySlot so we know which slot to remove from when selling
-                CreateShopSlot(playerInventoryGrid, originalItem.ID, originalItem.quantity, false, inventorySlot);
+                // Try to get Item component (for selling price)
+                Item originalItem = inventorySlot.currentItem.GetComponent<Item>();
+                if (originalItem != null)
+                {
+                    CreateShopSlot(playerInventoryGrid, originalItem.ID, originalItem.quantity, false, inventorySlot);
+                }
+                else
+                {
+                    // If no Item component, still show it but cannot sell (or use default price)
+                    Debug.LogWarning($"Item '{inventorySlot.currentItem.name}' has no Item component - cannot sell.");
+                }
             }
         }
     }
-}
 
-private void CreateShopSlot(Transform grid, int itemID, int quantity, bool isShop, Slot originalSlot = null)
-{
-    if (shopSlotPrefab == null) return;
-    GameObject slotObj = Instantiate(shopSlotPrefab, grid);
-    ShopSlot slot = slotObj.GetComponent<ShopSlot>();
-    if (slot == null)
+    private void CreateShopSlot(Transform grid, int itemID, int quantity, bool isShop, Slot originalSlot = null)
     {
-        Debug.LogError("ShopSlot component missing on prefab!");
-        Destroy(slotObj);
-        return;
-    }
-
-    Item itemData = null;
-    GameObject itemPrefab = null;
-    int price = 0;
-    string displayName = "";
-
-    if (isShop)
-    {
-        // Shop item: get data from NPC's itemReferences
-        itemData = currentShop.GetItemByID(itemID);
-        if (itemData == null)
+        if (shopSlotPrefab == null) return;
+        GameObject slotObj = Instantiate(shopSlotPrefab, grid);
+        ShopSlot slot = slotObj.GetComponent<ShopSlot>();
+        if (slot == null)
         {
-            Debug.LogError($"Item with ID {itemID} not found in NPC's itemReferences!");
+            Debug.LogError("ShopSlot component missing on prefab!");
             Destroy(slotObj);
             return;
         }
-        itemPrefab = itemData.uiPrefab;
-        price = itemData.buyPrice;
-        displayName = itemData.Name;
-    }
-    else
-    {
-        // Player item: get data from the inventory item
-        if (originalSlot == null || originalSlot.currentItem == null)
+
+        Item itemData = null;
+        GameObject itemPrefab = null;
+        int price = 0;
+        string displayName = "";
+
+        if (isShop)
         {
+            itemData = currentShop.GetItemByID(itemID);
+            if (itemData == null)
+            {
+                Debug.LogError($"Item with ID {itemID} not found in NPC's itemReferences!");
+                Destroy(slotObj);
+                return;
+            }
+            itemPrefab = itemData.uiPrefab;
+            price = itemData.buyPrice;
+            displayName = itemData.Name;
+        }
+        else
+        {
+            if (originalSlot == null || originalSlot.currentItem == null)
+            {
+                Destroy(slotObj);
+                return;
+            }
+            Item invItem = originalSlot.currentItem.GetComponent<Item>();
+            if (invItem == null)
+            {
+                Debug.LogWarning($"Cannot sell '{originalSlot.currentItem.name}' – missing Item component.");
+                Destroy(slotObj);
+                return;
+            }
+            itemPrefab = invItem.uiPrefab;
+            price = invItem.GetSellPrice();
+            displayName = invItem.Name;
+        }
+
+        if (itemPrefab == null)
+        {
+            Debug.LogError($"No uiPrefab for item {displayName}");
             Destroy(slotObj);
             return;
         }
-        Item invItem = originalSlot.currentItem.GetComponent<Item>();
-        if (invItem == null)
+
+        GameObject itemInstance = Instantiate(itemPrefab, slotObj.transform);
+        RectTransform itemRect = itemInstance.GetComponent<RectTransform>();
+        if (itemRect != null)
         {
-            Destroy(slotObj);
-            return;
+            itemRect.anchoredPosition = Vector2.zero;
+            itemRect.sizeDelta = new Vector2(60, 60);
         }
-        itemPrefab = invItem.uiPrefab;
-        price = invItem.GetSellPrice();
-        displayName = invItem.Name;
-        
-        // Store the original slot reference on the handler for selling
-        // We'll do this after creating the item instance
+
+        ItemDragHandler drag = itemInstance.GetComponent<ItemDragHandler>();
+        if (drag != null) drag.enabled = false;
+
+        slot.SetItem(itemInstance, price);
+        slot.UpdateNameDisplay(displayName);
+        slot.isShopSlot = isShop;
+
+        ShopItemHandler handler = itemInstance.GetComponent<ShopItemHandler>();
+        if (handler == null) handler = itemInstance.AddComponent<ShopItemHandler>();
+
+        if (!isShop && originalSlot != null)
+            handler.Initialize(isShop, null, null, originalSlot);
+        else
+            handler.Initialize(isShop, null, isShop ? currentShop.GetCurrentStock().Find(s => s.itemID == itemID) : null, null);
     }
 
-    if (itemPrefab == null)
-    {
-        Debug.LogError($"No uiPrefab for item {displayName}");
-        Destroy(slotObj);
-        return;
-    }
-
-    // Instantiate the visual item inside the slot
-    GameObject itemInstance = Instantiate(itemPrefab, slotObj.transform);
-    RectTransform itemRect = itemInstance.GetComponent<RectTransform>();
-    if (itemRect != null)
-    {
-        itemRect.anchoredPosition = Vector2.zero;
-        itemRect.sizeDelta = new Vector2(60, 60);
-    }
-
-    // Disable drag on shop items
-    ItemDragHandler drag = itemInstance.GetComponent<ItemDragHandler>();
-    if (drag != null) drag.enabled = false;
-
-    // Setup the slot
-    slot.SetItem(itemInstance, price);
-    slot.UpdateNameDisplay(displayName);
-    slot.isShopSlot = isShop;
-
-    // Add click handler to the item
-    ShopItemHandler handler = itemInstance.GetComponent<ShopItemHandler>();
-    if (handler == null) handler = itemInstance.AddComponent<ShopItemHandler>();
-    
-    // Pass the originalSlot for selling
-    if (!isShop && originalSlot != null)
-    {
-        handler.Initialize(isShop, null, null, originalSlot);
-    }
-    else
-    {
-        handler.Initialize(isShop, null, isShop ? currentShop.GetCurrentStock().Find(s => s.itemID == itemID) : null, null);
-    }
-}
-    // ========== CREATE SHOP SLOT (with proper display scaling) ==========
-
-    // ========== MONEY & BUY/SELL ==========
     public void UpdateMoneyDisplay()
     {
         if (playerMoneyText != null && CurrencyController.Instance != null)
             playerMoneyText.text = CurrencyController.Instance.GetGold().ToString();
     }
 
+    // ==================== FIXED BUY METHOD ====================
     public bool TryBuyItem(ShopNPC.ShopStockItem stockItem, int price)
     {
-        if (CurrencyController.Instance == null || currentShop == null) return false;
+        Debug.Log($"[SHOP] === TryBuyItem called: ItemID={stockItem.itemID}, Price={price} ===");
+
+        if (CurrencyController.Instance == null)
+        {
+            Debug.LogError("[SHOP] CurrencyController.Instance is null!");
+            return false;
+        }
+        if (currentShop == null)
+        {
+            Debug.LogError("[SHOP] currentShop is null!");
+            return false;
+        }
 
         if (CurrencyController.Instance.GetGold() < price)
         {
-            Debug.Log("Not enough gold!");
+            Debug.Log("[SHOP] Not enough gold!");
             return false;
         }
 
         Item itemData = currentShop.GetItemByID(stockItem.itemID);
-        if (itemData == null || itemData.uiPrefab == null)
+        if (itemData == null)
         {
-            Debug.LogError($"Cannot buy item ID {stockItem.itemID}: missing UI prefab!");
+            Debug.LogError($"[SHOP] Item with ID {stockItem.itemID} not found in shop's itemReferences!");
             return false;
+        }
+
+        Debug.Log($"[SHOP] Item found: {itemData.Name}, uiPrefab: {(itemData.uiPrefab != null ? itemData.uiPrefab.name : "NULL")}");
+
+        if (itemData.uiPrefab == null)
+        {
+            Debug.LogError($"[SHOP] Cannot buy item {itemData.Name}: uiPrefab is null!");
+            return false;
+        }
+
+        // Check for health component on the UI prefab
+        UsableHealthItem healthCheck = itemData.uiPrefab.GetComponent<UsableHealthItem>();
+        if (healthCheck != null)
+        {
+            Debug.Log($"[SHOP] ✅ This is a HEALTH item! Heal amount: {healthCheck.healAmount}");
+        }
+        else
+        {
+            Debug.LogWarning($"[SHOP] ⚠️ Item '{itemData.Name}' has NO UsableHealthItem component on its UI prefab.");
+            // Optional: auto-add for items that look like health items
+            if (itemData.Name.ToLower().Contains("apple") || itemData.Name.ToLower().Contains("potion") || itemData.Name.ToLower().Contains("food"))
+            {
+                Debug.Log($"[SHOP] Auto-adding UsableHealthItem to {itemData.uiPrefab.name} (fallback). Set healAmount in Inspector!");
+                healthCheck = itemData.uiPrefab.AddComponent<UsableHealthItem>();
+                healthCheck.healAmount = 20; // default fallback
+                healthCheck.displayName = itemData.Name;
+            }
         }
 
         if (currentShop.RemoveFromShopStock(stockItem.itemID, 1))
         {
+            Debug.Log("[SHOP] Item removed from shop stock.");
             CurrencyController.Instance.SpendGold(price);
-            bool added = InventoryController.Instance.AddItem(itemData.uiPrefab, itemData.Name, Collectibles.CollectibleType.QuestItem);
+            Debug.Log($"[SHOP] Spent {price} gold. Remaining: {CurrencyController.Instance.GetGold()}");
+
+            // Add to inventory – use the correct item type for health items
+            Collectibles.CollectibleType itemType = (healthCheck != null) ? Collectibles.CollectibleType.Potion : Collectibles.CollectibleType.QuestItem;
+            bool added = InventoryController.Instance.AddItem(itemData.uiPrefab, itemData.Name, itemType);
+            
             if (added)
             {
+                Debug.Log($"[SHOP] Item '{itemData.Name}' successfully added to inventory!");
+
+                // Verify the item in inventory has the health component
+                var healthItems = InventoryController.Instance.GetAllSlotsWithComponent<UsableHealthItem>();
+                Debug.Log($"[SHOP] Total health items in inventory after purchase: {healthItems.Count}");
+                foreach (var hi in healthItems)
+                    Debug.Log($"[SHOP] -> {hi.component.GetDisplayName()} heals {hi.component.healAmount}");
+
                 UpdateMoneyDisplay();
                 RefreshShopDisplay();
                 RefreshPlayerInventoryDisplay();
@@ -216,10 +257,13 @@ private void CreateShopSlot(Transform grid, int itemID, int quantity, bool isSho
             }
             else
             {
-                // Inventory full – refund
+                Debug.LogError("[SHOP] Failed to add item to inventory! (Inventory full?) Refunding...");
                 CurrencyController.Instance.AddGold(price);
-                Debug.Log("Inventory full!");
             }
+        }
+        else
+        {
+            Debug.LogError($"[SHOP] Failed to remove item from shop stock! ID: {stockItem.itemID}");
         }
         return false;
     }
@@ -233,9 +277,6 @@ private void CreateShopSlot(Transform grid, int itemID, int quantity, bool isSho
             CurrencyController.Instance.AddGold(price);
             UpdateMoneyDisplay();
             RefreshPlayerInventoryDisplay();
-            // Optional: add item back to shop stock
-            // int itemID = GetItemIDByName(playerItem.itemName);
-            // if (itemID != -1) currentShop?.AddToStock(itemID, 1);
             return true;
         }
         return false;

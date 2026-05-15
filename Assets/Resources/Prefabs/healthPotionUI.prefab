@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3646241518863320447}
   - component: {fileID: 7988904077543031404}
   - component: {fileID: 1444821354213735518}
+  - component: {fileID: 7320364768996358545}
   m_Layer: 0
   m_Name: healthPotionUI
   m_TagString: Untagged
@@ -107,3 +108,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573465638307f4bebb6b9e9ceac52b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemDragHandler
+--- !u!114 &7320364768996358545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204751398892296118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7e4eafd92194203a95385a7f364574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UsableHealthItem
+  healAmount: 20
+  displayName: Mid heal

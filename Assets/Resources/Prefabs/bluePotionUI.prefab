@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3813891146330872972}
   - component: {fileID: 5166002845249941016}
   - component: {fileID: 5349685180296816868}
+  - component: {fileID: 1952753084168545526}
   m_Layer: 0
   m_Name: bluePotionUI
   m_TagString: Untagged
@@ -107,3 +108,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573465638307f4bebb6b9e9ceac52b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemDragHandler
+--- !u!114 &1952753084168545526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7616786657456660657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7e4eafd92194203a95385a7f364574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UsableHealthItem
+  healAmount: 40
+  displayName: Large heal

@@ -121,63 +121,63 @@ public class InventoryController : MonoBehaviour
         return false;
     }
 
-public bool RemoveItem(string itemName, int amount = 1)
-{
-    Debug.Log($"[Inventory] RemoveItem called: itemName='{itemName}', amount={amount}");
-    Debug.Log($"[Inventory] Current slotItems count: {slotItems.Count}");
-    
-    foreach (var kvp in slotItems)
+    public bool RemoveItem(string itemName, int amount = 1)
     {
-        Debug.Log($"[Inventory] Checking item: '{kvp.Value.itemName}' (quantity={kvp.Value.quantity})");
+        Debug.Log($"[Inventory] RemoveItem called: itemName='{itemName}', amount={amount}");
+        Debug.Log($"[Inventory] Current slotItems count: {slotItems.Count}");
         
-        if (kvp.Value.itemName == itemName)
+        foreach (var kvp in slotItems)
         {
-            Debug.Log($"[Inventory] Found match! Current quantity: {kvp.Value.quantity}");
+            Debug.Log($"[Inventory] Checking item: '{kvp.Value.itemName}' (quantity={kvp.Value.quantity})");
             
-            kvp.Value.quantity -= amount;
-            Debug.Log($"[Inventory] New quantity: {kvp.Value.quantity}");
-            
-            if (kvp.Value.quantity <= 0)
+            if (kvp.Value.itemName == itemName)
             {
-                Debug.Log($"[Inventory] Quantity <= 0, clearing slot");
-                kvp.Key.ClearSlot();
-                slotItems.Remove(kvp.Key);
+                Debug.Log($"[Inventory] Found match! Current quantity: {kvp.Value.quantity}");
+                
+                kvp.Value.quantity -= amount;
+                Debug.Log($"[Inventory] New quantity: {kvp.Value.quantity}");
+                
+                if (kvp.Value.quantity <= 0)
+                {
+                    Debug.Log($"[Inventory] Quantity <= 0, clearing slot");
+                    kvp.Key.ClearSlot();
+                    slotItems.Remove(kvp.Key);
+                }
+                else
+                {
+                    UpdateSlotDisplay(kvp.Key, kvp.Value);
+                }
+                
+                SaveToGameManager();
+                Debug.Log($"[Inventory] RemoveItem SUCCESS for {itemName}");
+                return true;
+            }
+        }
+        
+        Debug.LogWarning($"[Inventory] RemoveItem FAILED: '{itemName}' not found in inventory!");
+        return false;
+    }
+
+    public bool RemoveItemFromSlot(Slot slot, int amount = 1)
+    {
+        if (slotItems.ContainsKey(slot))
+        {
+            var data = slotItems[slot];
+            data.quantity -= amount;
+            if (data.quantity <= 0)
+            {
+                slot.ClearSlot();
+                slotItems.Remove(slot);
             }
             else
             {
-                UpdateSlotDisplay(kvp.Key, kvp.Value);
+                UpdateSlotDisplay(slot, data);
             }
-            
             SaveToGameManager();
-            Debug.Log($"[Inventory] RemoveItem SUCCESS for {itemName}");
             return true;
         }
+        return false;
     }
-    
-    Debug.LogWarning($"[Inventory] RemoveItem FAILED: '{itemName}' not found in inventory!");
-    return false;
-}
-
-public bool RemoveItemFromSlot(Slot slot, int amount = 1)
-{
-    if (slotItems.ContainsKey(slot))
-    {
-        var data = slotItems[slot];
-        data.quantity -= amount;
-        if (data.quantity <= 0)
-        {
-            slot.ClearSlot();
-            slotItems.Remove(slot);
-        }
-        else
-        {
-            UpdateSlotDisplay(slot, data);
-        }
-        SaveToGameManager();
-        return true;
-    }
-    return false;
-}
 
     public int GetItemCount(string itemName)
     {
@@ -187,36 +187,80 @@ public bool RemoveItemFromSlot(Slot slot, int amount = 1)
         return total;
     }
 
+    /// <summary>
+    /// COMPLETELY REWRITTEN: Safely handles TMP text without material errors
+    /// </summary>
     private void UpdateSlotDisplay(Slot slot, InventoryItem data)
     {
+        if (slot == null) return;
+        
         if (data.quantity > 1)
         {
+            // Find or create quantity text
             TextMeshProUGUI text = slot.GetComponentInChildren<TextMeshProUGUI>();
+            
             if (text == null)
             {
+                // Create the text GameObject only once
                 GameObject textGO = new GameObject("QuantityText");
                 textGO.transform.SetParent(slot.transform);
                 text = textGO.AddComponent<TextMeshProUGUI>();
+                
+                // Setup RectTransform
                 RectTransform textRect = textGO.GetComponent<RectTransform>();
                 textRect.anchorMin = new Vector2(1, 1);
                 textRect.anchorMax = new Vector2(1, 1);
                 textRect.pivot = new Vector2(1, 1);
                 textRect.anchoredPosition = new Vector2(-5, -5);
                 textRect.sizeDelta = new Vector2(30, 20);
+                
+                // Configure TMP text settings WITHOUT outline to avoid material issues
                 text.fontSize = 14;
                 text.color = Color.white;
                 text.alignment = TextAlignmentOptions.TopRight;
                 text.fontStyle = FontStyles.Bold;
-                text.outlineWidth = 0.2f;
-                text.outlineColor = Color.black;
+                
+                // SAFELY set outline - create material instance if needed
+                SafeSetTextOutline(text, 0.2f, Color.black);
             }
+            
+            // Update text content
             text.text = data.quantity.ToString();
             text.enabled = true;
         }
         else
         {
+            // Hide quantity text when quantity is 1 or less
             TextMeshProUGUI text = slot.GetComponentInChildren<TextMeshProUGUI>();
             if (text != null) text.enabled = false;
+        }
+    }
+    
+    /// <summary>
+    /// Safely sets outline on TMP text without causing null reference exceptions
+    /// </summary>
+    private void SafeSetTextOutline(TextMeshProUGUI text, float width, Color color)
+    {
+        if (text == null) return;
+        
+        try
+        {
+            // Force font material to be created if it doesn't exist
+            if (text.fontMaterial == null && text.font != null)
+            {
+                text.fontMaterial = text.font.material;
+            }
+            
+            // Now it's safe to set outline properties
+            text.outlineWidth = width;
+            text.outlineColor = color;
+        }
+        catch (System.Exception e)
+        {
+            // If any error occurs, just log and continue without outline
+            Debug.LogWarning($"Could not set text outline: {e.Message}. Using text without outline.");
+            // Still try to set basic properties
+            text.outlineWidth = 0;
         }
     }
 
@@ -227,9 +271,12 @@ public bool RemoveItemFromSlot(Slot slot, int amount = 1)
 
     public void RefreshInventoryUI()
     {
+        // First, clean up all slots
         foreach (Slot slot in slots)
             slot.ClearSlot();
         slotItems.Clear();
+        
+        // Then reload from GameManager
         if (GameManager.Instance != null && GameManager.Instance.inventorySlots.Count > 0)
             LoadFromSlotData(GameManager.Instance.inventorySlots);
     }
@@ -253,11 +300,17 @@ public bool RemoveItemFromSlot(Slot slot, int amount = 1)
     public void LoadFromSlotData(List<GameManager.InventorySlotData> data)
     {
         if (data == null || data.Count == 0) return;
+        
         foreach (var itemData in data)
         {
             string path = "Prefabs/" + itemData.uiPrefabName;
             GameObject prefab = Resources.Load<GameObject>(path);
-            if (prefab == null) continue;
+            if (prefab == null)
+            {
+                Debug.LogWarning($"Could not load prefab: {path}");
+                continue;
+            }
+            
             for (int i = 0; i < itemData.quantity; i++)
                 AddItemWithoutSync(prefab, itemData.itemName, itemData.itemType);
         }
@@ -278,6 +331,7 @@ public bool RemoveItemFromSlot(Slot slot, int amount = 1)
                 }
             }
         }
+        
         foreach (Slot slot in slots)
         {
             if (slot.IsEmpty())
@@ -294,7 +348,9 @@ public bool RemoveItemFromSlot(Slot slot, int amount = 1)
                 }
                 Image img = newItem.GetComponent<Image>();
                 if (img != null) img.enabled = true;
-                if (newItem.GetComponent<ItemDragHandler>() == null) newItem.AddComponent<ItemDragHandler>();
+                if (newItem.GetComponent<ItemDragHandler>() == null) 
+                    newItem.AddComponent<ItemDragHandler>();
+                    
                 slot.SetItem(newItem);
                 slotItems[slot] = new InventoryItem
                 {
@@ -310,12 +366,35 @@ public bool RemoveItemFromSlot(Slot slot, int amount = 1)
         }
     }
 
-public void SaveToGameManager()
-{
-    if (GameManager.Instance != null)
+    public void SaveToGameManager()
     {
-        GameManager.Instance.inventorySlots = GetAllSlotData();
-        Debug.Log($"[Inventory] Saved to GameManager. Items count: {GameManager.Instance.inventorySlots.Count}");
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.inventorySlots = GetAllSlotData();
+            Debug.Log($"[Inventory] Saved to GameManager. Items count: {GameManager.Instance.inventorySlots.Count}");
+        }
     }
+    
+    /// <summary>
+    /// NEW METHOD: Gets all slots with a specific component (for health item system)
+    /// </summary>
+   // Add this method INSIDE your InventoryController class
+public List<(Slot slot, T component)> GetAllSlotsWithComponent<T>() where T : Component
+{
+    var result = new List<(Slot slot, T component)>();
+    
+    foreach (var kvp in slotItems)
+    {
+        Slot slot = kvp.Key;
+        if (slot == null || slot.currentItem == null) continue;
+        
+        // Search the entire hierarchy of the item
+        T comp = slot.currentItem.GetComponentInChildren<T>();
+        if (comp != null)
+        {
+            result.Add((slot, comp));
+        }
+    }
+    return result;
 }
 }
