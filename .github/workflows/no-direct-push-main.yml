@@ -1,0 +1,28 @@
+name: No Direct Push to Main
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      # Show up (and pass) on PRs so it can be required
+      - name: PR placeholder
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "PR OK: this job only blocks direct pushes to main."
+
+      # Fail only on direct pushes to main; allow PR merges
+      - name: Block direct pushes to main (allow PR merges)
+        if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/main') }}
+        run: |
+          echo "Actor: $GITHUB_ACTOR"
+          # PR merges via the green button are done by 'web-flow' (or sometimes 'github')
+          if [ "$GITHUB_ACTOR" = "web-flow" ] || [ "$GITHUB_ACTOR" = "github" ]; then
+            echo "This push came from a PR merge. Allowed."
+            exit 0
+          fi
+          echo "::error::Direct pushes to 'main' are not allowed. Open a PR."
+          exit 1

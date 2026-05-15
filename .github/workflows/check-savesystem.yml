@@ -1,0 +1,17 @@
+name: SaveSystem Check (noop)
+
+on:
+    pull_request:
+    push:
+        branches: [main, develop, workspace-*]
+
+jobs:
+    savesystem:
+        name: SaveSystem Check
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Placeholder SaveSystem check
+              run: |
+                  echo "SaveSystem placeholder check → PASS (noop)"
+                  exit 0

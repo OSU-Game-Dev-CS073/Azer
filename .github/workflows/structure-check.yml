@@ -1,0 +1,64 @@
+name: Unity Repo Structure Check
+
+on:
+    pull_request:
+    push:
+
+jobs:
+    structure:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Validate Unity project layout
+              shell: bash
+              run: |
+                  set -euo pipefail
+                  err=0
+
+                  # --- 1) Require a Unity project at repo root ---
+                  for d in Assets ProjectSettings; do
+                    if [[ ! -d "$d" ]]; then
+                      echo "::error::Missing '$d/' at repo root."
+                      err=1
+                    fi
+                  done
+
+                  # --- 2) Forbid additional Unity project roots anywhere else ---
+                  # A "project root" is a directory that contains BOTH Assets/ and ProjectSettings/
+                  # (Packages/ is optional, some older projects may lack it.)
+                  while IFS= read -r projroot; do
+                    # normalize path
+                    projroot="${projroot#./}"
+                    # Ignore the real root of the repo
+                    if [[ "$projroot" != "." ]]; then
+                      echo "::error::Nested Unity project detected at '$projroot' (contains Assets/ and ProjectSettings/). Remove or move its contents to the repo root."
+                      err=1
+                    fi
+                  done < <(
+                    # Find any directory that has BOTH children: Assets and ProjectSettings
+                    # Print its parent as a candidate "project root"
+                    find . -type d -name ProjectSettings -print0 \
+                    | xargs -0 -I{} dirname {} \
+                    | while read -r parent; do
+                        if [[ -d "$parent/Assets" && -d "$parent/ProjectSettings" ]]; then
+                          echo "$parent"
+                        fi
+                      done \
+                    | sort -u
+                  )
+
+                  # --- 3) Reject cache/build folders if they somehow got committed ---
+                  for d in Library Temp Obj obj Debug Release Builds Build Logs; do
+                    if [[ -e "$d" ]]; then
+                      echo "::error::'$d/' must not be committed. Delete it and ensure .gitignore ignores it."
+                      err=1
+                    fi
+                  done
+
+                  # --- 4) Warn (don’t fail) if .gitattributes missing ---
+                  if [[ ! -f ".gitattributes" ]]; then
+                    echo "::warning::.gitattributes missing. Add Git LFS patterns for Unity binaries."
+                  fi
+
+                  exit $err

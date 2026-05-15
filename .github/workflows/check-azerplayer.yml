@@ -1,0 +1,29 @@
+name: Check azerPlayer Exists
+
+on:
+    pull_request:
+    push:
+        branches: [main, develop, workspace-*]
+
+jobs:
+    verify-azerplayer:
+        name: Verify azerPlayer.cs Exists
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Check if azerPlayer.cs exists
+              shell: bash
+              run: |
+                  # Look for exact lowercase name
+                  FILE_PATH=$(find . -type f -name "azerPlayer.cs" | head -n 1)
+
+                  if [ -z "$FILE_PATH" ]; then
+                    echo "::error::azerPlayer.cs not found in repository!"
+                    echo "❌ Make sure azerPlayer.cs exists and is committed before pushing."
+                    exit 1
+                  else
+                    echo "✅ Found azerPlayer.cs at: $FILE_PATH"
+                  fi
