@@ -11,6 +11,7 @@ TagManager:
   - NPC
   - Door
   - Enemy
+  - JumpGround
   layers:
   - Default
   - TransparentFX
