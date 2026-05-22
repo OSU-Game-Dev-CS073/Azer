@@ -75,7 +75,7 @@ public class HealthItemUser : MonoBehaviour
         }
 
         // Play sound if assigned
-        if (useSound != null && player.audioSource != null)
+        if (useSound != null)
             player.PlaySFX(useSound, useSoundVolume, 1f);
 
         Debug.Log($"Used {best.component.GetDisplayName()}, restored {healAmount} HP.");

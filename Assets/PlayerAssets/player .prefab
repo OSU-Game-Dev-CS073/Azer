@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4541505641815495536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: attackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 940980522627609442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 3356531108485076476}
   - component: {fileID: 3864852434464333498}
   - component: {fileID: 8776061099313089826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'player '
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -147,9 +147,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 1223840877
+  m_SortingLayer: 4
+  m_SortingOrder: 32767
   m_Sprite: {fileID: 3713219614965599903, guid: be2350aa31af94b158fcef6255e7281b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -253,9 +253,11 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   tr: {fileID: 0}
   coins: 0
+  money: 0
   facingDirection: 1
   speed: 8
   moveInput: {x: 0, y: 0}
+  cameraFollowObject: {fileID: 0}
   jumpForce: 15.5
   jumpCutMultiplier: 0.4
   groundCheck: {fileID: 940980522627609442}
@@ -274,6 +276,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
+  knockbackForce: 5
   normalSprite: {fileID: 0}
   darkModeSprite: {fileID: 0}
   transitionSprite: {fileID: 0}
@@ -462,7 +465,7 @@ GameObject:
   - component: {fileID: 7438216816049216592}
   - component: {fileID: 6999779025985668393}
   - component: {fileID: 2872577173892151503}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spellFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +509,7 @@ SpriteRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -528,8 +531,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1223840877
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
