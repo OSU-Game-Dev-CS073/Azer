@@ -1,8 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-// next time i need to add action scripts for each item type
-// q for quick heal potions, and need to figure out how to handle stacking world items and shop items
-
 
 public class ShopItemHandler : MonoBehaviour, IPointerClickHandler
 {
@@ -15,29 +12,49 @@ public class ShopItemHandler : MonoBehaviour, IPointerClickHandler
         isShopItem = isShop;
         shopStockItem = shopItem;
         originalInventorySlot = originalSlot;
+        Debug.Log($"[ShopItemHandler] Initialize - isShopItem={isShopItem}, hasStockItem={shopItem != null}, hasOriginalSlot={originalSlot != null}");
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log($"[ShopItemHandler] OnPointerClick FIRED! isShopItem={isShopItem}, button={eventData.button}, object={gameObject.name}");
+        
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             if (isShopItem)
+            {
+                Debug.Log("[ShopItemHandler] Calling BuyItem");
                 BuyItem();
+            }
             else
+            {
+                Debug.Log("[ShopItemHandler] Calling SellItem");
                 SellItem();
+            }
         }
     }
 
     private void BuyItem()
     {
-        if (shopStockItem == null) return;
+        Debug.Log("[ShopItemHandler] BuyItem executing");
+        if (shopStockItem == null) 
+        {
+            Debug.LogError("[ShopItemHandler] shopStockItem is null!");
+            return;
+        }
         ShopSlot slot = GetComponentInParent<ShopSlot>();
-        if (slot == null) return;
+        if (slot == null) 
+        {
+            Debug.LogError("[ShopItemHandler] ShopSlot not found!");
+            return;
+        }
+        Debug.Log($"[ShopItemHandler] Attempting to buy item ID: {shopStockItem.itemID}, Price: {slot.itemPrice}");
         ShopController.Instance.TryBuyItem(shopStockItem, slot.itemPrice);
     }
 
     private void SellItem()
     {
+        Debug.Log("[ShopItemHandler] SellItem executing");
         if (originalInventorySlot == null)
         {
             Debug.LogError("[ShopItemHandler] Cannot sell: originalInventorySlot is null.");
@@ -52,11 +69,15 @@ public class ShopItemHandler : MonoBehaviour, IPointerClickHandler
         }
 
         ShopSlot slot = GetComponentInParent<ShopSlot>();
-        if (slot == null) return;
+        if (slot == null) 
+        {
+            Debug.LogError("[ShopItemHandler] ShopSlot not found for selling!");
+            return;
+        }
 
         int sellPrice = invItem.GetSellPrice();
+        Debug.Log($"[ShopItemHandler] Selling {invItem.Name} for {sellPrice} gold");
 
-        // Remove using the slot reference
         bool removed = InventoryController.Instance.RemoveItemFromSlot(originalInventorySlot, 1);
         if (removed)
         {
@@ -64,11 +85,11 @@ public class ShopItemHandler : MonoBehaviour, IPointerClickHandler
             ShopController.Instance.UpdateMoneyDisplay();
             ShopController.Instance.RefreshPlayerInventoryDisplay();
             ShopController.Instance.RefreshShopDisplay();
-            Debug.Log($"Sold {invItem.Name} for {sellPrice} gold!");
+            Debug.Log($"[ShopItemHandler] Successfully sold {invItem.Name} for {sellPrice} gold!");
         }
         else
         {
-            Debug.LogError($"Failed to remove {invItem.Name} from inventory.");
+            Debug.LogError($"[ShopItemHandler] Failed to remove {invItem.Name} from inventory.");
         }
     }
 }

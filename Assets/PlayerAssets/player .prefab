@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 3356531108485076476}
   - component: {fileID: 3864852434464333498}
   - component: {fileID: 8776061099313089826}
+  - component: {fileID: 5271199407429581706}
   m_Layer: 9
   m_Name: 'player '
   m_TagString: Player
@@ -147,8 +148,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1223840877
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 3713219614965599903, guid: be2350aa31af94b158fcef6255e7281b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -257,7 +258,6 @@ MonoBehaviour:
   facingDirection: 1
   speed: 10
   moveInput: {x: 0, y: 0}
-  cameraFollowObject: {fileID: 0}
   jumpForce: 15.5
   jumpCutMultiplier: 0.4
   groundCheck: {fileID: 940980522627609442}
@@ -454,6 +454,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5271199407429581706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4542343991886159627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7341549872b3242929654c526aed68a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthItemUser
+  useKey: 113
+  useSound: {fileID: 0}
+  useSoundVolume: 0.6
 --- !u!1 &6888986628270122129
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +548,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

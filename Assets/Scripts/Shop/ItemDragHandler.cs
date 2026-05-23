@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -31,28 +29,41 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
+    void Update()
+    {
+        // Disable dragging if shop is open
+        if (ShopController.Instance != null && ShopController.Instance.shopPanel != null && ShopController.Instance.shopPanel.activeSelf)
+        {
+            canvasGroup.blocksRaycasts = true;
+            return;
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
+        // Don't allow dragging when shop is open
+        if (ShopController.Instance != null && ShopController.Instance.shopPanel != null && ShopController.Instance.shopPanel.activeSelf)
+        {
+            eventData.pointerDrag = null;
+            return;
+        }
+        
         originalParent = transform.parent;
         originalPosition = rectTransform.position;
         
-        // Detach from slot and move to root
         transform.SetParent(parentCanvas.transform);
-        transform.SetAsLastSibling(); // Put on top of everything
+        transform.SetAsLastSibling();
         
-        // Make it visible and not block raycasts
         canvasGroup.blocksRaycasts = false;
-        canvasGroup.alpha = 1f; // Keep fully visible
-        
-        // Slightly enlarge for visual feedback
+        canvasGroup.alpha = 1f;
         rectTransform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
-        
-        Debug.Log($"Started dragging: {gameObject.name}");
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Move the item with the mouse
+        if (ShopController.Instance != null && ShopController.Instance.shopPanel != null && ShopController.Instance.shopPanel.activeSelf)
+            return;
+            
         if (rectTransform != null)
         {
             rectTransform.position = Input.mousePosition;
@@ -61,6 +72,9 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (ShopController.Instance != null && ShopController.Instance.shopPanel != null && ShopController.Instance.shopPanel.activeSelf)
+            return;
+            
         Slot dropSlot = eventData.pointerEnter?.GetComponent<Slot>();
         if (dropSlot == null)
         {
@@ -75,18 +89,13 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         if (dropSlot != null && dropSlot != originalSlot)
         {
-            // Valid drop on a different slot
             if (dropSlot.currentItem != null && dropSlot.currentItem != gameObject)
             {
-                // Slot has an item - swap items
                 GameObject itemToSwap = dropSlot.currentItem;
-                
-                // Move swapped item to original slot
                 itemToSwap.transform.SetParent(originalSlot.transform);
                 originalSlot.currentItem = itemToSwap;
                 itemToSwap.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 
-                // Ensure swapped item is visible
                 Image swappedImage = itemToSwap.GetComponent<Image>();
                 if (swappedImage != null) swappedImage.enabled = true;
             }
@@ -95,26 +104,18 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 originalSlot.currentItem = null;
             }
 
-            // Move this item into drop slot
             transform.SetParent(dropSlot.transform);
             dropSlot.currentItem = gameObject;
         }
         else
         {
-            // No valid drop - return to original slot
             transform.SetParent(originalParent);
         }
 
-        // Reset position and scale
         rectTransform.anchoredPosition = Vector2.zero;
         rectTransform.localScale = Vector3.one;
-        
-        // Restore raycast blocking
         canvasGroup.blocksRaycasts = true;
         
-        // Ensure item is visible
         if (itemImage != null) itemImage.enabled = true;
-        
-        Debug.Log($"Ended dragging: {gameObject.name}");
     }
 }

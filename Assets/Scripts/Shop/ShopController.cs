@@ -20,45 +20,70 @@ public class ShopController : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        Debug.Log("[ShopController] Awake completed");
     }
 
     void Start()
     {
         if (shopPanel != null) shopPanel.SetActive(false);
         UpdateMoneyDisplay();
+        Debug.Log("[ShopController] Start completed - shopPanel assigned: " + (shopPanel != null));
+    }
+
+    void Update()
+    {
+        // Debug mouse clicks when shop is open
+        if (shopPanel != null && shopPanel.activeSelf && Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("[ShopController] Mouse click detected while shop open at position: " + Input.mousePosition);
+        }
     }
 
     public void OpenShop(ShopNPC shop)
     {
+        Debug.Log("[ShopController] OpenShop called for: " + shop.shopkeeperName);
         currentShop = shop;
         shopPanel.SetActive(true);
         if (shopTitleText != null) shopTitleText.text = shop.shopkeeperName + "'s Shop";
         RefreshShopDisplay();
         RefreshPlayerInventoryDisplay();
         UpdateMoneyDisplay();
+        Debug.Log("[ShopController] OpenShop completed - shopPanel active: " + shopPanel.activeSelf);
     }
 
     public void CloseShop()
     {
+        Debug.Log("[ShopController] CloseShop called");
         shopPanel.SetActive(false);
         currentShop = null;
     }
 
     public void RefreshShopDisplay()
     {
-        if (currentShop == null) return;
+        Debug.Log("[ShopController] RefreshShopDisplay called");
+        if (currentShop == null) 
+        {
+            Debug.LogWarning("[ShopController] currentShop is null");
+            return;
+        }
         foreach (Transform child in shopInventoryGrid) Destroy(child.gameObject);
 
         foreach (var stockItem in currentShop.GetCurrentStock())
         {
             if (stockItem.quantity <= 0) continue;
+            Debug.Log("[ShopController] Creating shop slot for item ID: " + stockItem.itemID);
             CreateShopSlot(shopInventoryGrid, stockItem.itemID, stockItem.quantity, true);
         }
     }
 
     public void RefreshPlayerInventoryDisplay()
     {
-        if (InventoryController.Instance == null) return;
+        Debug.Log("[ShopController] RefreshPlayerInventoryDisplay called");
+        if (InventoryController.Instance == null) 
+        {
+            Debug.LogWarning("[ShopController] InventoryController.Instance is null");
+            return;
+        }
         foreach (Transform child in playerInventoryGrid) Destroy(child.gameObject);
 
         Transform inventoryParent = InventoryController.Instance.itemsPageParent;
@@ -73,15 +98,14 @@ public class ShopController : MonoBehaviour
             Slot inventorySlot = slotTransform.GetComponent<Slot>();
             if (inventorySlot?.currentItem != null)
             {
-                // Try to get Item component (for selling price)
                 Item originalItem = inventorySlot.currentItem.GetComponent<Item>();
                 if (originalItem != null)
                 {
+                    Debug.Log("[ShopController] Creating sell slot for item: " + originalItem.Name);
                     CreateShopSlot(playerInventoryGrid, originalItem.ID, originalItem.quantity, false, inventorySlot);
                 }
                 else
                 {
-                    // If no Item component, still show it but cannot sell (or use default price)
                     Debug.LogWarning($"Item '{inventorySlot.currentItem.name}' has no Item component - cannot sell.");
                 }
             }
@@ -90,7 +114,11 @@ public class ShopController : MonoBehaviour
 
     private void CreateShopSlot(Transform grid, int itemID, int quantity, bool isShop, Slot originalSlot = null)
     {
-        if (shopSlotPrefab == null) return;
+        if (shopSlotPrefab == null) 
+        {
+            Debug.LogError("ShopSlotPrefab is null!");
+            return;
+        }
         GameObject slotObj = Instantiate(shopSlotPrefab, grid);
         ShopSlot slot = slotObj.GetComponent<ShopSlot>();
         if (slot == null)
@@ -117,6 +145,7 @@ public class ShopController : MonoBehaviour
             itemPrefab = itemData.uiPrefab;
             price = itemData.buyPrice;
             displayName = itemData.Name;
+            Debug.Log($"[ShopController] Shop slot created: {displayName}, price: {price}");
         }
         else
         {
@@ -135,6 +164,7 @@ public class ShopController : MonoBehaviour
             itemPrefab = invItem.uiPrefab;
             price = invItem.GetSellPrice();
             displayName = invItem.Name;
+            Debug.Log($"[ShopController] Sell slot created: {displayName}, sell price: {price}");
         }
 
         if (itemPrefab == null)
@@ -166,15 +196,17 @@ public class ShopController : MonoBehaviour
             handler.Initialize(isShop, null, null, originalSlot);
         else
             handler.Initialize(isShop, null, isShop ? currentShop.GetCurrentStock().Find(s => s.itemID == itemID) : null, null);
+        
+        Debug.Log($"[ShopController] CreateShopSlot completed for {displayName}, handler assigned");
     }
 
     public void UpdateMoneyDisplay()
     {
         if (playerMoneyText != null && CurrencyController.Instance != null)
             playerMoneyText.text = CurrencyController.Instance.GetGold().ToString();
+        Debug.Log("[ShopController] UpdateMoneyDisplay called, gold: " + (CurrencyController.Instance != null ? CurrencyController.Instance.GetGold().ToString() : "null"));
     }
 
-    // ==================== FIXED BUY METHOD ====================
     public bool TryBuyItem(ShopNPC.ShopStockItem stockItem, int price)
     {
         Debug.Log($"[SHOP] === TryBuyItem called: ItemID={stockItem.itemID}, Price={price} ===");
@@ -211,7 +243,6 @@ public class ShopController : MonoBehaviour
             return false;
         }
 
-        // Check for health component on the UI prefab
         UsableHealthItem healthCheck = itemData.uiPrefab.GetComponent<UsableHealthItem>();
         if (healthCheck != null)
         {
@@ -220,12 +251,11 @@ public class ShopController : MonoBehaviour
         else
         {
             Debug.LogWarning($"[SHOP] ⚠️ Item '{itemData.Name}' has NO UsableHealthItem component on its UI prefab.");
-            // Optional: auto-add for items that look like health items
             if (itemData.Name.ToLower().Contains("apple") || itemData.Name.ToLower().Contains("potion") || itemData.Name.ToLower().Contains("food"))
             {
-                Debug.Log($"[SHOP] Auto-adding UsableHealthItem to {itemData.uiPrefab.name} (fallback). Set healAmount in Inspector!");
+                Debug.Log($"[SHOP] Auto-adding UsableHealthItem to {itemData.uiPrefab.name} (fallback).");
                 healthCheck = itemData.uiPrefab.AddComponent<UsableHealthItem>();
-                healthCheck.healAmount = 20; // default fallback
+                healthCheck.healAmount = 20;
                 healthCheck.displayName = itemData.Name;
             }
         }
@@ -236,20 +266,12 @@ public class ShopController : MonoBehaviour
             CurrencyController.Instance.SpendGold(price);
             Debug.Log($"[SHOP] Spent {price} gold. Remaining: {CurrencyController.Instance.GetGold()}");
 
-            // Add to inventory – use the correct item type for health items
             Collectibles.CollectibleType itemType = (healthCheck != null) ? Collectibles.CollectibleType.Potion : Collectibles.CollectibleType.QuestItem;
             bool added = InventoryController.Instance.AddItem(itemData.uiPrefab, itemData.Name, itemType);
             
             if (added)
             {
                 Debug.Log($"[SHOP] Item '{itemData.Name}' successfully added to inventory!");
-
-                // Verify the item in inventory has the health component
-                var healthItems = InventoryController.Instance.GetAllSlotsWithComponent<UsableHealthItem>();
-                Debug.Log($"[SHOP] Total health items in inventory after purchase: {healthItems.Count}");
-                foreach (var hi in healthItems)
-                    Debug.Log($"[SHOP] -> {hi.component.GetDisplayName()} heals {hi.component.healAmount}");
-
                 UpdateMoneyDisplay();
                 RefreshShopDisplay();
                 RefreshPlayerInventoryDisplay();
@@ -270,6 +292,7 @@ public class ShopController : MonoBehaviour
 
     public bool TrySellItem(GameManager.InventorySlotData playerItem, int price)
     {
+        Debug.Log($"[SHOP] TrySellItem called: {playerItem.itemName}, price: {price}");
         if (CurrencyController.Instance == null || InventoryController.Instance == null) return false;
 
         if (InventoryController.Instance.RemoveItem(playerItem.itemName, 1))
@@ -277,8 +300,11 @@ public class ShopController : MonoBehaviour
             CurrencyController.Instance.AddGold(price);
             UpdateMoneyDisplay();
             RefreshPlayerInventoryDisplay();
+            RefreshShopDisplay();
+            Debug.Log($"[SHOP] Sold {playerItem.itemName} for {price} gold");
             return true;
         }
+        Debug.LogWarning($"[SHOP] Failed to sell {playerItem.itemName}");
         return false;
     }
 }
