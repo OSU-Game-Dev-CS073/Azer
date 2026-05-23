@@ -616,45 +616,56 @@ public class EnemyController : MonoBehaviour
             PlayAnim(idleAnim);
     }
 
-    void OnDeath()
+void OnDeath()
+{
+    if (isDead) return;
+    isDead = true;
+    isAttacking = false;
+    currentState = AIState.Dead;
+
+    PlayAnim(deathAnim);
+    PlaySFX(deathSFX);
+
+    // Freeze animator on death so it doesn't transition back to idle
+    if (animator != null && !string.IsNullOrEmpty(deathAnim))
+        StartCoroutine(FreezeAfterDeath());
+
+    // Notify GameManager (XP + chaos)
+    if (GameManager.Instance != null)
+        GameManager.Instance.OnEnemyKilled(xpReward);
+
+    // Gold drop
+    if (goldDrop > 0 && GameManager.Instance != null)
+        GameManager.Instance.AddMoney(goldDrop);
+
+    // UNLOCK DOUBLE JUMP ONLY FOR SPIDER BOSS
+    // Check if this enemy is the Spider Boss (by name or enemyType)
+    if (enemyName == "Spider_Boss" || enemyName == "Spider Boss" || gameObject.name.Contains("Spider_Boss"))
     {
-        if (isDead) return;
-        isDead = true;
-        isAttacking = false;
-        currentState = AIState.Dead;
-
-        PlayAnim(deathAnim);
-        PlaySFX(deathSFX);
-
-        // Freeze animator on death so it doesn't transition back to idle
-        if (animator != null && !string.IsNullOrEmpty(deathAnim))
-            StartCoroutine(FreezeAfterDeath());
-
-        // Notify GameManager (XP + chaos)
-        if (GameManager.Instance != null)
-            GameManager.Instance.OnEnemyKilled(xpReward);
-
-        // Gold drop
-        if (goldDrop > 0 && GameManager.Instance != null)
-            GameManager.Instance.AddMoney(goldDrop);
-
-        // Stop movement
-        if (rb != null)
+        Player player = FindObjectOfType<Player>();
+        if (player != null)
         {
-            rb.linearVelocity = Vector2.zero;
-            rb.bodyType = RigidbodyType2D.Kinematic;
+            player.UnlockDoubleJump();
+            Debug.Log("Spider Boss defeated! Double jump unlocked!");
         }
-
-        // Disable collider so player can walk through
-        Collider2D col = GetComponent<Collider2D>();
-        if (col != null) col.enabled = false;
-
-        // Cleanup
-        if (uiRoot != null) Destroy(uiRoot);
-        Destroy(gameObject, 1.2f);
     }
 
-    IEnumerator DamageFlash()
+    // Stop movement
+    if (rb != null)
+    {
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+    }
+
+    // Disable collider so player can walk through
+    Collider2D col = GetComponent<Collider2D>();
+    if (col != null) col.enabled = false;
+
+    // Cleanup
+    if (uiRoot != null) Destroy(uiRoot);
+    Destroy(gameObject, 1.2f);
+}
+      IEnumerator DamageFlash()
     {
         if (spriteRenderer == null) yield break;
         spriteRenderer.color = Color.red;

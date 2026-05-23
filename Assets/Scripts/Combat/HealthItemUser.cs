@@ -48,6 +48,13 @@ public class HealthItemUser : MonoBehaviour
             return;
         }
 
+        // Check if player health is already full
+        if (GameManager.Instance != null && GameManager.Instance.playerHealth >= GameManager.Instance.playerMaxHealth)
+        {
+            Debug.Log("Health is already full! Cannot use health item.");
+            return;
+        }
+
         // Find all slots that contain a UsableHealthItem
         var candidates = InventoryController.Instance.GetAllSlotsWithComponent<UsableHealthItem>();
 

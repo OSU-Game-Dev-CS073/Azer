@@ -3,27 +3,53 @@ using System;
 
 public class CurrencyController : MonoBehaviour
 {
-    public static CurrencyController Instance;
+    private static CurrencyController _instance;
+    public static CurrencyController Instance 
+    { 
+        get 
+        {
+            if (_instance == null)
+            {
+                // Try to find existing instance
+                _instance = FindObjectOfType<CurrencyController>();
+                
+                // If none exists, create a new one
+                if (_instance == null)
+                {
+                    GameObject go = new GameObject("CurrencyController");
+                    _instance = go.AddComponent<CurrencyController>();
+                    DontDestroyOnLoad(go);
+                    Debug.Log("[CurrencyController] Auto-created instance!");
+                }
+            }
+            return _instance;
+        }
+    }
+    
     [SerializeField] private int startingCurrency = 1000;
     private int playerCurrency;
     public event Action<int> OnCurrencyChanged;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this) Destroy(gameObject);
-        else
+        // Singleton pattern - destroy duplicates
+        if (_instance != null && _instance != this)
         {
-            Instance = this;
-            playerCurrency = startingCurrency;
-            DontDestroyOnLoad(gameObject);
-            
-            // Sync with GameManager on start
-            if (GameManager.Instance != null)
-                GameManager.Instance.SetPlayerMoney(playerCurrency);
-            
-            OnCurrencyChanged?.Invoke(playerCurrency);
-            Debug.Log($"[CurrencyController] Initialized with {playerCurrency} currency");
+            Debug.Log("[CurrencyController] Duplicate destroyed");
+            Destroy(gameObject);
+            return;
         }
+        
+        _instance = this;
+        playerCurrency = startingCurrency;
+        DontDestroyOnLoad(gameObject);
+        
+        // Sync with GameManager on start
+        if (GameManager.Instance != null)
+            GameManager.Instance.SetPlayerMoney(playerCurrency);
+        
+        OnCurrencyChanged?.Invoke(playerCurrency);
+        Debug.Log($"[CurrencyController] Initialized with {playerCurrency} currency");
     }
 
     void Start()

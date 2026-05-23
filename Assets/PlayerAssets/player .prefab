@@ -149,7 +149,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1223840877
   m_SortingLayer: 4
-  m_SortingOrder: 32767
+  m_SortingOrder: 10
   m_Sprite: {fileID: 3713219614965599903, guid: be2350aa31af94b158fcef6255e7281b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   coins: 0
   money: 0
   facingDirection: 1
-  speed: 8
+  speed: 10
   moveInput: {x: 0, y: 0}
   cameraFollowObject: {fileID: 0}
   jumpForce: 15.5
@@ -276,12 +276,12 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
-  knockbackForce: 5
-  normalSprite: {fileID: 0}
-  darkModeSprite: {fileID: 0}
-  transitionSprite: {fileID: 0}
-  transitionSprite2: {fileID: 0}
-  darkAnimOverride: {fileID: 0}
+  knockbackForce: 2
+  normalSprite: {fileID: 8509258159170065282, guid: f24439583405a5a42b7be9458c80b18f, type: 3}
+  darkModeSprite: {fileID: -839956166498566535, guid: f24439583405a5a42b7be9458c80b18f, type: 3}
+  transitionSprite: {fileID: 4663743520299353102, guid: f24439583405a5a42b7be9458c80b18f, type: 3}
+  transitionSprite2: {fileID: -4667734717070294307, guid: f24439583405a5a42b7be9458c80b18f, type: 3}
+  darkAnimOverride: {fileID: 22100000, guid: 96182475723d6e441935a5694998a9cc, type: 2}
   darkModeDamageMultiplier: 3
   darkModeSpeedMultiplier: 1.5
   darkModeJumpMultiplier: 1.5
@@ -531,8 +531,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1223840877
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

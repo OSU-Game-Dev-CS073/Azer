@@ -55,10 +55,6 @@ public class Player : MonoBehaviour
     public float speed = 5f;
     public Vector2 moveInput;
     public bool IsFacingRight => facingDirection == 1;
-    
-    [Header("Camera")]
-    public CameraFollowObject cameraFollowObject;
-    private float _fallSpeedDampingChangeThreshold;
 
     [Header("Jump")]
     public float jumpForce = 10f;
@@ -68,6 +64,7 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
     [Tooltip("Air jumps in normal mode. 1 = double jump.")]
     public int maxAirJumps = 1;
+    private bool doubleJumpUnlocked = false;  // Start with double jump LOCKED
 
     [Header("Combat")]
     public float attackRadius = 0.5f;
@@ -200,7 +197,7 @@ public class Player : MonoBehaviour
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
 
-        airJumpsLeft = maxAirJumps;
+        airJumpsLeft = 0; // Start with no air jumps
         usedGroundJump = false;
 
         if (spriteRenderer != null)
@@ -235,8 +232,6 @@ public class Player : MonoBehaviour
             originalImpactScale = impactFXPrefab.transform.localScale;
         if (wallImpactFXPrefab != null)
             originalWallImpactScale = wallImpactFXPrefab.transform.localScale;
-
-        _fallSpeedDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThreshold;
     }
 
     void Update()
@@ -252,7 +247,7 @@ public class Player : MonoBehaviour
 
         if (isGrounded && !wasGrounded)
         {
-            airJumpsLeft = GetCurrentAirJumps();
+            airJumpsLeft = doubleJumpUnlocked ? GetCurrentAirJumps() : 0;
             usedGroundJump = false;
             canDash = true; // reset dash when grounded (from original)
         }
@@ -278,16 +273,6 @@ public class Player : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
         }
-
-    if (rb.linearVelocity.y < _fallSpeedDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
-    {
-        CameraManager.instance.LerpYDamping(true);
-    }
-
-    if (rb.linearVelocity.y >= 0f && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
-    {
-        CameraManager.instance.LerpYDamping(false);
-    }
     }
 
     void FixedUpdate()
@@ -306,70 +291,69 @@ public class Player : MonoBehaviour
     #endregion
 
     #region INPUT
-void Flip()
-{
-    bool wasFacingRight = facingDirection == 1;
-    
-    if (moveInput.x > 0.1f) facingDirection = 1;
-    else if (moveInput.x < -0.1f) facingDirection = -1;
-    
-    bool isNowFacingRight = facingDirection == 1;
-    
-    // Only flip if direction actually changed
-    if (wasFacingRight != isNowFacingRight)
+    void Flip()
     {
-        float currentScale = baseScale;
-        if (Mathf.Abs(moveInput.x) > 0.1f)
+        bool wasFacingRight = facingDirection == 1;
+        
+        if (moveInput.x > 0.1f) facingDirection = 1;
+        else if (moveInput.x < -0.1f) facingDirection = -1;
+        
+        bool isNowFacingRight = facingDirection == 1;
+        
+        // Only flip if direction actually changed
+        if (wasFacingRight != isNowFacingRight)
         {
-            transform.localScale = new Vector3(currentScale * facingDirection, currentScale, currentScale);
-            
-            // Tell the camera to flip smoothly
-            if (cameraFollowObject != null)
+            float currentScale = baseScale;
+            if (Mathf.Abs(moveInput.x) > 0.1f)
             {
-                cameraFollowObject.CallTurn();
+                transform.localScale = new Vector3(currentScale * facingDirection, currentScale, currentScale);
+                
+                if (GameManager.Instance != null)
+                    GameManager.Instance.facingDirection = facingDirection;
             }
-            
-            if (GameManager.Instance != null)
-                GameManager.Instance.facingDirection = facingDirection;
         }
     }
-}
-   public void OnMove(InputValue value)
-{
-    if (!inputEnabled || !movementEnabled) { moveInput = Vector2.zero; return; }
-    moveInput = value.Get<Vector2>();
-}
+
+    public void OnMove(InputValue value)
+    {
+        if (!inputEnabled || !movementEnabled) { moveInput = Vector2.zero; return; }
+        moveInput = value.Get<Vector2>();
+    }
+
     public void OnJump(InputValue value)
-{
-    if (!inputEnabled || !movementEnabled || !value.isPressed || isAttacking || isDashing) return;
-
-    float currentJumpForce = jumpForce;
-    if (darkModeActive) currentJumpForce *= darkModeJumpMultiplier;
-
-    // Dev infinite jump
-    if (DevPanel.Instance != null && DevPanel.Instance.infiniteJump)
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-        PlaySound(jumpSFX);
-        return;
+        if (!inputEnabled || !movementEnabled || !value.isPressed || isAttacking || isDashing) return;
+
+        float currentJumpForce = jumpForce;
+        if (darkModeActive) currentJumpForce *= darkModeJumpMultiplier;
+
+        // Dev infinite jump
+        if (DevPanel.Instance != null && DevPanel.Instance.infiniteJump)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+            PlaySound(jumpSFX);
+            return;
+        }
+
+        // Ground jump (always allowed)
+        if (isGrounded && !usedGroundJump)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+            usedGroundJump = true;
+            PlaySound(jumpSFX);
+            return;
+        }
+
+        // Air jump (double jump) - ONLY if unlocked
+        if (!isGrounded && airJumpsLeft > 0 && doubleJumpUnlocked)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
+            airJumpsLeft--;
+            PlaySound(jumpSFX);
+            return;
+        }
     }
 
-    if (isGrounded && !usedGroundJump)
-    {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-        usedGroundJump = true;
-        PlaySound(jumpSFX);
-        return;
-    }
-
-    if (!isGrounded && airJumpsLeft > 0)
-    {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentJumpForce);
-        airJumpsLeft--;
-        PlaySound(jumpSFX);
-        return;
-    }
-}
     public void OnDash(InputValue value)
     {
         if (!inputEnabled || !movementEnabled || isAttacking) return;
@@ -557,8 +541,6 @@ void Flip()
         }
     }
 
-    // Simple screenshake coroutine
-    
     public void TakeDamage(int damageAmount)
     {
         if (isDashing) return; // invincibility during dash (from original)
@@ -604,6 +586,7 @@ void Flip()
     #region DARK MODE
     private int GetCurrentAirJumps()
     {
+        if (!doubleJumpUnlocked) return 0;  // No air jumps until unlocked
         return darkModeActive ? darkModeAirJumps : maxAirJumps;
     }
 
@@ -688,6 +671,17 @@ void Flip()
     public bool IsDarkModeActive => darkModeActive;
     #endregion
 
+    #region DOUBLE JUMP UNLOCK
+    public void UnlockDoubleJump()
+    {
+        doubleJumpUnlocked = true;
+        airJumpsLeft = GetCurrentAirJumps();
+        Debug.Log("Double jump unlocked!");
+    }
+
+    public bool HasDoubleJump() => doubleJumpUnlocked;
+    #endregion
+
     #region SFX
     private void HandleFootsteps()
     {
@@ -728,20 +722,36 @@ void Flip()
     #endregion
 
     #region COINS / DIALOGUE
-public void AddMoney(int amount)
-{
-    money += amount;
-    if (CurrencyController.Instance != null)
-        CurrencyController.Instance.AddCurrency(amount);
-    else if (GameManager.Instance != null)
-        GameManager.Instance.AddMoney(amount);
-}
+    public void AddMoney(int amount)
+    {
+        money += amount;
+        if (CurrencyController.Instance != null)
+            CurrencyController.Instance.AddCurrency(amount);
+        else if (GameManager.Instance != null)
+            GameManager.Instance.AddMoney(amount);
+    }
 
     public void AddCoins(int amount)
     {
         AddMoney(amount);
     }
 
+    public void Heal(int amount)
+    {
+        health += amount;
+        if (health > currentMaxHealth)
+        {
+            health = currentMaxHealth;
+        }
+        
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.playerHealth = health;
+        }
+        
+        UIManager.Instance?.UpdateHealthBar((float)health / currentMaxHealth);
+        Debug.Log($"Healed {amount} health. Current health: {health}");
+    }
 
     public void SetInputEnabled(bool enabled)
     {
@@ -752,19 +762,20 @@ public void AddMoney(int amount)
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
     }
-    public void DisableMovement()
-{
-    movementEnabled = false;
-    moveInput = Vector2.zero;
-    rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-    Debug.Log("Player movement disabled");
-}
 
-public void EnableMovement()
-{
-    movementEnabled = true;
-    Debug.Log("Player movement enabled");
-}
+    public void DisableMovement()
+    {
+        movementEnabled = false;
+        moveInput = Vector2.zero;
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        Debug.Log("Player movement disabled");
+    }
+
+    public void EnableMovement()
+    {
+        movementEnabled = true;
+        Debug.Log("Player movement enabled");
+    }
     #endregion
 
     #region ANIMATION
@@ -801,20 +812,5 @@ public void EnableMovement()
         }
     }
     #endregion
-    public void Heal(int amount)
-{
-    health += amount;
-    if (health > currentMaxHealth)
-    {
-        health = currentMaxHealth;
-    }
-    
-    if (GameManager.Instance != null)
-    {
-        GameManager.Instance.playerHealth = health;
-    }
-    
-    UIManager.Instance?.UpdateHealthBar((float)health / currentMaxHealth);
-    Debug.Log($"Healed {amount} health. Current health: {health}");
-}
+
 }
