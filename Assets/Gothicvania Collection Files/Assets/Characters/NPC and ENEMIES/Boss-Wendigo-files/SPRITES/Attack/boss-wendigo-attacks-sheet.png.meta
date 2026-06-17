@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 9dfacf79c75b94a6eb70b305da68e6b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -372890464490155279
+    second: boss-wendigo-attacks-sheet_0
+  - first:
+      213: 5922256877366433979
+    second: boss-wendigo-attacks-sheet_1
+  - first:
+      213: -4890131694097059916
+    second: boss-wendigo-attacks-sheet_2
+  - first:
+      213: -2783838599830637112
+    second: boss-wendigo-attacks-sheet_3
+  - first:
+      213: 7896991164590702650
+    second: boss-wendigo-attacks-sheet_4
+  - first:
+      213: 4712304666946747995
+    second: boss-wendigo-attacks-sheet_5
+  - first:
+      213: 3266522265487066609
+    second: boss-wendigo-attacks-sheet_6
+  - first:
+      213: -9212541649210721188
+    second: boss-wendigo-attacks-sheet_7
+  - first:
+      213: 7711345977059943034
+    second: boss-wendigo-attacks-sheet_8
+  - first:
+      213: -437676163016611936
+    second: boss-wendigo-attacks-sheet_9
+  - first:
+      213: -9043393909243911975
+    second: boss-wendigo-attacks-sheet_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 103
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f21fe3291a33daf0800000000000000
+      internalID: -372890464490155279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 0
+        width: 90
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb85a04a045103250800000000000000
+      internalID: 5922256877366433979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 91
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf277c1223c22cb0800000000000000
+      internalID: -4890131694097059916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 0
+        width: 103
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5f219fa81dd59d0800000000000000
+      internalID: -2783838599830637112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 0
+        width: 112
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30c3d7cf9fb79d60800000000000000
+      internalID: 7896991164590702650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 0
+        width: 101
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5eb6c2b028756140800000000000000
+      internalID: 4712304666946747995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 0
+        width: 112
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5c24591b4055d20800000000000000
+      internalID: 3266522265487066609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 0
+        width: 174
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5cbd402e2a762080800000000000000
+      internalID: -9212541649210721188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 0
+        width: 152
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72abc64f44340b60800000000000000
+      internalID: 7711345977059943034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 0
+        width: 126
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a72db049df0de9f0800000000000000
+      internalID: -437676163016611936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-wendigo-attacks-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 0
+        width: 121
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0e59b47296f7280800000000000000
+      internalID: -9043393909243911975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss-wendigo-attacks-sheet_0: -372890464490155279
+      boss-wendigo-attacks-sheet_1: 5922256877366433979
+      boss-wendigo-attacks-sheet_10: -9043393909243911975
+      boss-wendigo-attacks-sheet_2: -4890131694097059916
+      boss-wendigo-attacks-sheet_3: -2783838599830637112
+      boss-wendigo-attacks-sheet_4: 7896991164590702650
+      boss-wendigo-attacks-sheet_5: 4712304666946747995
+      boss-wendigo-attacks-sheet_6: 3266522265487066609
+      boss-wendigo-attacks-sheet_7: -9212541649210721188
+      boss-wendigo-attacks-sheet_8: 7711345977059943034
+      boss-wendigo-attacks-sheet_9: -437676163016611936
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: d97974c76d3d44617b09b65ed5a6dec2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6331570507937913423
+    second: Flames-sheet_0
+  - first:
+      213: -8887047291503388271
+    second: Flames-sheet_1
+  - first:
+      213: -6068026972604968966
+    second: Flames-sheet_2
+  - first:
+      213: -4509572155051805875
+    second: Flames-sheet_3
+  - first:
+      213: 990793295464354781
+    second: Flames-sheet_4
+  - first:
+      213: 7903217375824433546
+    second: Flames-sheet_5
+  - first:
+      213: -7349017467272712048
+    second: Flames-sheet_6
+  - first:
+      213: -4437413685396459016
+    second: Flames-sheet_7
+  - first:
+      213: 6182299367902827992
+    second: Flames-sheet_8
+  - first:
+      213: 4478432550887292520
+    second: Flames-sheet_9
+  - first:
+      213: -8628133436543749577
+    second: Flames-sheet_10
+  - first:
+      213: -9090364403292211957
+    second: Flames-sheet_11
+  - first:
+      213: -5135659384408858802
+    second: Flames-sheet_12
+  - first:
+      213: 7042053391856367673
+    second: Flames-sheet_13
+  - first:
+      213: 2111242422630524909
+    second: Flames-sheet_14
+  - first:
+      213: -2584041131240370937
+    second: Flames-sheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flames-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a9af3b4d14ed750800000000000000
+      internalID: 6331570507937913423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 6
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199d7dfe29ddaa480800000000000000
+      internalID: -8887047291503388271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 3
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff44624e990acba0800000000000000
+      internalID: -6068026972604968966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 4
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43f4298408ca61c0800000000000000
+      internalID: -4509572155051805875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 62
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3ddf5b04100cd00800000000000000
+      internalID: 990793295464354781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 5
+        width: 46
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81d5bc845eddad60800000000000000
+      internalID: 7903217375824433546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 52
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090b11fdc8b030a90800000000000000
+      internalID: -7349017467272712048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 69
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1bc7873c32b62c0800000000000000
+      internalID: -4437413685396459016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 56
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d558f61580fbc550800000000000000
+      internalID: 6182299367902827992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3
+        width: 44
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86efe226da6962e30800000000000000
+      internalID: 4478432550887292520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 52
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732b3207a56b24880800000000000000
+      internalID: -8628133436543749577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 49
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0579eeecb988d180800000000000000
+      internalID: -9090364403292211957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 57
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f98e0fff87ab8b0800000000000000
+      internalID: -5135659384408858802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 2
+        width: 49
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938feeedf366ab160800000000000000
+      internalID: 7042053391856367673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 3
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7a0ab2cc3ac4d10800000000000000
+      internalID: 2111242422630524909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flames-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 36
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d4b6f2844a32cd0800000000000000
+      internalID: -2584041131240370937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Flames-sheet_0: 6331570507937913423
+      Flames-sheet_1: -8887047291503388271
+      Flames-sheet_10: -8628133436543749577
+      Flames-sheet_11: -9090364403292211957
+      Flames-sheet_12: -5135659384408858802
+      Flames-sheet_13: 7042053391856367673
+      Flames-sheet_14: 2111242422630524909
+      Flames-sheet_15: -2584041131240370937
+      Flames-sheet_2: -6068026972604968966
+      Flames-sheet_3: -4509572155051805875
+      Flames-sheet_4: 990793295464354781
+      Flames-sheet_5: 7903217375824433546
+      Flames-sheet_6: -7349017467272712048
+      Flames-sheet_7: -4437413685396459016
+      Flames-sheet_8: 6182299367902827992
+      Flames-sheet_9: 4478432550887292520
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

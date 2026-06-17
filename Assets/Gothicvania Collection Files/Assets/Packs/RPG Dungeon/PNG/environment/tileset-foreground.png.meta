@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 0707bd55fdeab409e9a7ff85a76a6194
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6384568904557078596
+    second: tileset-foreground_0
+  - first:
+      213: -1081940671116841781
+    second: tileset-foreground_1
+  - first:
+      213: 7212648116558289051
+    second: tileset-foreground_2
+  - first:
+      213: -4437712792797233608
+    second: tileset-foreground_3
+  - first:
+      213: 280364257003849565
+    second: tileset-foreground_4
+  - first:
+      213: 1373957065265430339
+    second: tileset-foreground_5
+  - first:
+      213: 6576826593327296624
+    second: tileset-foreground_6
+  - first:
+      213: -626946234823640008
+    second: tileset-foreground_7
+  - first:
+      213: -6249787241649979584
+    second: tileset-foreground_8
+  - first:
+      213: -6351253239732771821
+    second: tileset-foreground_9
+  - first:
+      213: -5288229189387882922
+    second: tileset-foreground_10
+  - first:
+      213: 4367051692201981245
+    second: tileset-foreground_11
+  - first:
+      213: 7099993253628794542
+    second: tileset-foreground_12
+  - first:
+      213: 8769765361758654287
+    second: tileset-foreground_13
+  - first:
+      213: -3643362540631632461
+    second: tileset-foreground_14
+  - first:
+      213: 7621818452863333256
+    second: tileset-foreground_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tileset-foreground_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 312
+        width: 82
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7dedf78647567a0800000000000000
+      internalID: -6384568904557078596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 306
+        width: 50
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc680621bc2cf0f0800000000000000
+      internalID: -1081940671116841781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 207
+        width: 25
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98d85d6f39781460800000000000000
+      internalID: 7212648116558289051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 207
+        width: 25
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e3d1a1ab31a62c0800000000000000
+      internalID: -4437712792797233608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 239
+        width: 15
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d574e6a6ecd04e300800000000000000
+      internalID: 280364257003849565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 239
+        width: 15
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34fb8cbdba6411310800000000000000
+      internalID: 1373957065265430339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_6
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 207
+        width: 50
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070bd9ce0f4954b50800000000000000
+      internalID: 6576826593327296624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_7
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 159
+        width: 82
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c711c98b3ac47f0800000000000000
+      internalID: -626946234823640008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_8
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 143
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f3fa3dd9b4449a0800000000000000
+      internalID: -6249787241649979584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 127
+        width: 50
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 314ed2f24d0dbd7a0800000000000000
+      internalID: -6351253239732771821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_10
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 79
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65eeeab029f6c96b0800000000000000
+      internalID: -5288229189387882922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_11
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 79
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35b77d5062ea9c30800000000000000
+      internalID: 4367051692201981245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_12
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 63
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6d63e2f3e388260800000000000000
+      internalID: 7099993253628794542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_13
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 63
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f462fd12774b970800000000000000
+      internalID: 8769765361758654287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_14
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 47
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5dfa9921d207dc0800000000000000
+      internalID: -3643362540631632461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset-foreground_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 22
+        width: 50
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 883bf61308326c960800000000000000
+      internalID: 7621818452863333256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tileset-foreground_0: -6384568904557078596
+      tileset-foreground_1: -1081940671116841781
+      tileset-foreground_10: -5288229189387882922
+      tileset-foreground_11: 4367051692201981245
+      tileset-foreground_12: 7099993253628794542
+      tileset-foreground_13: 8769765361758654287
+      tileset-foreground_14: -3643362540631632461
+      tileset-foreground_15: 7621818452863333256
+      tileset-foreground_2: 7212648116558289051
+      tileset-foreground_3: -4437712792797233608
+      tileset-foreground_4: 280364257003849565
+      tileset-foreground_5: 1373957065265430339
+      tileset-foreground_6: 6576826593327296624
+      tileset-foreground_7: -626946234823640008
+      tileset-foreground_8: -6249787241649979584
+      tileset-foreground_9: -6351253239732771821
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

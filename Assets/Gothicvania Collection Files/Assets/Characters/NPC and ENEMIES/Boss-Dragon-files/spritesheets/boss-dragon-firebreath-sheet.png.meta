@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: 2ff5b3fe040d64fe68f7a8f9f87b419d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8035888732823085736
+    second: boss-dragon-firebreath-sheet_0
+  - first:
+      213: -4364648022103403819
+    second: boss-dragon-firebreath-sheet_1
+  - first:
+      213: 2112259406953646395
+    second: boss-dragon-firebreath-sheet_2
+  - first:
+      213: 423963787085071846
+    second: boss-dragon-firebreath-sheet_3
+  - first:
+      213: -6040112647760994628
+    second: boss-dragon-firebreath-sheet_4
+  - first:
+      213: 6167293175261146415
+    second: boss-dragon-firebreath-sheet_5
+  - first:
+      213: 5267173717429673005
+    second: boss-dragon-firebreath-sheet_6
+  - first:
+      213: -1836250834341462718
+    second: boss-dragon-firebreath-sheet_7
+  - first:
+      213: -2324467643471536079
+    second: boss-dragon-firebreath-sheet_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 7
+        width: 211
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2eb7ef936358f60800000000000000
+      internalID: 8035888732823085736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 7
+        width: 209
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d25ae0bfb7ad63c0800000000000000
+      internalID: -4364648022103403819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 7
+        width: 192
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3903f84db0405d10800000000000000
+      internalID: 2112259406953646395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 7
+        width: 187
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5c5de61d832e500800000000000000
+      internalID: 423963787085071846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 7
+        width: 212
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe9cda7c853d2ca0800000000000000
+      internalID: -6040112647760994628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 7
+        width: 234
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2da1299770a69550800000000000000
+      internalID: 6167293175261146415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 7
+        width: 229
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c5badd692c81940800000000000000
+      internalID: 5267173717429673005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2521
+        y: 7
+        width: 223
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24dff8458935486e0800000000000000
+      internalID: -1836250834341462718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-dragon-firebreath-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2873
+        y: 7
+        width: 221
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1306dfa6ef4ddbfd0800000000000000
+      internalID: -2324467643471536079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss-dragon-firebreath-sheet_0: 8035888732823085736
+      boss-dragon-firebreath-sheet_1: -4364648022103403819
+      boss-dragon-firebreath-sheet_2: 2112259406953646395
+      boss-dragon-firebreath-sheet_3: 423963787085071846
+      boss-dragon-firebreath-sheet_4: -6040112647760994628
+      boss-dragon-firebreath-sheet_5: 6167293175261146415
+      boss-dragon-firebreath-sheet_6: 5267173717429673005
+      boss-dragon-firebreath-sheet_7: -1836250834341462718
+      boss-dragon-firebreath-sheet_8: -2324467643471536079
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

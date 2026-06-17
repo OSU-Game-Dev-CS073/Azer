@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: fc21981f655e14f569be6f1dcfe098af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2839092925109284136
+    second: magic-castle-sprites_0
+  - first:
+      213: 6466800849114780324
+    second: magic-castle-sprites_1
+  - first:
+      213: 6036146981444469125
+    second: magic-castle-sprites_2
+  - first:
+      213: -8119028599891584545
+    second: magic-castle-sprites_3
+  - first:
+      213: 8524717506672604539
+    second: magic-castle-sprites_4
+  - first:
+      213: 2404034067505907914
+    second: magic-castle-sprites_5
+  - first:
+      213: 7117150042862002948
+    second: magic-castle-sprites_6
+  - first:
+      213: 1790798470341642343
+    second: magic-castle-sprites_7
+  - first:
+      213: 6461012835658736881
+    second: magic-castle-sprites_8
+  - first:
+      213: 7774869186398085844
+    second: magic-castle-sprites_9
+  - first:
+      213: 1784729997399732249
+    second: magic-castle-sprites_10
+  - first:
+      213: -4775914305959028794
+    second: magic-castle-sprites_11
+  - first:
+      213: 7089296084456402955
+    second: magic-castle-sprites_12
+  - first:
+      213: -842870781208105292
+    second: magic-castle-sprites_13
+  - first:
+      213: -972341447947386944
+    second: magic-castle-sprites_14
+  - first:
+      213: -465311440591424773
+    second: magic-castle-sprites_15
+  - first:
+      213: 2955747754666751048
+    second: magic-castle-sprites_16
+  - first:
+      213: 48733193264613137
+    second: magic-castle-sprites_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: magic-castle-sprites_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 104
+        width: 56
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82da67529fb766720800000000000000
+      internalID: 2839092925109284136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a25ea41c11beb950800000000000000
+      internalID: 6466800849114780324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 123
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5814b01e2b3b4c350800000000000000
+      internalID: 6036146981444469125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_3
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 123
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd9993e318a635f80800000000000000
+      internalID: -8119028599891584545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_4
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 127
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7536cb0861ed4670800000000000000
+      internalID: 8524717506672604539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_5
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 127
+        width: 57
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac880ad4f38dc5120800000000000000
+      internalID: 2404034067505907914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_6
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 127
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40322f5714235c260800000000000000
+      internalID: 7117150042862002948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 127
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 768c60188b13ad810800000000000000
+      internalID: 1790798470341642343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_8
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 63
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4adae21f02aa950800000000000000
+      internalID: 6461012835658736881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_9
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 40
+        width: 46
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2636ef452e5eb60800000000000000
+      internalID: 7774869186398085844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 47
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910befa0a72a4c810800000000000000
+      internalID: 1784729997399732249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_11
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 47
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c71b9b1e3b88bdb0800000000000000
+      internalID: -4775914305959028794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_12
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 63
+        width: 12
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0077956a3d326260800000000000000
+      internalID: 7089296084456402955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_13
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 33
+        width: 15
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bee88e7d758d44f0800000000000000
+      internalID: -842870781208105292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_14
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 66
+        width: 7
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cff4b2da9c8182f0800000000000000
+      internalID: -972341447947386944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 31
+        width: 15
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf27f99c5b1ea89f0800000000000000
+      internalID: -465311440591424773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 47
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844f1923cece40920800000000000000
+      internalID: 2955747754666751048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic-castle-sprites_17
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 47
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117ce41c4922da000800000000000000
+      internalID: 48733193264613137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      magic-castle-sprites_0: 2839092925109284136
+      magic-castle-sprites_1: 6466800849114780324
+      magic-castle-sprites_10: 1784729997399732249
+      magic-castle-sprites_11: -4775914305959028794
+      magic-castle-sprites_12: 7089296084456402955
+      magic-castle-sprites_13: -842870781208105292
+      magic-castle-sprites_14: -972341447947386944
+      magic-castle-sprites_15: -465311440591424773
+      magic-castle-sprites_16: 2955747754666751048
+      magic-castle-sprites_17: 48733193264613137
+      magic-castle-sprites_2: 6036146981444469125
+      magic-castle-sprites_3: -8119028599891584545
+      magic-castle-sprites_4: 8524717506672604539
+      magic-castle-sprites_5: 2404034067505907914
+      magic-castle-sprites_6: 7117150042862002948
+      magic-castle-sprites_7: 1790798470341642343
+      magic-castle-sprites_8: 6461012835658736881
+      magic-castle-sprites_9: 7774869186398085844
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

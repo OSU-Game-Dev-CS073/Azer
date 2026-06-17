@@ -1,0 +1,1729 @@
+fileFormatVersion: 2
+guid: 85959b789b8ab4ad489f0b315a59889b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6046522827855176116
+    second: Ghost-Wolf-sheet_0
+  - first:
+      213: 2153241018203995750
+    second: Ghost-Wolf-sheet_1
+  - first:
+      213: -1602914741074686022
+    second: Ghost-Wolf-sheet_2
+  - first:
+      213: -451005287491466095
+    second: Ghost-Wolf-sheet_3
+  - first:
+      213: 533771001587715504
+    second: Ghost-Wolf-sheet_4
+  - first:
+      213: 6723019138041643646
+    second: Ghost-Wolf-sheet_5
+  - first:
+      213: -1308815308188483580
+    second: Ghost-Wolf-sheet_6
+  - first:
+      213: 4768483022832955540
+    second: Ghost-Wolf-sheet_7
+  - first:
+      213: -3355835415812089920
+    second: Ghost-Wolf-sheet_8
+  - first:
+      213: 6031523379654573618
+    second: Ghost-Wolf-sheet_9
+  - first:
+      213: -8340513768218462425
+    second: Ghost-Wolf-sheet_10
+  - first:
+      213: -8519213624414085658
+    second: Ghost-Wolf-sheet_11
+  - first:
+      213: -5673739390331670302
+    second: Ghost-Wolf-sheet_12
+  - first:
+      213: -5516146285161690539
+    second: Ghost-Wolf-sheet_13
+  - first:
+      213: -8718864219222328021
+    second: Ghost-Wolf-sheet_14
+  - first:
+      213: -8108983633526351989
+    second: Ghost-Wolf-sheet_15
+  - first:
+      213: -6712759416485549412
+    second: Ghost-Wolf-sheet_16
+  - first:
+      213: -5287345124428400004
+    second: Ghost-Wolf-sheet_17
+  - first:
+      213: -4196312545332443314
+    second: Ghost-Wolf-sheet_18
+  - first:
+      213: 2373845546298079239
+    second: Ghost-Wolf-sheet_19
+  - first:
+      213: -2205925298358184230
+    second: Ghost-Wolf-sheet_20
+  - first:
+      213: -1668470548855691256
+    second: Ghost-Wolf-sheet_21
+  - first:
+      213: 1889447372249240611
+    second: Ghost-Wolf-sheet_22
+  - first:
+      213: 8561559629072492807
+    second: Ghost-Wolf-sheet_23
+  - first:
+      213: -8773247334880641856
+    second: Ghost-Wolf-sheet_24
+  - first:
+      213: 3056000854704534208
+    second: Ghost-Wolf-sheet_25
+  - first:
+      213: -1662698433669491348
+    second: Ghost-Wolf-sheet_26
+  - first:
+      213: 2021529338731197781
+    second: Ghost-Wolf-sheet_27
+  - first:
+      213: 1150555612376468467
+    second: Ghost-Wolf-sheet_28
+  - first:
+      213: 6194848307694111333
+    second: Ghost-Wolf-sheet_29
+  - first:
+      213: -272084864064181341
+    second: Ghost-Wolf-sheet_30
+  - first:
+      213: -1825457494594851217
+    second: Ghost-Wolf-sheet_31
+  - first:
+      213: 2263537688213571862
+    second: Ghost-Wolf-sheet_32
+  - first:
+      213: -8200910265482769147
+    second: Ghost-Wolf-sheet_33
+  - first:
+      213: 3260659723784670083
+    second: Ghost-Wolf-sheet_34
+  - first:
+      213: -1348518892466174517
+    second: Ghost-Wolf-sheet_35
+  - first:
+      213: -6874459907897736339
+    second: Ghost-Wolf-sheet_36
+  - first:
+      213: 6553936271422349852
+    second: Ghost-Wolf-sheet_37
+  - first:
+      213: 2406460852379258720
+    second: Ghost-Wolf-sheet_38
+  - first:
+      213: 7016976357715684129
+    second: Ghost-Wolf-sheet_39
+  - first:
+      213: 7395234531897916370
+    second: Ghost-Wolf-sheet_40
+  - first:
+      213: -6996514325682718127
+    second: Ghost-Wolf-sheet_41
+  - first:
+      213: -7470943144631598153
+    second: Ghost-Wolf-sheet_42
+  - first:
+      213: -1798424427601952988
+    second: Ghost-Wolf-sheet_43
+  - first:
+      213: -2291313746059021874
+    second: Ghost-Wolf-sheet_44
+  - first:
+      213: -1505372533494900885
+    second: Ghost-Wolf-sheet_45
+  - first:
+      213: -507611390992356024
+    second: Ghost-Wolf-sheet_46
+  - first:
+      213: 9032037764554970465
+    second: Ghost-Wolf-sheet_47
+  - first:
+      213: 69392509245519651
+    second: Ghost-Wolf-sheet_48
+  - first:
+      213: 8221544332950121462
+    second: Ghost-Wolf-sheet_49
+  - first:
+      213: 4839226440526006358
+    second: Ghost-Wolf-sheet_50
+  - first:
+      213: -7533221484616683030
+    second: Ghost-Wolf-sheet_51
+  - first:
+      213: -5549056304182312553
+    second: Ghost-Wolf-sheet_52
+  - first:
+      213: -3782395301118027907
+    second: Ghost-Wolf-sheet_53
+  - first:
+      213: 7544402655005023736
+    second: Ghost-Wolf-sheet_54
+  - first:
+      213: 2707535064245913423
+    second: Ghost-Wolf-sheet_55
+  - first:
+      213: -7920681522473432298
+    second: Ghost-Wolf-sheet_56
+  - first:
+      213: 9044499881908126163
+    second: Ghost-Wolf-sheet_57
+  - first:
+      213: 5313177682165052146
+    second: Ghost-Wolf-sheet_58
+  - first:
+      213: 4591911276230106898
+    second: Ghost-Wolf-sheet_59
+  - first:
+      213: 3689530682452506864
+    second: Ghost-Wolf-sheet_60
+  - first:
+      213: 4663223883822194104
+    second: Ghost-Wolf-sheet_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 539
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ed66f168f661ca0800000000000000
+      internalID: -6046522827855176116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 539
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e79d53c49d1ed10800000000000000
+      internalID: 2153241018203995750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 539
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf810d198d41c9e0800000000000000
+      internalID: -1602914741074686022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 560
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c8f3f9415bdb9f0800000000000000
+      internalID: -451005287491466095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 539
+        width: 60
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd4a0dd5e5586700800000000000000
+      internalID: 533771001587715504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 539
+        width: 60
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7200253946fc4d50800000000000000
+      internalID: 6723019138041643646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 479
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40005de596726dde0800000000000000
+      internalID: -1308815308188483580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 479
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49070757b0e0d2240800000000000000
+      internalID: 4768483022832955540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 419
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c758d3287dad61d0800000000000000
+      internalID: -3355835415812089920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 419
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e36c2be8644b350800000000000000
+      internalID: 6031523379654573618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 419
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7277511faea804c80800000000000000
+      internalID: -8340513768218462425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 419
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed5127685ca5c980800000000000000
+      internalID: -8519213624414085658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 359
+        width: 67
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0b323d514d241b0800000000000000
+      internalID: -5673739390331670302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 440
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ac8dfed26b273b0800000000000000
+      internalID: -5516146285161690539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 359
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2db368ef2f500780800000000000000
+      internalID: -8718864219222328021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 299
+        width: 67
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b87943a395a177f80800000000000000
+      internalID: -8108983633526351989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 299
+        width: 64
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a68bd50ec77d2a0800000000000000
+      internalID: -6712759416485549412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 299
+        width: 68
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a3d857f939f96b0800000000000000
+      internalID: -5287345124428400004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 299
+        width: 66
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47c1f819f3b3c5c0800000000000000
+      internalID: -4196312545332443314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 299
+        width: 67
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7087dba72f791f020800000000000000
+      internalID: 2373845546298079239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 299
+        width: 147
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad6105ee0aaf261e0800000000000000
+      internalID: -2205925298358184230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 299
+        width: 76
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808614130e668d8e0800000000000000
+      internalID: -1668470548855691256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_22
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 299
+        width: 72
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32416b4df5aa83a10800000000000000
+      internalID: 1889447372249240611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_23
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 239
+        width: 64
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709e03e1f15c0d670800000000000000
+      internalID: 8561559629072492807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_24
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 239
+        width: 68
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ccfbc5180a2f3680800000000000000
+      internalID: -8773247334880641856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_25
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 239
+        width: 66
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c234f10698196a20800000000000000
+      internalID: 3056000854704534208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_26
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 179
+        width: 67
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65188c7598ece8e0800000000000000
+      internalID: -1662698433669491348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 179
+        width: 64
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5557a1a193aed0c10800000000000000
+      internalID: 2021529338731197781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 179
+        width: 68
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb080acb3897ff00800000000000000
+      internalID: 1150555612376468467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_29
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 179
+        width: 66
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a8981d6b588f550800000000000000
+      internalID: 6194848307694111333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_30
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 179
+        width: 67
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aba1b8f14c593cf0800000000000000
+      internalID: -272084864064181341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_31
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 179
+        width: 147
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e6912941caaa6e0800000000000000
+      internalID: -1825457494594851217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_32
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 179
+        width: 76
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619cda1e883b96f10800000000000000
+      internalID: 2263537688213571862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 179
+        width: 72
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d8b075093803e80800000000000000
+      internalID: -8200910265482769147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_34
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 167
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38bcb993eb0304d20800000000000000
+      internalID: 3260659723784670083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 119
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc586a94639194de0800000000000000
+      internalID: -1348518892466174517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_36
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 159
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63471fd2230990a0800000000000000
+      internalID: -6874459907897736339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_37
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 170
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c126daa805244fa50800000000000000
+      internalID: 6553936271422349852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_38
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 146
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f03ff2567756120800000000000000
+      internalID: 2406460852379258720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_39
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 119
+        width: 73
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b25fed1de416160800000000000000
+      internalID: 7016976357715684129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_40
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 157
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db3a7800a621a660800000000000000
+      internalID: 7395234531897916370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_41
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 119
+        width: 73
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15affb73a4367ee90800000000000000
+      internalID: -6996514325682718127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_42
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 119
+        width: 74
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3081feac0e15890800000000000000
+      internalID: -7470943144631598153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 119
+        width: 70
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f7665f286ba07e0800000000000000
+      internalID: -1798424427601952988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_44
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 119
+        width: 77
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1be21b94e9330e0800000000000000
+      internalID: -2291313746059021874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_45
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 119
+        width: 75
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67186618a7db1be0800000000000000
+      internalID: -1505372533494900885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_46
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 119
+        width: 74
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d65fb112a94f8f0800000000000000
+      internalID: -507611390992356024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_47
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 119
+        width: 74
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165563a3e7e385d70800000000000000
+      internalID: 9032037764554970465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_48
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 148
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327f6a79e1886f000800000000000000
+      internalID: 69392509245519651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_49
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 119
+        width: 70
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb2e9ed20bc81270800000000000000
+      internalID: 8221544332950121462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_50
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 106
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6580b3feec2682340800000000000000
+      internalID: 4839226440526006358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_51
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 107
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1f413f8fe947790800000000000000
+      internalID: -7533221484616683030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_52
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 59
+        width: 67
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791429601bacdf2b0800000000000000
+      internalID: -5549056304182312553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_53
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 46
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77d0cc738b328bc0800000000000000
+      internalID: -3782395301118027907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_54
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 47
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd96162e3a13b860800000000000000
+      internalID: 7544402655005023736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_55
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 59
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47ca49bbc8139520800000000000000
+      internalID: 2707535064245913423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_56
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 57
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b88f1fe16141290800000000000000
+      internalID: -7920681522473432298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_57
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 0
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1423809b4848d70800000000000000
+      internalID: 9044499881908126163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_58
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 67
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f23bf593f23cb940800000000000000
+      internalID: 5313177682165052146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_59
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 67
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f5ecb0afeb9bf30800000000000000
+      internalID: 4591911276230106898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_60
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 35
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f87c739b98d33330800000000000000
+      internalID: 3689530682452506864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost-Wolf-sheet_61
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bdd65f5a6917b040800000000000000
+      internalID: 4663223883822194104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ghost-Wolf-sheet_0: -6046522827855176116
+      Ghost-Wolf-sheet_1: 2153241018203995750
+      Ghost-Wolf-sheet_10: -8340513768218462425
+      Ghost-Wolf-sheet_11: -8519213624414085658
+      Ghost-Wolf-sheet_12: -5673739390331670302
+      Ghost-Wolf-sheet_13: -5516146285161690539
+      Ghost-Wolf-sheet_14: -8718864219222328021
+      Ghost-Wolf-sheet_15: -8108983633526351989
+      Ghost-Wolf-sheet_16: -6712759416485549412
+      Ghost-Wolf-sheet_17: -5287345124428400004
+      Ghost-Wolf-sheet_18: -4196312545332443314
+      Ghost-Wolf-sheet_19: 2373845546298079239
+      Ghost-Wolf-sheet_2: -1602914741074686022
+      Ghost-Wolf-sheet_20: -2205925298358184230
+      Ghost-Wolf-sheet_21: -1668470548855691256
+      Ghost-Wolf-sheet_22: 1889447372249240611
+      Ghost-Wolf-sheet_23: 8561559629072492807
+      Ghost-Wolf-sheet_24: -8773247334880641856
+      Ghost-Wolf-sheet_25: 3056000854704534208
+      Ghost-Wolf-sheet_26: -1662698433669491348
+      Ghost-Wolf-sheet_27: 2021529338731197781
+      Ghost-Wolf-sheet_28: 1150555612376468467
+      Ghost-Wolf-sheet_29: 6194848307694111333
+      Ghost-Wolf-sheet_3: -451005287491466095
+      Ghost-Wolf-sheet_30: -272084864064181341
+      Ghost-Wolf-sheet_31: -1825457494594851217
+      Ghost-Wolf-sheet_32: 2263537688213571862
+      Ghost-Wolf-sheet_33: -8200910265482769147
+      Ghost-Wolf-sheet_34: 3260659723784670083
+      Ghost-Wolf-sheet_35: -1348518892466174517
+      Ghost-Wolf-sheet_36: -6874459907897736339
+      Ghost-Wolf-sheet_37: 6553936271422349852
+      Ghost-Wolf-sheet_38: 2406460852379258720
+      Ghost-Wolf-sheet_39: 7016976357715684129
+      Ghost-Wolf-sheet_4: 533771001587715504
+      Ghost-Wolf-sheet_40: 7395234531897916370
+      Ghost-Wolf-sheet_41: -6996514325682718127
+      Ghost-Wolf-sheet_42: -7470943144631598153
+      Ghost-Wolf-sheet_43: -1798424427601952988
+      Ghost-Wolf-sheet_44: -2291313746059021874
+      Ghost-Wolf-sheet_45: -1505372533494900885
+      Ghost-Wolf-sheet_46: -507611390992356024
+      Ghost-Wolf-sheet_47: 9032037764554970465
+      Ghost-Wolf-sheet_48: 69392509245519651
+      Ghost-Wolf-sheet_49: 8221544332950121462
+      Ghost-Wolf-sheet_5: 6723019138041643646
+      Ghost-Wolf-sheet_50: 4839226440526006358
+      Ghost-Wolf-sheet_51: -7533221484616683030
+      Ghost-Wolf-sheet_52: -5549056304182312553
+      Ghost-Wolf-sheet_53: -3782395301118027907
+      Ghost-Wolf-sheet_54: 7544402655005023736
+      Ghost-Wolf-sheet_55: 2707535064245913423
+      Ghost-Wolf-sheet_56: -7920681522473432298
+      Ghost-Wolf-sheet_57: 9044499881908126163
+      Ghost-Wolf-sheet_58: 5313177682165052146
+      Ghost-Wolf-sheet_59: 4591911276230106898
+      Ghost-Wolf-sheet_6: -1308815308188483580
+      Ghost-Wolf-sheet_60: 3689530682452506864
+      Ghost-Wolf-sheet_61: 4663223883822194104
+      Ghost-Wolf-sheet_7: 4768483022832955540
+      Ghost-Wolf-sheet_8: -3355835415812089920
+      Ghost-Wolf-sheet_9: 6031523379654573618
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

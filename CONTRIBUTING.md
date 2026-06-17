@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+# Contributing (Azer)
+- Branch off: `feature/<short-name>`
+- Open PR to `main` (or `dev` if using dev-first)
+- Require ≥1 approval; resolve all comments
+- Squash merge with conventional commit title
+- Link Issues/Project cards for traceability
+=======
 # Contributing Guide — Azer: The Path of Salvation
 
 Welcome! This guide explains how to set up, code, test, review and release so contributions meet our **Definition of Done (DoD)** (see Team Charter).
@@ -69,3 +77,4 @@ Reference issues where applicable.
 ## Support & Contact
 - Questions: open a Discussion or ask in Discord `#general`.  
 - Response windows: ≤12h (Discord), ≤24h (PR review).  
+>>>>>>> cda978e8d09053e161e1d8f777664c3acc57018f

@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 0a1d98daa2c94442f991bb1d2d34313b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1957803944143740473
+    second: spider-attack-sheet_0
+  - first:
+      213: -3326187268394244921
+    second: spider-attack-sheet_1
+  - first:
+      213: -7226447933029112887
+    second: spider-attack-sheet_2
+  - first:
+      213: 800553197498913988
+    second: spider-attack-sheet_3
+  - first:
+      213: -8785831574564659093
+    second: spider-attack-sheet_4
+  - first:
+      213: 7873825695929517007
+    second: spider-attack-sheet_5
+  - first:
+      213: 1141374407954272154
+    second: spider-attack-sheet_6
+  - first:
+      213: 3618138529267173009
+    second: spider-attack-sheet_7
+  - first:
+      213: -1781000621233087179
+    second: spider-attack-sheet_8
+  - first:
+      213: 1348875911957012800
+    second: spider-attack-sheet_9
+  - first:
+      213: -8107670477901403051
+    second: spider-attack-sheet_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spider-attack-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c124798fab74d4e0800000000000000
+      internalID: -1957803944143740473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 68
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c42fe26d4207d1d0800000000000000
+      internalID: -3326187268394244921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 75
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3a1fb64ef76bb90800000000000000
+      internalID: -7226447933029112887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 0
+        width: 74
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4d9b044e22c1b00800000000000000
+      internalID: 800553197498913988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 73
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60a9a57bb4721680800000000000000
+      internalID: -8785831574564659093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 74
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3c83dc0c2754d60800000000000000
+      internalID: 7873825695929517007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 0
+        width: 73
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f06dd0af9f6df00800000000000000
+      internalID: 1141374407954272154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 74
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196cf1992d5363230800000000000000
+      internalID: 3618138529267173009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 73
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53dd6a20f5d9847e0800000000000000
+      internalID: -1781000621233087179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 0
+        width: 74
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041674ace7b28b210800000000000000
+      internalID: 1348875911957012800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-attack-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 0
+        width: 73
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ce3c818a4cb7f80800000000000000
+      internalID: -8107670477901403051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spider-attack-sheet_0: -1957803944143740473
+      spider-attack-sheet_1: -3326187268394244921
+      spider-attack-sheet_10: -8107670477901403051
+      spider-attack-sheet_2: -7226447933029112887
+      spider-attack-sheet_3: 800553197498913988
+      spider-attack-sheet_4: -8785831574564659093
+      spider-attack-sheet_5: 7873825695929517007
+      spider-attack-sheet_6: 1141374407954272154
+      spider-attack-sheet_7: 3618138529267173009
+      spider-attack-sheet_8: -1781000621233087179
+      spider-attack-sheet_9: 1348875911957012800
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

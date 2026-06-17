@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DarkAzerOverride
+  m_Controller: {fileID: 9100000, guid: d2e317ac5b07e4737bb235084c0a7666, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3e3ace9a75e3e4677abee62c4891fae4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cbbc22e1667f5774b9b235ef6faf0dd7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b06584520c3c14786a8687c1682a02c2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 22ff3e81e4d160f4ca385d1410d28795, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c6cedc9ab5ccc495dafdb475ac896020, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d1aefb4e75e5c9b4d8ba1ae0b6ebdeab, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fe68e8b17478841429d42e65c81752ad, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dd4f5992cbd8a4f4b8519c829abfa3b2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b5bef83f44e98419e841fe65fd2ccfc8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f45d175cacc8f7745acc931b3978e8b6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cbbc22e1667f5774b9b235ef6faf0dd7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cbbc22e1667f5774b9b235ef6faf0dd7, type: 2}

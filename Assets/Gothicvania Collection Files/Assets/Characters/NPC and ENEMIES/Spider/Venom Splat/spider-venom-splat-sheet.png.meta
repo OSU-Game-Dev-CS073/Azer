@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: e8fab34169a1a457b85438b9abb20b6d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5434015809890835067
+    second: spider-venom-splat-sheet_0
+  - first:
+      213: -7085384366983999707
+    second: spider-venom-splat-sheet_1
+  - first:
+      213: 1491537271516823161
+    second: spider-venom-splat-sheet_2
+  - first:
+      213: 6380967505034223605
+    second: spider-venom-splat-sheet_3
+  - first:
+      213: -8115527576558449593
+    second: spider-venom-splat-sheet_4
+  - first:
+      213: -8456559792700011358
+    second: spider-venom-splat-sheet_5
+  - first:
+      213: 3820645116967794858
+    second: spider-venom-splat-sheet_6
+  - first:
+      213: -8155633252796642579
+    second: spider-venom-splat-sheet_7
+  - first:
+      213: 3297788940884032432
+    second: spider-venom-splat-sheet_8
+  - first:
+      213: -8831318567595781979
+    second: spider-venom-splat-sheet_9
+  - first:
+      213: -228719220862117588
+    second: spider-venom-splat-sheet_10
+  - first:
+      213: 1620716071916623216
+    second: spider-venom-splat-sheet_11
+  - first:
+      213: -8521221130373053537
+    second: spider-venom-splat-sheet_12
+  - first:
+      213: -7791263468907739995
+    second: spider-venom-splat-sheet_13
+  - first:
+      213: 559587399123690819
+    second: spider-venom-splat-sheet_14
+  - first:
+      213: 6999573982672082442
+    second: spider-venom-splat-sheet_15
+  - first:
+      213: 6591084388710385934
+    second: spider-venom-splat-sheet_16
+  - first:
+      213: -6603161150891085538
+    second: spider-venom-splat-sheet_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 14
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a5664a690896b40800000000000000
+      internalID: 5434015809890835067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 11
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f00dc4578abad90800000000000000
+      internalID: -7085384366983999707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 24
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ef306fe3103b410800000000000000
+      internalID: 1491537271516823161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 16
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff10e45320cd8850800000000000000
+      internalID: 6380967505034223605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 25
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74cc852caaadf5f80800000000000000
+      internalID: -8115527576558449593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 20
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2acc34e5ca344aa80800000000000000
+      internalID: -8456559792700011358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 24
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa832b1cd78a50530800000000000000
+      internalID: 3820645116967794858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 13
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea41b854ce51de80800000000000000
+      internalID: -8155633252796642579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 12
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbba9db19914cd20800000000000000
+      internalID: 3297788940884032432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 23
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a054289d8ad07580800000000000000
+      internalID: -8831318567595781979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 17
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c299537941d63dcf0800000000000000
+      internalID: -228719220862117588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 11
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0755b543ea0fd7610800000000000000
+      internalID: 1620716071916623216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 7
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93cf8f778a8eb980800000000000000
+      internalID: -8521221130373053537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 10
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4c648a72fdfd390800000000000000
+      internalID: -7791263468907739995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 8
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3456d8156cd04c700800000000000000
+      internalID: 559587399123690819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a065c30b37b732160800000000000000
+      internalID: 6999573982672082442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0984b9945c387b50800000000000000
+      internalID: 6591084388710385934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-venom-splat-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e113a761bebdc54a0800000000000000
+      internalID: -6603161150891085538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spider-venom-splat-sheet_0: 5434015809890835067
+      spider-venom-splat-sheet_1: -7085384366983999707
+      spider-venom-splat-sheet_10: -228719220862117588
+      spider-venom-splat-sheet_11: 1620716071916623216
+      spider-venom-splat-sheet_12: -8521221130373053537
+      spider-venom-splat-sheet_13: -7791263468907739995
+      spider-venom-splat-sheet_14: 559587399123690819
+      spider-venom-splat-sheet_15: 6999573982672082442
+      spider-venom-splat-sheet_16: 6591084388710385934
+      spider-venom-splat-sheet_17: -6603161150891085538
+      spider-venom-splat-sheet_2: 1491537271516823161
+      spider-venom-splat-sheet_3: 6380967505034223605
+      spider-venom-splat-sheet_4: -8115527576558449593
+      spider-venom-splat-sheet_5: -8456559792700011358
+      spider-venom-splat-sheet_6: 3820645116967794858
+      spider-venom-splat-sheet_7: -8155633252796642579
+      spider-venom-splat-sheet_8: 3297788940884032432
+      spider-venom-splat-sheet_9: -8831318567595781979
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

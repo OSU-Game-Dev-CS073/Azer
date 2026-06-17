@@ -32,3 +32,8 @@ Thumbs.db
 
 # VS Code
 .vscode/
+/Library/
+/Logs/
+/UserSettings/
+.DS_Store
+*.DS_Store

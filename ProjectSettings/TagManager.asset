@@ -8,6 +8,9 @@ TagManager:
   - ManaSprite
   - HealthSprite
   - coin
+  - NPC
+  - Door
+  - Enemy
   layers:
   - Default
   - TransparentFX
